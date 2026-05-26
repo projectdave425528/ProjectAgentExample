@@ -1,0 +1,12 @@
+{
+  "name": "Watch Generator Reply",
+  "version": "1.0.0",
+  "when": {
+    "type": "fileCreated",
+    "patterns": ["../generator/outbox/task-*-reply.md"]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Generator 已完成。讀取 ../generator/outbox/ 最新 reply，確認代碼位置，調用 Evaluator。"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Remind Update Config (Deleted)",
+  "version": "1.0.0",
+  "description": "當 .kiro/ 目錄下的配置文件被刪除時，提醒用戶是否 commit + push 到 GitHub",
+  "when": {
+    "type": "fileDeleted",
+    "patterns": [".kiro/steering/*.md", ".kiro/hooks/*.kiro.hook", ".kiro/specs/**/*", ".kiro/settings/*.json"]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Kiro 配置文件剛剛被刪除。請執行以下步驟：\n1. 執行 `git status .kiro/` 檢查有咩改動\n2. 列出刪除摘要\n3. 問用戶：「有 Kiro 配置文件被刪除，是否要 commit + push 到 GitHub？（是/否）」\n4. 用戶回答「是」→ git add .kiro/ → git commit → git push\n5. 用戶回答「否」→ 唔做任何操作"
+  }
+}

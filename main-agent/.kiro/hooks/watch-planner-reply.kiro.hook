@@ -1,0 +1,12 @@
+{
+  "name": "Watch Planner Reply",
+  "version": "1.0.0",
+  "when": {
+    "type": "fileCreated",
+    "patterns": ["../planner/outbox/task-*-reply.md"]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Planner 已完成。讀取 ../planner/outbox/ 最新 reply，審視計劃，問用戶是否派發 Generator。"
+  }
+}

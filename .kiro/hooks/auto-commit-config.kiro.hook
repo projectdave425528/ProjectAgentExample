@@ -1,0 +1,13 @@
+{
+  "name": "Commit Kiro Config to GitHub",
+  "version": "1.0.0",
+  "description": "當 .kiro 目錄下的 Steering、Hooks 或 Specs 文件被修改後，問用戶是否 commit + push 到 GitHub",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [".kiro/steering/*.md", ".kiro/hooks/*.kiro.hook", ".kiro/specs/**/*", ".kiro/settings/*.json"]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Kiro 配置文件（Steering/Hooks/Specs）剛剛被修改。請執行以下步驟：\n1. 執行 `git status .kiro/` 顯示有咩改動\n2. 列出修改摘要俾用戶睇\n3. 問用戶：「是否要 commit 並 push 到 GitHub？（是/否）」\n4. 如果用戶回答「是」：\n   - 執行 `git add .kiro/`\n   - 執行 `git commit -m \"kiro: update config $(Get-Date -Format 'yyyy-MM-dd HH:mm')\"`\n   - 執行 `git push origin main`\n   - 告知用戶已推送到 GitHub\n5. 如果用戶回答「否」：\n   - 唔做任何 git 操作\n   - 告知用戶可以之後手動 commit"
+  }
+}

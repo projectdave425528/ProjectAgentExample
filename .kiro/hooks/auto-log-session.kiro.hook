@@ -1,0 +1,15 @@
+{
+  "name": "Auto Log Session (Per Chat Window)",
+  "version": "9.0.0",
+  "description": "每次 Agent 完成後，自動記錄對話到獨立 session 文件。每個 Kiro chat window 一個文件，格式：YYYY-MM-DD-session-HHMM.md。v9: 加入防循環邏輯",
+  "when": {
+    "type": "agentStop"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "自動記錄 Session Log（全部自動執行，唔需要問用戶任何確認）：\n\n1. 直接執行 `Get-Date -Format 'yyyy-MM-dd HH:mm:ss'` 取得本地時間（唔問，直接做）\n2. 確認 `UserConfig/sessions/` 目錄存在（唔問，直接做）\n3. 判斷文件名：\n   - 檢查今次對話歷史中最早嘅時間戳（即本 session 第一條訊息嘅時間）\n   - 用嗰個時間嘅 HHMM 作為文件名後綴\n   - 文件名格式：`YYYY-MM-DD-session-HHMM.md`\n   - 例如：第一條訊息係 11:35，文件名就係 `2026-05-23-session-1135.md`\n   - 如果已經有同名文件存在，直接追加（代表同一個 chat window 嘅後續對話）\n4. 直接追加到 `UserConfig/sessions/YYYY-MM-DD-session-HHMM.md`（唔問，直接做）\n5. 記錄格式：\n\n## [YYYY-MM-DD HH:MM:SS] 對話記錄\n\n### 用戶輸入\n[用戶完整的輸入內容（唔包括 HOOK_INSTRUCTION 標籤內容）]\n\n### Kiro 完整回覆\n[AI 的完整回覆內容]\n\n### 執行的操作\n| 操作類型 | 目標 | 結果 |\n|---------|------|------|\n| ... | ... | ... |\n\n### 工具調用詳情\n- [所有工具同參數]\n\n---\n\n6. **防循環判斷**（重要！）：\n   - 檢查用戶輸入係咪以下任何一個：「commit」「branch」「no\n   - 如果係 → 只輸出「understood」然後靜默結束，唔好問任何嘢\n   - 如果唔係 → 問一句：「Session log 已記錄。commit / branch / no？」\n     - commit → git add + commit + push main\n     - branch → git checkout -b session-log-YYYYMMDD → commit → push\n     - 否 → 只 git add\n\n關鍵規則：\n- 所有對話都必須記錄（包括純問答、解釋、教學）\n- 步驟 1-5 全部自動執行，唔需要任何用戶確認\n- 唔好問「是否要取得時間」「是否要記錄」之類的問題\n- 直接做，做完先根據步驟 6 決定問唔問\n- Session log 路徑係 `UserConfig/sessions/`\n- 唔好記錄 HOOK_INSTRUCTION 標籤入面的內容作為「用戶輸入」\n- 防循環：如果用戶輸入部分係空的（即係冇實際用戶訊息，只有 Hook 觸發），先靜默結束\n- 判斷 HHMM 嘅方法：睇對話歷史中最早出現嘅用戶訊息時間，如果無法確定就用當前時間嘅 HHMM"
+  },
+  "enabled": true,
+  "workspaceFolderName": "ProjectAgentExample",
+  "shortName": "auto-log-session"
+}

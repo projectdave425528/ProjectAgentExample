@@ -1,0 +1,12 @@
+{
+  "name": "Watch Evaluator Reply",
+  "version": "1.0.0",
+  "when": {
+    "type": "fileCreated",
+    "patterns": ["../evaluator/outbox/task-*-verdict.md"]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Evaluator 已完成。讀取 verdict：PASS → 交付；FAIL → 重調 Generator；REPLAN → 重調 Planner。"
+  }
+}

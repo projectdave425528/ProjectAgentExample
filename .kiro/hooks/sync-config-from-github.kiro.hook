@@ -1,0 +1,12 @@
+{
+  "name": "Sync Kiro Config from GitHub",
+  "version": "2.0.0",
+  "description": "從 GitHub 拉取最新的 Steering、Hooks、Specs 文件到本地，更新本地配置",
+  "when": {
+    "type": "userTriggered"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "請執行以下步驟從 GitHub 拉取最新 Kiro 配置：\n1. 執行 `git fetch origin` 檢查 GitHub 有冇新內容\n2. 執行 `git diff HEAD origin/main -- .kiro/` 顯示所有 .kiro 目錄的差異\n3. 如果有差異：\n   - 列出哪些文件有更新（分 Steering / Hooks / Specs 三類顯示）\n   - 問用戶：「是否要 pull 更新本地文件？（是/否）」\n4. 如果用戶回答「是」：\n   - 執行 `git pull origin main`\n   - 告知用戶哪些文件已更新\n   - 提醒：Steering 會在下次對話自動載入新內容\n5. 如果用戶回答「否」：\n   - 唔做任何操作\n6. 如果冇差異：\n   - 告知用戶本地已係最新版本"
+  }
+}
