@@ -4,10 +4,10 @@
   "description": "偵測 shared/notify-main.md 被修改，代表有 Agent 完成任務",
   "when": {
     "type": "fileEdited",
-    "patterns": ["ProjectMultiAgent/shared/notify-main.md"]
+    "patterns": ["ProjectRecord/*/control/notify-main.md"]
   },
   "then": {
     "type": "askAgent",
-    "prompt": "有 Agent 完成任務。讀取 ProjectMultiAgent/shared/notify-main.md 了解邊個 Agent 完成咗咩任務，然後去對應嘅 outbox 讀取回覆內容，根據 Orchestrator 規則判斷下一步並通知用戶。"
+    "prompt": "有 Agent 完成任務。先讀取 ProjectRecord/active-project.md 確認當前 Project，然後讀取對應 Project 嘅 control/notify-main.md 了解邊個 Agent 完成咗咩任務，去對應嘅 outbox 讀取回覆內容，根據 Orchestrator 規則判斷下一步並通知用戶。"
   }
 }

@@ -1,0 +1,12 @@
+{
+  "name": "Watch Generator Reply",
+  "version": "1.0.0",
+  "when": {
+    "type": "fileCreated",
+    "patterns": ["../../ProjectRecord/*/outbox/generator/task-*-reply.md"]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Generator 已完成。先讀取 ProjectRecord/active-project.md 確認當前 Project，然後讀取對應 Project 嘅 generator/outbox/ 最新 reply，確認代碼位置，調用 Evaluator。"
+  }
+}

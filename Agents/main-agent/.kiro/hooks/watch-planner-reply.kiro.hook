@@ -1,0 +1,12 @@
+{
+  "name": "Watch Planner Reply",
+  "version": "1.0.0",
+  "when": {
+    "type": "fileCreated",
+    "patterns": ["../../ProjectRecord/*/outbox/planner/task-*-reply.md"]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Planner 已完成。先讀取 ProjectRecord/active-project.md 確認當前 Project，然後讀取對應 Project 嘅 planner/outbox/ 最新 reply，審視計劃，問用戶是否派發 Generator。"
+  }
+}

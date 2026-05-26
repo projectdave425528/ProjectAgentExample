@@ -1,0 +1,12 @@
+{
+  "name": "Watch Evaluator Reply",
+  "version": "1.0.0",
+  "when": {
+    "type": "fileCreated",
+    "patterns": ["../../ProjectRecord/*/outbox/evaluator/task-*-verdict.md"]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Evaluator 已完成。先讀取 ProjectRecord/active-project.md 確認當前 Project，然後讀取對應 Project 嘅 evaluator/outbox/ verdict：PASS → 交付；FAIL → 重調 Generator；REPLAN → 重調 Planner。"
+  }
+}
