@@ -58,7 +58,7 @@ Step 5: 放棄自學，報告 blocked
 ```markdown
 ## Blocked Report
 
-**Task ID**: task-{id}
+**Task ID**: assignment-{id}
 **Blocked 原因**: [具體原因]
 
 ### 已嘗試

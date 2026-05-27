@@ -85,10 +85,10 @@ graph TD
 
 ```markdown
 ---
-task-id: "task-{id}"
+task-id: "assignment-{id}"
 from: planner
 to: main-agent
-type: reply
+type: assignment-reply
 timestamp: YYYY-MM-DD HH:mm
 status: done
 ---

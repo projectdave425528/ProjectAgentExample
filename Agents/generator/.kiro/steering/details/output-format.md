@@ -9,10 +9,10 @@ description: Generator Agent 輸出格式模板（L3 - 手動載入）
 
 ```markdown
 ---
-task-id: "task-{id}"
+task-id: "assignment-{id}"
 from: generator
 to: main-agent
-type: reply
+type: assignment-reply
 timestamp: YYYY-MM-DD HH:mm
 status: done
 files-generated: [文件列表]
@@ -20,7 +20,7 @@ files-generated: [文件列表]
 
 ## Task Completion Report
 
-**Task ID**: task-{id}
+**Task ID**: assignment-{id}
 **Status**: DONE
 
 ### 生成嘅文件

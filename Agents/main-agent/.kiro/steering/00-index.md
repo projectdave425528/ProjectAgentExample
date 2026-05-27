@@ -23,7 +23,7 @@ description: Main Agent (Orchestrator) 核心索引（L1 - 永遠載入）
 
 1. **最多重試 3 次** — 調用 Agent 出錯時重試，3 次仍然失敗就停止
 2. **搵簡單替代方案** — 如果原方法太複雜（會消耗大量 Token/Credit），改用更簡單嘅方法。搵唔到就問用戶
-3. **Task Fail 必須記錄** — 即使 Task 失敗，都要寫 outbox reply（記錄做咗咩、點解失敗、試過咩方法），然後向用戶請求指示
+3. **Assignment Fail 必須記錄** — 即使 Assignment 失敗，都要寫 outbox assignment reply（記錄做咗咩、點解失敗、試過咩方法），然後向用戶請求指示
 4. **唔好死撐** — 寧願早啲問用戶，唔好浪費 Token/Credit 喺明顯做唔到嘅嘢上面
 
 ## 啟動流程
@@ -32,21 +32,21 @@ description: Main Agent (Orchestrator) 核心索引（L1 - 永遠載入）
 用戶需求 → Planner → Generator → Evaluator
                                     ↓
                               PASS → 交付
-                              FAIL → 回 Generator（最多3次）
-                              REPLAN → 回 Planner（最多2次）
+                              FAIL → 開新 Assignment 派俾 Generator（最多3次）
+                              REPLAN → 開新 Assignment 派俾 Planner（最多2次）
 ```
 
 ## 格式一致性規則（必須遵守，零例外）
 > 所有寫入 ProjectRecord 嘅文件必須嚴格遵守 `ProjectRecord/templates/` 入面嘅對應 template。
 
-### 自己寫 task 時
+### 自己寫 assignment 時
 1. **先讀取 `ProjectRecord/active-project.md`** → 確認當前 Project 名稱
-2. **寫 inbox task 前**：先讀取 `ProjectRecord/templates/task-template.md`，按格式填寫
+2. **寫 inbox assignment 前**：先讀取 `ProjectRecord/templates/assignment-template.md`，按格式填寫
 3. **寫 conversation-log 前**：先讀取 `ProjectRecord/templates/conversation-log-entry-template.md`，按格式填寫
 4. **寫入後更新 SearchIndex**：append 一行到 `ProjectRecord/{active-project}/SearchIndex.md`，格式參照 `ProjectRecord/templates/search-index-entry-template.md`
 
 ### 驗證 Agent 回覆時
-1. **Planner/Generator reply**：對照 `ProjectRecord/templates/reply-template.md` 驗證
+1. **Planner/Generator assignment reply**：對照 `ProjectRecord/templates/assignment-reply-template.md` 驗證
 2. **Evaluator verdict**：對照 `ProjectRecord/templates/verdict-template.md` 驗證
 3. **缺少必要欄位** → 退回 Agent 重寫（計入重試次數）
 4. **格式正確** → 繼續流程
@@ -65,6 +65,32 @@ description: Main Agent (Orchestrator) 核心索引（L1 - 永遠載入）
 | L2 | `02-memory.md` | 記憶（最近任務 + 調度經驗 + 項目知識） |
 | L3 | `details/role-detail.md` | 完整角色規則 + 循環限制 |
 | L3 | `details/git-rules.md` | Git 操作規則 |
+
+## Specs 管理規則
+
+### 啟動時讀取
+1. 確認當前 Project 後，檢查 `ProjectRecord/{active-project}/specs/` 是否存在
+2. 如果存在且有文件 → 讀取所有 `.md` 文件（requirements.md、design.md、tasks.md）
+3. 用 Specs 內容作為 Assignment 嘅 context（TaskRef、TaskID 從 tasks.md 取得）
+
+### 用戶要求建立 Specs 時
+1. 開新 Assignment 派俾 Planner，Type: `plan-request`
+2. Assignment 需求：「根據用戶需求，產出 requirements.md、design.md、tasks.md」
+3. Planner 完成後，Main Agent 將產出寫入 `ProjectRecord/{active-project}/specs/`
+4. Specs 文件格式必須參照 `ProjectRecord/templates/specs/` 入面嘅 template
+
+### Specs 路徑
+```
+ProjectRecord/{active-project}/specs/
+├── requirements.md
+├── design.md
+└── tasks.md
+```
+
+### TaskID 格式
+- `{active-project}/Task-{number}`
+- 例如：`ProjectCRUDGenerator/Task-2`
+- 對應 `ProjectRecord/{active-project}/specs/tasks.md` 入面嘅 Task 2
 
 ## 記憶更新 + 驗證（必須執行，零例外）
 

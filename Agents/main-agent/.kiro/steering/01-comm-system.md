@@ -32,6 +32,7 @@ ProjectRecord/
 ├── templates/                   ← 共用 Message 模板
 │
 └── {active-project}/            ← 當前 Project 嘅所有記錄
+    ├── specs/                   ← Spec 文件（requirements/design/tasks）
     ├── SearchIndex.md           ← 本 Project 嘅搜尋索引
     ├── conversation-log.md      ← 所有對話記錄（append-only）
     ├── control/                 ← 控制指令
@@ -50,16 +51,16 @@ ProjectRecord/
 
 ### 記錄時機
 - **開始前**：讀取 `ProjectRecord/active-project.md` 確認當前 Project
-- **調用前**：寫任務到 `ProjectRecord/{active-project}/inbox/{agent}/task-{id}.md`
-- **收到回覆**：從 `ProjectRecord/{active-project}/outbox/{agent}/task-{id}-reply.md` 讀取
+- **調用前**：寫任務到 `ProjectRecord/{active-project}/inbox/{agent}/assignment-{id}.md`
+- **收到回覆**：從 `ProjectRecord/{active-project}/outbox/{agent}/assignment-{id}-reply-{status}.md` 讀取
 - **每次交互**：append 到 `ProjectRecord/{active-project}/conversation-log.md`
 - **每次寫入**：append 到 `ProjectRecord/{active-project}/SearchIndex.md`
 
 ## Message 格式
 
-### Task Message（寫入 inbox）
+### Assignment Message（寫入 inbox）
 ```markdown
-# Task {id}
+# Assignment {id}
 
 - **From**: main-agent
 - **To**: {agent-name}
@@ -78,7 +79,7 @@ ProjectRecord/
 
 ### Reply Message（從 outbox 讀取）
 ```markdown
-# Reply: Task {id}
+# Assignment Reply: {id}
 
 - **From**: {agent-name}
 - **To**: main-agent

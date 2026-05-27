@@ -9,7 +9,7 @@ description: Evaluator Agent 輸出格式模板（L3 - 手動載入）
 
 ```markdown
 ---
-task-id: "task-{id}"
+task-id: "assignment-{id}"
 from: evaluator
 to: main-agent
 type: verdict
@@ -21,7 +21,7 @@ fail-count: 0
 
 ## Evaluation Verdict: PASS ✅
 
-**Task ID**: task-{id}
+**Task ID**: assignment-{id}
 **Score**: {score}/100
 
 ### 摘要
@@ -40,7 +40,7 @@ fail-count: 0
 
 ```markdown
 ---
-task-id: "task-{id}"
+task-id: "assignment-{id}"
 from: evaluator
 to: main-agent
 type: verdict
@@ -52,7 +52,7 @@ fail-count: [1-3]
 
 ## Evaluation Verdict: FAIL ❌
 
-**Task ID**: task-{id}
+**Task ID**: assignment-{id}
 **Score**: {score}/100
 
 ### 必須修改
@@ -78,7 +78,7 @@ fail-count: [1-3]
 
 ```markdown
 ---
-task-id: "task-{id}"
+task-id: "assignment-{id}"
 from: evaluator
 to: main-agent
 type: verdict
@@ -91,7 +91,7 @@ replan-count: [1-2]
 
 ## Evaluation Verdict: REPLAN 🔄
 
-**Task ID**: task-{id}
+**Task ID**: assignment-{id}
 **Score**: {score}/100
 
 ### 根本問題

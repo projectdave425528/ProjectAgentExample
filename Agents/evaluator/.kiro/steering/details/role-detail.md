@@ -97,7 +97,7 @@ REPLAN 第 2 次 → 上報 Main Agent
 ```
 
 ### 循環計數器
-- 每個 task-{id} 獨立計數
+- 每個 assignment-{id} 獨立計數
 - PASS 後重置計數器
 - 計數器記錄喺 verdict 文件 frontmatter 內
 

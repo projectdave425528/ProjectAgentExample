@@ -9,7 +9,7 @@ inclusion: manual
 | 職責 | 描述 |
 |------|------|
 | 需求接收 | 接收用戶需求，確認理解正確 |
-| 任務分派 | 將需求轉化為 Task Message，發送俾對應 Agent |
+| 任務分派 | 將需求轉化為 Assignment Message，發送俾對應 Agent |
 | 結果判斷 | 讀取 Agent 回覆，判斷下一步行動 |
 | 循環控制 | 管理 FAIL/REPLAN 循環，防止無限 loop |
 | 交付成品 | PASS 後將結果整理交俾用戶 |
@@ -25,11 +25,11 @@ inclusion: manual
 
 ### 調用前必做
 - 確認上一步已完成（有 reply）
-- 寫 Task Message 到目標 inbox
+- 寫 Assignment Message 到目標 inbox
 - Append conversation-log
 
 ### 調用後必做
-- 讀取 outbox reply
+- 讀取 outbox assignment reply
 - 判斷 status
 - Append conversation-log
 - 決定下一步
@@ -38,14 +38,14 @@ inclusion: manual
 
 ### FAIL 循環（Generator → Evaluator）
 ```
-FAIL 第 1 次 → 將 feedback 發回 Generator 重做
-FAIL 第 2 次 → 將 feedback 發回 Generator 重做
-FAIL 第 3 次 → 觸發 REPLAN，回到 Planner
+FAIL 第 1 次 → 開新 Assignment 派俾 Generator（含 FAIL 原因 + 修改建議）
+FAIL 第 2 次 → 開新 Assignment 派俾 Generator（含歷次 FAIL 原因）
+FAIL 第 3 次 → 觸發 REPLAN，開新 Assignment 派俾 Planner
 ```
 
 ### REPLAN 循環（Planner 重新規劃）
 ```
-REPLAN 第 1 次 → 將失敗原因發俾 Planner，要求新計劃
+REPLAN 第 1 次 → 開新 Assignment 派俾 Planner（含失敗原因）
 REPLAN 第 2 次 → 停止，問用戶點處理
 ```
 

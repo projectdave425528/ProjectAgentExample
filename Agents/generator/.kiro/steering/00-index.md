@@ -18,7 +18,7 @@ description: Generator Agent 核心索引（L1 - 永遠載入）
 
 1. **最多重試 3 次** — 遇到 Error 先自己重試，3 次仍然失敗就停止
 2. **搵簡單替代方案** — 如果原方法太複雜（會消耗大量 Token/Credit），改用更簡單嘅方法。如果簡單方法都搵唔到，向 Main Agent 或用戶請求指示
-3. **Task Fail 必須記錄** — 即使 Task 失敗，都要寫 outbox reply（記錄做咗咩、點解失敗、試過咩方法），然後向 Main Agent 或用戶請求指示
+3. **Assignment Fail 必須記錄** — 即使 Assignment 失敗，都要寫 outbox assignment reply（記錄做咗咩、點解失敗、試過咩方法），然後向 Main Agent 或用戶請求指示
 4. **唔好死撐** — 寧願早啲上報，唔好浪費 Token/Credit 喺明顯做唔到嘅嘢上面
 
 ## 代碼規範（硬性限制）
@@ -32,13 +32,13 @@ description: Generator Agent 核心索引（L1 - 永遠載入）
 2. 讀 `ProjectRecord/{active-project}/inbox/generator/` → 取得任務計劃
 3. 自我評估 → 確認有能力完成
 4. 生成代碼 → 寫到 `ProjectRecord/{active-project}/output/`
-5. **嚴格按照 `ProjectRecord/templates/reply-template.md` 格式**寫完成報告到 `ProjectRecord/{active-project}/outbox/generator/`
+5. **嚴格按照 `ProjectRecord/templates/assignment-reply-template.md` 格式**寫完成報告到 `ProjectRecord/{active-project}/outbox/generator/`
 
 ## 格式一致性規則（必須遵守，零例外）
 > 所有寫入 ProjectRecord 嘅文件必須嚴格遵守 `ProjectRecord/templates/` 入面嘅對應 template。
 
-1. **寫 outbox reply 前**：先讀取 `ProjectRecord/templates/reply-template.md`，按格式填寫
-2. **寫 blocked 報告前**：同樣用 reply-template，Status 填 `blocked`
+1. **寫 outbox assignment reply 前**：先讀取 `ProjectRecord/templates/assignment-reply-template.md`，按格式填寫
+2. **寫 blocked 報告前**：同樣用 assignment-reply-template，Status 填 `blocked`
 3. **所有欄位必須齊全** — template 入面有嘅欄位唔可以省略（可以填 N/A 但唔可以刪）
 4. **唔好自創格式** — 唔好加 template 冇定義嘅 section（除非 template 有「備註」欄位）
 5. **格式唔一致 = 任務未完成** — Main Agent 會驗證格式，唔合格會退回重寫
@@ -46,21 +46,21 @@ description: Generator Agent 核心索引（L1 - 永遠載入）
 
 ## 通訊協議
 - 先讀取 `ProjectRecord/active-project.md` 確認當前 Project
-- 收件：`ProjectRecord/{active-project}/inbox/generator/task-{id}.md`
-- 發件：`ProjectRecord/{active-project}/outbox/generator/task-{id}-reply.md`
-- Blocked：`ProjectRecord/{active-project}/outbox/generator/task-{id}-blocked.md`
+- 收件：`ProjectRecord/{active-project}/inbox/generator/assignment-{id}.md`
+- 發件：`ProjectRecord/{active-project}/outbox/generator/assignment-{id}-reply-completed.md`
+- Blocked：`ProjectRecord/{active-project}/outbox/generator/assignment-{id}-reply-blocked.md`
 
 ## ProjectRecord 寫入規則（必須遵守，零例外）
 > 🔒 **寫入 ProjectRecord 係任務完成嘅必要條件。寫入失敗 = 任務未完成。**
 
-1. **任務完成 = outbox 寫入成功** — 無論結果係 completed/blocked/failed，都必須成功寫入 `ProjectRecord/{active-project}/outbox/generator/task-{id}-reply.md`（或 `-blocked.md`）
+1. **任務完成 = outbox 寫入成功** — 無論結果係 completed/blocked/failed，都必須成功寫入 `ProjectRecord/{active-project}/outbox/generator/assignment-{id}-reply-{status}.md`（status: completed 或 blocked）
 2. **寫入失敗處理**：
    - 第一次失敗 → 重試一次
    - 第二次失敗 → 嘗試用更簡單嘅內容寫入（至少包含 status + 一句話摘要）
    - 第三次失敗 → 向 Main Agent 回報：「ProjectRecord 寫入失敗，需要人工介入」
 3. **回報格式**（寫入失敗時）：
    - 喺 console/output 明確輸出：`[ERROR] ProjectRecord 寫入失敗：{原因}`
-   - 如果可以寫入其他位置，寫一份 fallback 到 `ProjectRecord/{active-project}/outbox/generator/task-{id}-write-failed.md`
+   - 如果可以寫入其他位置，寫一份 fallback 到 `ProjectRecord/{active-project}/outbox/generator/assignment-{id}-write-failed.md`
 4. **唔好靜默失敗** — 寫入失敗絕對唔可以當冇事發生，必須通知 Main Agent 或用戶
 
 ## 文件目錄
@@ -73,7 +73,7 @@ description: Generator Agent 核心索引（L1 - 永遠載入）
 | `details/output-format.md` | L3 | 完成報告格式 + 常見項目模式 |
 
 ## 記憶更新（必須執行，零例外）
-完成任務寫 outbox reply 時，**必須同時**更新 `02-memory.md`：
+完成任務寫 outbox assignment reply 時，**必須同時**更新 `02-memory.md`：
 1. 喺「最近任務」表格加一行（日期 + 摘要 + 結果 + 學到咩）
 2. 超過 5 條就刪最舊嘅
 3. 如果有新教訓，加到「常見錯誤」或「項目知識」

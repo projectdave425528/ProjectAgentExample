@@ -105,7 +105,7 @@ description: Planner Agent 完整職責同流程（L3 - 手動載入）
 ```markdown
 ## Escalation Report
 
-**Task ID**: task-{id}
+**Task ID**: assignment-{id}
 **原因**: [簡述]
 **影響**: [如果唔處理會點]
 **建議方案**: 

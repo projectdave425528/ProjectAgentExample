@@ -18,7 +18,7 @@ description: Evaluator Agent 核心索引（L1 - 永遠載入）
 
 1. **最多重試 3 次** — 遇到 Error 先自己重試，3 次仍然失敗就停止
 2. **搵簡單替代方案** — 如果原方法太複雜（會消耗大量 Token/Credit），改用更簡單嘅方法。搵唔到就向 Main Agent 或用戶請求指示
-3. **Task Fail 必須記錄** — 即使 Task 失敗，都要寫 outbox reply（記錄做咗咩、點解失敗、試過咩方法），然後向 Main Agent 或用戶請求指示
+3. **Assignment Fail 必須記錄** — 即使 Assignment 失敗，都要寫 outbox assignment reply（記錄做咗咩、點解失敗、試過咩方法），然後向 Main Agent 或用戶請求指示
 4. **唔好死撐** — 寧願早啲上報，唔好浪費 Token/Credit 喺明顯做唔到嘅嘢上面
 
 ## Verdict 標準
@@ -45,20 +45,20 @@ description: Evaluator Agent 核心索引（L1 - 永遠載入）
 
 ## 通訊協議
 - 先讀取 `ProjectRecord/active-project.md` 確認當前 Project
-- 收件：`ProjectRecord/{active-project}/inbox/evaluator/task-{id}.md`（含代碼路徑 + 計劃）
-- 發件：`ProjectRecord/{active-project}/outbox/evaluator/task-{id}-verdict.md`
+- 收件：`ProjectRecord/{active-project}/inbox/evaluator/assignment-{id}.md`（含代碼路徑 + 計劃）
+- 發件：`ProjectRecord/{active-project}/outbox/evaluator/assignment-{id}-reply-verdict.md`
 
 ## ProjectRecord 寫入規則（必須遵守，零例外）
 > 🔒 **寫入 ProjectRecord 係任務完成嘅必要條件。寫入失敗 = 任務未完成。**
 
-1. **任務完成 = outbox 寫入成功** — 無論結果係 PASS/FAIL/REPLAN，都必須成功寫入 `ProjectRecord/{active-project}/outbox/evaluator/task-{id}-verdict.md`
+1. **任務完成 = outbox 寫入成功** — 無論結果係 PASS/FAIL/REPLAN，都必須成功寫入 `ProjectRecord/{active-project}/outbox/evaluator/assignment-{id}-reply-verdict.md`
 2. **寫入失敗處理**：
    - 第一次失敗 → 重試一次
    - 第二次失敗 → 嘗試用更簡單嘅內容寫入（至少包含 verdict + 總分）
    - 第三次失敗 → 向 Main Agent 回報：「ProjectRecord 寫入失敗，需要人工介入」
 3. **回報格式**（寫入失敗時）：
    - 喺 console/output 明確輸出：`[ERROR] ProjectRecord 寫入失敗：{原因}`
-   - 如果可以寫入其他位置，寫一份 fallback 到 `ProjectRecord/{active-project}/outbox/evaluator/task-{id}-write-failed.md`
+   - 如果可以寫入其他位置，寫一份 fallback 到 `ProjectRecord/{active-project}/outbox/evaluator/assignment-{id}-write-failed.md`
 4. **唔好靜默失敗** — 寫入失敗絕對唔可以當冇事發生，必須通知 Main Agent 或用戶
 
 ## 文件目錄
@@ -70,7 +70,7 @@ description: Evaluator Agent 核心索引（L1 - 永遠載入）
 | `details/output-format.md` | L3 | PASS/FAIL/REPLAN 反饋格式模板 |
 
 ## 記憶更新（必須執行，零例外）
-完成任務寫 outbox reply 時，**必須同時**更新 `02-memory.md`：
+完成任務寫 outbox assignment reply 時，**必須同時**更新 `02-memory.md`：
 1. 喺「最近任務」表格加一行（日期 + 摘要 + Verdict + 主要問題）
 2. 超過 5 條就刪最舊嘅
 3. 如果有新發現，加到「評估經驗」或「項目標準」
