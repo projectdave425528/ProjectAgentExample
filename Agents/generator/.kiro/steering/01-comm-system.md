@@ -1,6 +1,6 @@
 ---
-inclusion: manual
-description: Generator Agent 通訊協議（L2 - 手動載入）
+inclusion: always
+description: Generator Agent 通訊協議（L2 - 永遠載入）
 ---
 
 # Generator 通訊協議
@@ -36,7 +36,7 @@ from: generator
 to: main-agent
 type: assignment-reply | blocked
 timestamp: YYYY-MM-DD HH:mm
-status: done | blocked
+status: completed | blocked
 files-generated: [文件列表]
 ---
 ```

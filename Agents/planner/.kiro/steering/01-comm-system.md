@@ -1,6 +1,6 @@
 ---
-inclusion: manual
-description: Planner Agent 通訊協議（L2 - 手動載入）
+inclusion: always
+description: Planner Agent 通訊協議（L2 - 永遠載入）
 ---
 
 # Planner 通訊協議
@@ -32,7 +32,7 @@ from: planner
 to: main-agent
 type: assignment-reply | escalation
 timestamp: YYYY-MM-DD HH:mm
-status: done | blocked | need-clarification
+status: completed | blocked | need-clarification
 ---
 ```
 

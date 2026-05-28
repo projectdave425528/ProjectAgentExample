@@ -73,7 +73,7 @@
 根據 Planner 嘅計劃，實現 Todo CRUD API endpoints。
 
 ## Context
-- 計劃參考：ProjectRecord/{active-project}/planner/outbox/assignment-001-reply-completed.md
+- 計劃參考：ProjectRecord/{active-project}/outbox/planner/assignment-001-reply-completed.md
 - 代碼輸出位置：ProjectRecord/{active-project}/output/src/routes/todo.ts
 - 需要包含：路由定義 + Controller + Service + Model
 
@@ -105,8 +105,8 @@
 
 ## Context
 - 代碼位置：ProjectRecord/{active-project}/output/src/routes/todo.ts
-- 原始需求：ProjectRecord/{active-project}/planner/outbox/assignment-001-reply-completed.md
-- Generator 回覆：ProjectRecord/{active-project}/generator/outbox/assignment-002-reply-completed.md
+- 原始需求：ProjectRecord/{active-project}/outbox/planner/assignment-001-reply-completed.md
+- Generator 回覆：ProjectRecord/{active-project}/outbox/generator/assignment-002-reply-completed.md
 
 ## 驗證標準
 - [ ] 滿足 acceptance criteria

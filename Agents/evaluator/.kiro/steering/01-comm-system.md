@@ -1,6 +1,6 @@
 ---
-inclusion: manual
-description: Evaluator Agent 通訊協議（L2 - 手動載入）
+inclusion: always
+description: Evaluator Agent 通訊協議（L2 - 永遠載入）
 ---
 
 # Evaluator 通訊協議
