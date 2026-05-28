@@ -21,9 +21,10 @@
 ## Memory 已更新
 ✅ / ❌
 
----
-
-## AssignmentStatus 說明
+## Usage 估算
+- **Context 使用率**: {百分比}%（例如 45%）
+- **估算 Token 數**: {input_tokens} input / {output_tokens} output
+- **接近限額警告**: ⚠️ / ✅（如果 Context ≥ 80% 或感覺即將耗盡，標記 ⚠️）
 
 | Status | 用途 | 使用者 | 文件名後綴 |
 |--------|------|--------|-----------|
@@ -85,6 +86,11 @@ Client → Auth Middleware → Router → Controller → Service → Model → P
 
 ## Memory 已更新
 ✅
+
+## Usage 估算
+- **Context 使用率**: 35%
+- **估算 Token 數**: ~8,000 input / ~3,500 output
+- **接近限額警告**: ✅
 ```
 
 ### 實例 2：Generator Blocked（AssignmentStatus: blocked）

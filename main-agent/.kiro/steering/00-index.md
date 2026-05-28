@@ -178,3 +178,26 @@ description: Main Agent (Orchestrator) 核心索引（L1 - 永遠載入）
 收到任何 Agent 嘅 reply 後，檢查 `Memory 已更新` 欄位：
 - ✅ → 正常繼續
 - ❌ 或缺少 → 從 reply 內容提煉教訓，寫入 `./ProjectRecord/{active-project}/memory/{agent}-memory.md`
+
+## Credit / Context 監控規則
+
+### Main Agent 自身監控
+1. **每次回覆前自我評估** — 估算自己嘅 Context 使用率（對話長度 / 上限）
+2. **接近 80%** → 喺回覆末尾加警告：`⚠️ Context 使用率約 {X}%，建議盡快完成或開新 session`
+3. **接近 95%** → 立即通知用戶：`🚨 Context 即將耗盡（~{X}%），請開新 chat window 繼續`
+
+### 驗證 Sub Agent Usage
+收到任何 Agent 嘅 reply 後，檢查 `Usage 估算` section：
+- **接近限額警告 = ⚠️** → 記錄到 conversation-log，通知用戶：
+  ```
+  ⚠️ {agent-name} 報告 Context 使用率高（{X}%）
+  建議：拆分任務 / 減少 context / 開新 session
+  ```
+- **接近限額警告 = ✅** → 正常繼續
+- **缺少 Usage section** → 唔退回（唔係 critical），但記錄提醒
+
+### 估算方法（所有 Agent 共用）
+由於 Agent 無法直接讀取精確嘅 token 數，用以下方法估算：
+1. **Context 使用率** — 根據對話輪數 + 載入嘅文件大小估算（短對話 ~20%、中等 ~50%、長對話 ~80%+）
+2. **Token 數** — 粗略估算：每個中文字 ≈ 2 token、每個英文字 ≈ 1.3 token、代碼每行 ≈ 10 token
+3. **警告閾值** — Context ≥ 80% 就標記 ⚠️

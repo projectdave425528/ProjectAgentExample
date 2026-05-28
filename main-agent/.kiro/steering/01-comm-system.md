@@ -177,6 +177,11 @@ SearchIndex 最後一行：| 003 | evaluator | verdict | ...
 
 ## Memory 已更新
 ✅ / ❌
+
+## Usage 估算
+- **Context 使用率**: {百分比}%
+- **估算 Token 數**: {input_tokens} input / {output_tokens} output
+- **接近限額警告**: ⚠️ / ✅
 ```
 
 ### Conversation Log Entry
