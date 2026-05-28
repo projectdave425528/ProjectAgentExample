@@ -1,0 +1,12 @@
+{
+  "name": "Auto Log Session",
+  "version": "2.0.0",
+  "description": "每次完成後自動記錄 session log 到 active-project 嘅 UserConfig/sessions/ + 問 commit",
+  "when": {
+    "type": "agentStop"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "記錄 Session Log：1. 讀取 ./ProjectRecord/active-project.md 確認當前 Project。2. 記錄到 ./ProjectRecord/{active-project}/UserConfig/sessions/YYYY-MM-DD-session-HHMM.md。格式：時間 + 用戶輸入 + 回覆摘要 + 操作。記錄完問：commit / branch / no？防循環：如果用戶輸入係 commit/branch/no/go/understood → 靜默結束。"
+  }
+}

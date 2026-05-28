@@ -14,11 +14,11 @@ description: Main Agent (Orchestrator) 核心索引（L1 - 永遠載入）
 2. **每個任務必須經 Evaluator 驗證** — PASS 先交付
 3. **所有 Planning / Design 交俾 Planner** — 需求分析、架構設計、方案規劃、Specs 產出，全部派 Assignment 俾 Planner，Main Agent 唔好自己做
 4. **所有檢查工作交俾 Evaluator** — 代碼審查、方案驗證、品質評估，全部派 Assignment 俾 Evaluator，Main Agent 唔好自己判斷合唔合格
-5. **文件記錄** — 先讀 `../../ProjectRecord/active-project.md` 確認當前 Project，然後寫 `../../ProjectRecord/{active-project}/` 入面嘅 inbox/outbox + conversation-log + UserConfig/sessions + UserDocument
+5. **文件記錄** — 先讀 `./ProjectRecord/active-project.md` 確認當前 Project，然後寫 `./ProjectRecord/{active-project}/` 入面嘅 inbox/outbox + conversation-log + UserConfig/sessions + UserDocument
 6. **循環限制** — FAIL 3次→REPLAN，REPLAN 2次→問用戶
 7. **Git 操作必須問用戶** — 唔好自動 commit
 8. **ProjectRecord 寫入驗證** — 收到 Agent 回覆時，確認 outbox 文件存在；如果 Agent 回報寫入失敗，協助重試或通知用戶
-9. **格式一致性驗證** — 收到 Agent 回覆時，驗證格式是否符合 `../../ProjectRecord/templates/` 對應 template；唔合格退回重寫
+9. **格式一致性驗證** — 收到 Agent 回覆時，驗證格式是否符合 `./ProjectRecord/templates/` 對應 template；唔合格退回重寫
 10. **自動測試驗證** — Generator 交付嘅代碼必須包含 Unit Test；Evaluator 必須執行/驗證 test 結果
 
 ## ⚠️ Error 處理（必須遵守，零例外）
@@ -61,7 +61,7 @@ description: Main Agent (Orchestrator) 核心索引（L1 - 永遠載入）
 
 ```
 1. 確認 kiro-cli 可用（kiro-cli --version）
-2. 讀取 ../../ProjectRecord/active-project.md
+2. 讀取 ./ProjectRecord/active-project.md
 3. 檢查 specs/ 是否有文件
 4. 接收用戶需求
 
@@ -94,22 +94,22 @@ description: Main Agent (Orchestrator) 核心索引（L1 - 永遠載入）
 3. 提供 Planner 嘅 Test Criteria 作為對照
 
 ## 格式一致性規則（必須遵守，零例外）
-> 所有寫入 ProjectRecord 嘅文件必須嚴格遵守 `../../ProjectRecord/templates/` 入面嘅對應 template。
+> 所有寫入 ProjectRecord 嘅文件必須嚴格遵守 `./ProjectRecord/templates/` 入面嘅對應 template。
 
 ### 自己寫 assignment 時
-1. **先讀取 `../../ProjectRecord/active-project.md`** → 確認當前 Project 名稱
-2. **寫 inbox assignment 前**：先讀取 `../../ProjectRecord/templates/assignment-template.md`，按格式填寫
-3. **寫 conversation-log 前**：先讀取 `../../ProjectRecord/templates/conversation-log-entry-template.md`，按格式填寫
-4. **寫入後更新 SearchIndex**：append 一行到 `../../ProjectRecord/{active-project}/SearchIndex.md`，格式參照 `../../ProjectRecord/templates/search-index-entry-template.md`
+1. **先讀取 `./ProjectRecord/active-project.md`** → 確認當前 Project 名稱
+2. **寫 inbox assignment 前**：先讀取 `./ProjectRecord/templates/assignment-template.md`，按格式填寫
+3. **寫 conversation-log 前**：先讀取 `./ProjectRecord/templates/conversation-log-entry-template.md`，按格式填寫
+4. **寫入後更新 SearchIndex**：append 一行到 `./ProjectRecord/{active-project}/SearchIndex.md`，格式參照 `./ProjectRecord/templates/search-index-entry-template.md`
 
 ### 驗證 Agent 回覆時
-1. **所有 Agent assignment reply**：對照 `../../ProjectRecord/templates/assignment-reply-template.md` 驗證
+1. **所有 Agent assignment reply**：對照 `./ProjectRecord/templates/assignment-reply-template.md` 驗證
 3. **缺少必要欄位** → 退回 Agent 重寫（計入重試次數）
 4. **格式正確** → 繼續流程
 5. **確認 SearchIndex 已更新** — 如果 Agent 冇更新 SearchIndex，Main Agent 代為補上
 
 ### 搵記錄時
-1. **先讀 `../../ProjectRecord/{active-project}/SearchIndex.md`** — 用關鍵字/Task ID/Agent/Status 篩選
+1. **先讀 `./ProjectRecord/{active-project}/SearchIndex.md`** — 用關鍵字/Task ID/Agent/Status 篩選
 2. **只讀取對應嘅文件** — 唔好逐個 inbox/outbox 文件讀取
 3. **SearchIndex 唔存在或損壞** → 重建（掃描所有 inbox/outbox frontmatter）
 
@@ -126,34 +126,34 @@ description: Main Agent (Orchestrator) 核心索引（L1 - 永遠載入）
 ## UserConfig / UserDocument 放置規則
 
 ### Project 專屬（根據 active-project 決定路徑）
-- Session 記錄 → `../../ProjectRecord/{active-project}/UserConfig/sessions/`
-- 用戶文件 → `../../ProjectRecord/{active-project}/UserDocument/`
+- Session 記錄 → `./ProjectRecord/{active-project}/UserConfig/sessions/`
+- 用戶文件 → `./ProjectRecord/{active-project}/UserDocument/`
 
 ### 跨 Project 通用
-- 通用 Session → `../../UserConfig/sessions/`（唔屬於特定 Project 嘅對話）
-- 通用用戶文件 → `../../UserDocument/`（跨 Project 嘅文件）
+- 通用 Session → `./UserConfig/sessions/`（唔屬於特定 Project 嘅對話）
+- 通用用戶文件 → `./UserDocument/`（跨 Project 嘅文件）
 
 ### 路徑決定流程
-1. 讀取 `../../ProjectRecord/active-project.md` 嘅 `current` 值
-2. 如果操作屬於特定 Project → 寫入 `../../ProjectRecord/{current}/UserConfig/` 或 `UserDocument/`
-3. 如果操作係通用/跨 Project → 寫入頂層 `../../UserConfig/` 或 `../../UserDocument/`
+1. 讀取 `./ProjectRecord/active-project.md` 嘅 `current` 值
+2. 如果操作屬於特定 Project → 寫入 `./ProjectRecord/{current}/UserConfig/` 或 `UserDocument/`
+3. 如果操作係通用/跨 Project → 寫入頂層 `./UserConfig/` 或 `./UserDocument/`
 
 ## Specs 管理規則
 
 ### 啟動時讀取
-1. 確認當前 Project 後，檢查 `../../ProjectRecord/{active-project}/specs/` 是否存在
+1. 確認當前 Project 後，檢查 `./ProjectRecord/{active-project}/specs/` 是否存在
 2. 如果存在且有文件 → 讀取所有 `.md` 文件（requirements.md、design.md、tasks.md）
 3. 用 Specs 內容作為 Assignment 嘅 context（TaskRef、TaskID 從 tasks.md 取得）
 
 ### 用戶要求建立 Specs 時
 1. 開新 Assignment 派俾 Planner，Type: `plan-request`
 2. Assignment 需求：「根據用戶需求，產出 requirements.md、design.md、tasks.md」
-3. Planner 完成後，Main Agent 將產出寫入 `../../ProjectRecord/{active-project}/specs/`
-4. Specs 文件格式必須參照 `../../ProjectRecord/templates/specs/` 入面嘅 template
+3. Planner 完成後，Main Agent 將產出寫入 `./ProjectRecord/{active-project}/specs/`
+4. Specs 文件格式必須參照 `./ProjectRecord/templates/specs/` 入面嘅 template
 
 ### Specs 路徑
 ```
-../../ProjectRecord/{active-project}/specs/
+./ProjectRecord/{active-project}/specs/
 ├── requirements.md
 ├── design.md
 └── tasks.md
@@ -162,13 +162,13 @@ description: Main Agent (Orchestrator) 核心索引（L1 - 永遠載入）
 ### TaskID 格式
 - `{active-project}/Task-{number}`
 - 例如：`ProjectCRUDGenerator/Task-2`
-- 對應 `../../ProjectRecord/{active-project}/specs/tasks.md` 入面嘅 Task 2
+- 對應 `./ProjectRecord/{active-project}/specs/tasks.md` 入面嘅 Task 2
 
 ## 記憶更新 + 驗證（必須執行，零例外）
 
 ### 自己嘅記憶
 每次完成一輪調度（用戶需求 → 交付）後，**必須**更新 Project Memory：
-1. 讀取 `../../ProjectRecord/{active-project}/memory/main-agent-memory.md`
+1. 讀取 `./ProjectRecord/{active-project}/memory/main-agent-memory.md`
 2. 喺「最近任務」表格加一行（日期 + 摘要 + 結果 + 備註）
 3. 超過 5 條就刪最舊嘅
 4. 如果有新發現，加到「調度經驗」或「項目知識」
@@ -177,4 +177,4 @@ description: Main Agent (Orchestrator) 核心索引（L1 - 永遠載入）
 ### 驗證 Sub Agent 記憶
 收到任何 Agent 嘅 reply 後，檢查 `Memory 已更新` 欄位：
 - ✅ → 正常繼續
-- ❌ 或缺少 → 從 reply 內容提煉教訓，寫入 `../../ProjectRecord/{active-project}/memory/{agent}-memory.md`
+- ❌ 或缺少 → 從 reply 內容提煉教訓，寫入 `./ProjectRecord/{active-project}/memory/{agent}-memory.md`

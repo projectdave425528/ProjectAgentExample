@@ -29,16 +29,16 @@ kiro-cli chat --agent [agent-name] "[prompt]"
 
 | Agent | contextFiles |
 |-------|-------------|
-| **所有 Agent 共用** | `../../ProjectRecord/active-project.md` |
-| | `../../ProjectRecord/{active-project}/memory/{agent}-memory.md` |
-| | `../../ProjectRecord/templates/assignment-reply-template.md` |
-| | `../../ProjectRecord/{active-project}/specs/tasks.md`（如存在） |
-| **Planner** | `../../Agents/planner/.kiro/steering/00-index.md` |
-| | `../../Agents/planner/.kiro/steering/01-comm-system.md` |
-| **Generator** | `../../Agents/generator/.kiro/steering/00-index.md` |
-| | `../../Agents/generator/.kiro/steering/01-comm-system.md` |
-| **Evaluator** | `../../Agents/evaluator/.kiro/steering/00-index.md` |
-| | `../../Agents/evaluator/.kiro/steering/01-comm-system.md` |
+| **所有 Agent 共用** | `./ProjectRecord/active-project.md` |
+| | `./ProjectRecord/{active-project}/memory/{agent}-memory.md` |
+| | `./ProjectRecord/templates/assignment-reply-template.md` |
+| | `./ProjectRecord/{active-project}/specs/tasks.md`（如存在） |
+| **Planner** | `./Agents/planner/.kiro/steering/00-index.md` |
+| | `./Agents/planner/.kiro/steering/01-comm-system.md` |
+| **Generator** | `./Agents/generator/.kiro/steering/00-index.md` |
+| | `./Agents/generator/.kiro/steering/01-comm-system.md` |
+| **Evaluator** | `./Agents/evaluator/.kiro/steering/00-index.md` |
+| | `./Agents/evaluator/.kiro/steering/01-comm-system.md` |
 
 **調用格式：**
 ```
@@ -46,12 +46,12 @@ invoke_sub_agent:
   name: "general-task-execution"
   prompt: "[assignment 內容]"
   contextFiles:
-    - path: "../../Agents/{agent}/.kiro/steering/00-index.md"
-    - path: "../../Agents/{agent}/.kiro/steering/01-comm-system.md"
-    - path: "../../ProjectRecord/active-project.md"
-    - path: "../../ProjectRecord/{active-project}/specs/tasks.md"
-    - path: "../../ProjectRecord/{active-project}/memory/{agent}-memory.md"
-    - path: "../../ProjectRecord/templates/assignment-reply-template.md"
+    - path: "./Agents/{agent}/.kiro/steering/00-index.md"
+    - path: "./Agents/{agent}/.kiro/steering/01-comm-system.md"
+    - path: "./ProjectRecord/active-project.md"
+    - path: "./ProjectRecord/{active-project}/specs/tasks.md"
+    - path: "./ProjectRecord/{active-project}/memory/{agent}-memory.md"
+    - path: "./ProjectRecord/templates/assignment-reply-template.md"
 ```
 
 **調用前必做：**
@@ -80,7 +80,7 @@ invoke_sub_agent:
 
 ### 目錄結構
 ```
-../../ProjectRecord/
+./ProjectRecord/
 ├── active-project.md            ← 當前 active project（切換用）
 ├── templates/                   ← 共用 Message 模板
 │
@@ -108,11 +108,11 @@ invoke_sub_agent:
 ```
 
 ### 記錄時機
-- **開始前**：讀取 `../../ProjectRecord/active-project.md` 確認當前 Project
-- **調用前**：寫任務到 `../../ProjectRecord/{active-project}/inbox/{agent}/assignment-{id}.md`
-- **收到回覆**：從 `../../ProjectRecord/{active-project}/outbox/{agent}/assignment-{id}-reply-{status}.md` 讀取
-- **每次交互**：append 到 `../../ProjectRecord/{active-project}/conversation-log.md`
-- **每次寫入**：append 到 `../../ProjectRecord/{active-project}/SearchIndex.md`
+- **開始前**：讀取 `./ProjectRecord/active-project.md` 確認當前 Project
+- **調用前**：寫任務到 `./ProjectRecord/{active-project}/inbox/{agent}/assignment-{id}.md`
+- **收到回覆**：從 `./ProjectRecord/{active-project}/outbox/{agent}/assignment-{id}-reply-{status}.md` 讀取
+- **每次交互**：append 到 `./ProjectRecord/{active-project}/conversation-log.md`
+- **每次寫入**：append 到 `./ProjectRecord/{active-project}/SearchIndex.md`
 
 ## Assignment ID 生成規則
 
@@ -121,7 +121,7 @@ invoke_sub_agent:
 - 全局遞增（同一個 Project 入面唔會重複）
 
 ### 生成方法
-1. 讀取 `../../ProjectRecord/{active-project}/SearchIndex.md`
+1. 讀取 `./ProjectRecord/{active-project}/SearchIndex.md`
 2. 搵最後一行嘅 Assignment ID（第一欄）
 3. +1 = 新 ID
 4. 如果 SearchIndex 為空或唔存在 → 從 `001` 開始
