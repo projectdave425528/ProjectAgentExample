@@ -1,0 +1,16 @@
+# WhatsApp 帳目分析系統 - 配置文件
+
+# 分析模式：ocr 或 ai_vision
+analysis_mode: "ocr"
+
+# Tesseract OCR 路徑（Windows 需要指定，null 表示使用系統 PATH）
+tesseract_path: null
+
+# 輸出目錄
+output_dir: "./output"
+
+# 信心度閾值（低於此值會標記 needs_review）
+confidence_threshold: 0.7
+
+# Tesseract 語言包
+language: "chi_tra+eng"

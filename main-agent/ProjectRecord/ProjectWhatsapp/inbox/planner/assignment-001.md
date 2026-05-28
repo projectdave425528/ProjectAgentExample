@@ -4,41 +4,38 @@
 - **To**: planner
 - **Timestamp**: 2026-05-28T10:00:00+08:00
 - **Type**: plan-request
-- **TaskRef**: Task 1: WhatsApp 帳目分析系統
-- **TaskID**: ProjectWhatsapp/Task-1
-- **TaskStatus**: pending
+- **TaskRef**: N/A（全 Specs 重寫）
+- **TaskID**: ProjectWhatsapp/Specs-Rewrite
+- **TaskStatus**: pending → in_progress
 
 ## 需求
-根據用戶需求，產出 requirements.md、design.md、tasks.md。
+用戶要求重寫 ProjectWhatsapp 嘅所有 Specs（requirements.md、design.md、tasks.md）。
 
-用戶係手機維修員，需要一個系統處理 WhatsApp 匯出嘅對話紀錄（.txt + 圖片），自動分析並整合成客戶交易紀錄，最終匯出 Excel。
+項目係一個 **WhatsApp 帳目分析系統**：
+- Python 桌面工具，專為手機維修員設計
+- 讀取 WhatsApp 匯出嘅對話紀錄（.txt）同圖片
+- 自動分析內容，整合成結構化嘅客戶交易紀錄
+- 匯出 Excel 報表
 
-### 四個核心模組：
-1. **WhatsApp 文字解讀器**  解析 .txt 匯出文件，提取時間戳、發送者、訊息內容
-2. **圖片分析器**  OCR/AI Vision 分析轉帳截圖，提取金額、日期、交易資訊
-3. **交易紀錄整合器**  配對對話同圖片，整合成結構化客戶交易文檔
-4. **Excel 匯出器**  將交易紀錄匯出為 .xlsx 格式
-
-### 技術背景：
-- WhatsApp 匯出格式：.txt（每行 [時間戳] 發送者: 內容）+ 圖片（IMG-YYYYMMDD-WANNNN.jpg）
-- 圖片引用：<attached: IMG-YYYYMMDD-WANNNN.jpg>
-- 對話語言：廣東話 / 中文混合
-- 圖片類型：轉帳截圖（PayMe/FPS）、手機損壞相片、報價單
-- 建議技術棧：Python
-
-### Excel 輸出欄位（建議）：
-- 日期、客戶名稱、維修項目、報價金額、實收金額、付款方式、付款狀態、備註
+用戶改咗 Agent 嘅條件（Planner 嘅 steering 已更新），所以需要重新按照最新嘅 template 格式同規則重寫所有 Specs。
 
 ## Context
-- 當前 Project: ProjectWhatsapp
-- 用戶係手機維修員，帳目混亂需要系統化
-- 需要支援中文 OCR（轉帳截圖）
-- 圖片分析建議支援多方案（AI Vision API + Tesseract fallback）
+- 現有 Specs 位置：`./ProjectRecord/ProjectWhatsapp/specs/`
+- Template 位置：`./ProjectRecord/templates/specs/`
+- 現有 requirements.md、design.md、tasks.md 已有完整內容（可參考但需重寫）
+- Planner 嘅新規則要求：每個 Task 必須可獨立 Unit Test、必須有 Test Criteria（Happy Path + Error Path + Edge Case）
+- 輸出必須嚴格遵守 template 格式
+
+## 驗證標準
+- [ ] requirements.md 按 requirements-template.md 格式重寫
+- [ ] design.md 按 design-template.md 格式重寫
+- [ ] tasks.md 按 tasks-template.md 格式重寫，每個 Task 有 Test Criteria
+- [ ] 所有 Specs 內容完整覆蓋原有功能需求
+- [ ] Tasks 之間依賴關係清晰
+- [ ] 每個 Task 有明確嘅 Input/Output/Edge Cases
 
 ## 預期輸出
-- [ ] requirements.md  功能需求 + 非功能需求 + 用戶故事
-- [ ] design.md  系統架構 + 模組設計 + 數據流 + 技術選型
-- [ ] tasks.md  拆解為可執行任務（每個 task 有 acceptance criteria）
-
-## 預期格式
-請將產出寫入 ProjectRecord/ProjectWhatsapp/outbox/planner/assignment-001-reply-completed.md
+重寫後嘅三份 Specs 文件，寫入 `./ProjectRecord/ProjectWhatsapp/specs/`：
+- requirements.md
+- design.md
+- tasks.md
