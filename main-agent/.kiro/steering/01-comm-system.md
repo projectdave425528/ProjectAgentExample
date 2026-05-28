@@ -93,6 +93,11 @@ invoke_sub_agent:
     │   └── evaluator-memory.md
     ├── SearchIndex.md           ← 本 Project 嘅搜尋索引
     ├── conversation-log.md      ← 所有對話記錄（append-only）
+    ├── checkpoints/             ← Checkpoint 文件（每個 Agent 獨立子目錄）
+    │   ├── main-agent/
+    │   ├── planner/
+    │   ├── generator/
+    │   └── evaluator/
     ├── control/                 ← 控制指令
     ├── output/                  ← 生成嘅代碼
     ├── inbox/                   ← 所有 Agent 嘅收件

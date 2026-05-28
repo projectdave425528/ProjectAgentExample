@@ -62,8 +62,9 @@ description: Main Agent (Orchestrator) 核心索引（L1 - 永遠載入）
 ```
 1. 確認 kiro-cli 可用（kiro-cli --version）
 2. 讀取 ./ProjectRecord/active-project.md
-3. 檢查 specs/ 是否有文件
-4. 接收用戶需求
+3. 檢查 checkpoints/ 有冇 *-in_progress.md（斷線恢復）
+4. 檢查 specs/ 是否有文件
+5. 接收用戶需求
 
 用戶需求 → Planner（含 Test Criteria）→ Generator（code + test）→ Evaluator（執行 test + 評分）
                                                                           ↓
@@ -106,12 +107,55 @@ description: Main Agent (Orchestrator) 核心索引（L1 - 永遠載入）
 1. **所有 Agent assignment reply**：對照 `./ProjectRecord/templates/assignment-reply-template.md` 驗證
 3. **缺少必要欄位** → 退回 Agent 重寫（計入重試次數）
 4. **格式正確** → 繼續流程
-5. **確認 SearchIndex 已更新** — 如果 Agent 冇更新 SearchIndex，Main Agent 代為補上
+5. **SearchIndex 由 Main Agent 統一維護** — Sub Agent 唔好直接寫 SearchIndex.md。Main Agent 收到任何 inbox/outbox 寫入後，自行 append 對應記錄到 SearchIndex。
 
 ### 搵記錄時
 1. **先讀 `./ProjectRecord/{active-project}/SearchIndex.md`** — 用關鍵字/Task ID/Agent/Status 篩選
 2. **只讀取對應嘅文件** — 唔好逐個 inbox/outbox 文件讀取
 3. **SearchIndex 唔存在或損壞** → 重建（掃描所有 inbox/outbox frontmatter）
+
+## Checkpoint 恢復規則（斷線/重啟後）
+
+### 恢復流程
+1. 掃描 `./ProjectRecord/{active-project}/checkpoints/main-agent/` 目錄
+2. 搵所有 `*-in_progress.md` → 呢啲係未完成嘅調度
+3. 掃描對應嘅 `./ProjectRecord/{active-project}/checkpoints/{sub-agent}/` → 了解執行進度
+4. 對比實際文件系統（output/ + outbox/）確認真實狀態
+5. 決定：繼續（重新派 Sub Agent）/ 補寫 reply / 派 Evaluator
+
+### 判斷邏輯
+| Checkpoint 狀態 | output/ 有文件？ | outbox/ 有 reply？ | 動作 |
+|----------------|-----------------|-------------------|------|
+| in_progress | ❌ | ❌ | 重新派 Sub Agent |
+| in_progress | ✅（部分） | ❌ | 讀 checkpoint 了解缺咩 → 重新派 |
+| in_progress | ✅（完整） | ❌ | 補寫 outbox reply → 派 Evaluator |
+| in_progress | ✅ | ✅ | 更新 checkpoint → completed |
+
+### Main Agent 自己嘅 Checkpoint 規則
+> Main Agent 每次調度（派 assignment / 收 reply / 做決定）都要記錄 checkpoint。
+
+1. **派 Assignment 前**：建立 `./ProjectRecord/{active-project}/checkpoints/main-agent/checkpoint-A{id}-main-agent-in_progress.md`
+   - 填寫「計劃」section：打算派俾邊個 Agent、做咩 Task、預期結果
+2. **收到 Sub Agent reply 後**：append 到「執行記錄」
+3. **做調度決定時**（PASS → 下一步 / FAIL → 重派 / REPLAN → 退回）：append 到「思考過程」
+4. **Task 完成（PASS）後**：重命名為 `checkpoint-A{id}-main-agent-completed.md`
+5. **Checkpoint 路徑統一用 active-project**：`./ProjectRecord/{active-project}/checkpoints/main-agent/`
+
+### Checkpoints 目錄結構（所有 Project 通用）
+```
+./ProjectRecord/{active-project}/checkpoints/
+├── main-agent/
+│   ├── checkpoint-A001-main-agent-completed.md
+│   ├── checkpoint-A002-main-agent-completed.md
+│   └── checkpoint-A008-main-agent-in_progress.md   ← 斷線後恢復入口
+├── planner/
+│   └── checkpoint-A001-planner-completed.md
+├── generator/
+│   ├── checkpoint-A002-generator-completed.md
+│   └── checkpoint-A008-generator-in_progress.md    ← 了解執行進度
+└── evaluator/
+    └── checkpoint-A003-evaluator-completed.md
+```
 
 ## 文件目錄
 

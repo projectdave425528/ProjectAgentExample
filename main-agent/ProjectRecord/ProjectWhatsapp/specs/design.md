@@ -91,7 +91,8 @@ Input Files (.txt + images)
 | date | date | 交易日期 | NOT NULL |
 | customer_name | str | 客戶名稱 | NOT NULL |
 | repair_item | str \| None | 維修項目 | nullable |
-| quoted_amount | Decimal \| None | 報價金額 | nullable |
+| quantity | int | 數量 | default: 1, >= 1 |
+| quoted_amount | Decimal \| None | 報價金額（單價） | nullable |
 | received_amount | Decimal \| None | 實收金額 | nullable |
 | payment_method | Literal["payme", "fps", "bank_transfer", "cash", "unknown"] \| None | 付款方式 | nullable |
 | payment_status | Literal["paid", "unpaid", "partial"] | 付款狀態 | NOT NULL |

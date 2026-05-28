@@ -35,7 +35,7 @@
 ---
 
 ### Task 2: WhatsApp Text Parser — Regex Patterns
-- **Status**: pending
+- **Status**: completed
 - **Required**: yes
 - **Depends on**: Task 1
 
@@ -65,7 +65,7 @@
 ---
 
 ### Task 3: WhatsApp Text Parser — 主解析邏輯
-- **Status**: pending
+- **Status**: completed
 - **Required**: yes
 - **Depends on**: Task 2
 
@@ -96,7 +96,7 @@
 ---
 
 ### Task 4: Image Analyzer — Base + OCR 模式
-- **Status**: pending
+- **Status**: in_progress
 - **Required**: yes
 - **Depends on**: Task 1
 
@@ -199,15 +199,16 @@
 - [ ] `extractor.py` 實現交易資訊提取
 - [ ] 客戶名稱從 sender 欄位提取
 - [ ] 維修項目用關鍵字匹配（換屏、換電池、維修、整機等）
-- [ ] 報價金額用 regex 從對話提取（$xxx、xxx蚊、xxx元）
+- [ ] 數量提取：支援「3部」「x2」「×3」「2台」「兩部」等格式，預設為 1
+- [ ] 報價金額用 regex 從對話提取（$xxx、xxx蚊、xxx元）— 為單價
 - [ ] 支援廣東話金額表達（「三百」「五百蚊」等）
-- [ ] `status_resolver.py` 判斷付款狀態（比較報價 vs 實收）
+- [ ] `status_resolver.py` 判斷付款狀態（比較 報價×數量 vs 實收）
 - [ ] 處理一個客戶多次交易（按時間窗口分組）
 
 **Test Criteria**:
-- **Happy Path**: 對話含 "換屏 $500" 時正確提取 repair_item="換屏", quoted_amount=500；sender="陳大文" 時 customer_name="陳大文"；報價500實收500時 status="paid"
+- **Happy Path**: 對話含 "換屏 $500" 時正確提取 repair_item="換屏", quoted_amount=500, quantity=1；對話含 "換屏 x3 $500" 時 quantity=3；sender="陳大文" 時 customer_name="陳大文"；報價500×2=1000 實收1000時 status="paid"
 - **Error Path**: 對話完全無金額相關內容時 quoted_amount=None 且唔 crash；sender 為空字串時 customer_name 設為 "Unknown"
-- **Edge Case**: 廣東話 "三百蚊" 正確轉換為 300；同一客戶 2 小時內有 2 筆唔同金額交易時分為 2 個 record；報價500實收300時 status="partial"
+- **Edge Case**: 廣東話 "三百蚊" 正確轉換為 300；廣東話 "兩部" 正確轉換為 quantity=2；同一客戶 2 小時內有 2 筆唔同金額交易時分為 2 個 record；報價500×2=1000 實收700時 status="partial"
 
 **Output Files**:
 - `src/builder/extractor.py`, `src/builder/status_resolver.py`
@@ -256,7 +257,7 @@
 
 **Expected Outcome**:
 - [ ] `excel_exporter.py` 實現 `export_to_excel(records, output_path, sort_by="date")`
-- [ ] 包含欄位：日期、客戶名稱、維修項目、報價金額、實收金額、付款方式、付款狀態、備註
+- [ ] 包含欄位：日期、客戶名稱、維修項目、數量、報價金額（單價）、實收金額、付款方式、付款狀態、備註
 - [ ] 支援按日期排序（預設）同按客戶名稱排序
 - [ ] 最後一行自動計算報價總額同實收總額
 - [ ] 欄位格式化（日期格式、金額格式、欄寬自動調整）

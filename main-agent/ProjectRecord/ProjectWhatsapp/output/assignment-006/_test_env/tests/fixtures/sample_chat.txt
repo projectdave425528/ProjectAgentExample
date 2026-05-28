@@ -1,0 +1,16 @@
+[2024/01/15, 14:30:00] John: Hello, how are you?
+[2024/01/15, 14:30:15] Mary: I'm good, thanks!
+[2024/01/15, 14:31:00] John: Let me send you the details.
+Here is the first item.
+And here is the second item.
+[2024/01/15, 14:32:00] Mary: Got it, thanks!
+[2024/01/15, 14:33:00] John: <attached: receipt_001.jpg>
+[2024/01/15, 14:34:00] 系統: John 加入了群組
+[2024/01/15, 14:35:00] Mary: 我今日會去買嘢
+[1/15/24, 2:36 PM] Dr. Wong: 醫生話冇問題
+[1/15/24, 2:37 PM] Alice: OK let me check
+[2024/01/15, 14:38:00] Bob: <attached: photo_002.png>
+[2024/01/15, 14:39:00] 系統: Messages and calls are end-to-end encrypted
+[15-01-2024, 14:40:00] Charlie: 用 dash 分隔嘅日期格式
+[2024.01.15, 14:41:00] Dave: 用 dot 分隔嘅日期格式
+[2024/01/15, 14:42:00] John: This is a very long message that keeps going and going to test that the parser can handle messages with a lot of content without any issues at all even when the content is extremely lengthy and contains many words and characters

@@ -61,8 +61,31 @@ description: Evaluator Agent 核心索引（L1 - 永遠載入）
 ## 啟動流程
 1. 先讀取 `./ProjectRecord/active-project.md` → 確認當前 Project 名稱（例如 `ProjectExample`）
 2. 讀 `./ProjectRecord/{active-project}/inbox/evaluator/` → 取得代碼 + 原始計劃
-3. 逐項評估 → 計算分數
-4. **嚴格按照 `./ProjectRecord/templates/assignment-reply-template.md` 格式**寫 verdict 到 `./ProjectRecord/{active-project}/outbox/evaluator/`
+3. **建立 Checkpoint 文件**（見下方 Checkpoint 規則）
+4. 逐項評估 → 計算分數
+5. **每完成一個評估類別 → 更新 Checkpoint 執行記錄**
+6. **嚴格按照 `./ProjectRecord/templates/assignment-reply-template.md` 格式**寫 verdict 到 `./ProjectRecord/{active-project}/outbox/evaluator/`
+7. **更新 Checkpoint Status → completed，重命名文件**
+
+## Checkpoint 規則（必須遵守，零例外）
+> 每個 Assignment 必須有一份 Checkpoint 文件，記錄計劃、中間步驟、思考過程。
+
+### 文件路徑同命名
+- 格式：`checkpoint-A{id}-{agent}-{status}.md`
+- 路徑：`./ProjectRecord/{active-project}/checkpoints/evaluator/`
+- 開始時建立：`./ProjectRecord/{active-project}/checkpoints/evaluator/checkpoint-A{id}-evaluator-in_progress.md`
+- 完成時重命名：`./ProjectRecord/{active-project}/checkpoints/evaluator/checkpoint-A{id}-evaluator-completed.md`
+- Blocked 時重命名：`./ProjectRecord/{active-project}/checkpoints/evaluator/checkpoint-A{id}-evaluator-blocked.md`
+
+### 寫入時機
+1. **開始前**：讀取 `./ProjectRecord/templates/checkpoint-template.md`，填寫「計劃」section
+2. **每完成一個評估類別**：append 一行到「執行記錄」表格
+3. **遇到問題/做決定時**：append 到「思考過程」section
+4. **完成時**：填寫「最終狀態」section + 重命名文件
+
+### Checkpoint 寫入失敗處理
+- Checkpoint 寫入失敗 → **唔影響主流程**（繼續做嘢）
+- 但要喺 outbox reply 嘅「備註」標記：「Checkpoint 寫入失敗」
 
 ## 格式一致性規則（必須遵守，零例外）
 > 所有寫入 ProjectRecord 嘅文件必須嚴格遵守 `./ProjectRecord/templates/` 入面嘅對應 template。
@@ -71,7 +94,7 @@ description: Evaluator Agent 核心索引（L1 - 永遠載入）
 2. **所有欄位必須齊全** — template 入面有嘅欄位唔可以省略（分數必須填數字，唔可以填 N/A）
 3. **唔好自創格式** — 唔好加 template 冇定義嘅 section
 4. **格式唔一致 = 任務未完成** — Main Agent 會驗證格式，唔合格會退回重寫
-5. **SearchIndex 同步更新** — 每次寫入 ProjectRecord（inbox 或 outbox）後，必須 append 一行到 `./ProjectRecord/{active-project}/SearchIndex.md`，格式參照 `./ProjectRecord/templates/search-index-entry-template.md`。唔更新 SearchIndex = 任務未完成。
+5. **SearchIndex 由 Main Agent 統一維護** — Sub Agent 唔好直接寫 SearchIndex.md。Main Agent 會喺收到 reply 後自行更新。
 
 ## 通訊協議
 - 先讀取 `./ProjectRecord/active-project.md` 確認當前 Project
