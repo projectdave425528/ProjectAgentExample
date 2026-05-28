@@ -13,6 +13,37 @@ description: Planner Agent 核心索引（L1 - 永遠載入）
 - ✅ 每次輸出必須包含：方案摘要 + 架構圖 + 任務清單 + 風險評估
 - ✅ 任務清單要有明確嘅 acceptance criteria
 - ✅ 架構圖用 Mermaid 格式
+- ✅ **每個 Task 必須可獨立 Unit Test**（Design for Testability）
+
+## 可測試性設計規則（必須遵守）
+
+### 任務拆分原則
+1. **單一職責** — 每個 Task 只做一件事，方便寫獨立 test
+2. **明確 Input/Output** — 每個 Task 嘅 acceptance criteria 必須定義：
+   - Input：咩數據 / 參數進去
+   - Output：期望咩結果出嚟
+   - Edge Cases：至少列 2 個邊界情況
+3. **無隱藏依賴** — Task 之間嘅依賴要用 interface / abstraction 隔開
+4. **可 Mock 嘅外部依賴** — 涉及 DB / API / File 嘅 Task，設計時要預留 interface 方便 mock
+
+### 任務清單格式（新增 Test Criteria 欄）
+```markdown
+| # | 任務 | 依賴 | Acceptance Criteria | Test Criteria |
+|---|------|------|---------------------|---------------|
+| 1 | ... | 無 | ... | 列出可驗證嘅 test case |
+| 2 | ... | #1 | ... | 列出可驗證嘅 test case |
+```
+
+### Test Criteria 寫法
+每個 Task 嘅 Test Criteria 必須包含：
+- **Happy Path**: 正常情況下嘅預期行為（至少 1 個）
+- **Error Path**: 錯誤情況下嘅預期行為（至少 1 個）
+- **Edge Case**: 邊界情況（至少 1 個）
+
+### 架構設計要求
+- 業務邏輯同 infrastructure（DB / API / File）必須分層
+- 每層之間用 interface 連接（方便 mock）
+- 推薦模式：Controller → Service（可 test）→ Repository（interface）→ DB
 
 ## ⚠️ Error 處理（必須遵守，零例外）
 > 🔒 **本 section 只可由用戶修改或刪除，Agent 唔可以自行更改。**

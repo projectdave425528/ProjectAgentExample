@@ -7,21 +7,21 @@ description: Evaluator Agent 完整職責同流程（L3 - 手動載入）
 
 ## 1. 完整 Checklist
 
-### 功能性（40%）
+### 功能性（30%）
 | # | 檢查項 | 權重 | 判斷標準 |
 |---|--------|------|----------|
-| F1 | 滿足 acceptance criteria | 15% | 逐項對照計劃 |
-| F2 | 邊界情況處理 | 10% | null / empty / max |
-| F3 | 錯誤處理完整 | 10% | try-catch + 有意義 message |
-| F4 | 輸入驗證 | 5% | 所有用戶輸入都有 validate |
+| F1 | 滿足 acceptance criteria | 12% | 逐項對照計劃 |
+| F2 | 邊界情況處理 | 8% | null / empty / max |
+| F3 | 錯誤處理完整 | 6% | try-catch + 有意義 message |
+| F4 | 輸入驗證 | 4% | 所有用戶輸入都有 validate |
 
-### 代碼品質（30%）
+### 代碼品質（25%）
 | # | 檢查項 | 權重 | 判斷標準 |
 |---|--------|------|----------|
-| Q1 | 函數長度 | 8% | < 30 行 |
-| Q2 | 命名清晰 | 8% | 一睇就知做咩 |
-| Q3 | 結構合理 | 8% | 分層清晰，職責單一 |
-| Q4 | 重複代碼 | 6% | DRY，唔好 copy-paste |
+| Q1 | 函數長度 | 7% | < 30 行 |
+| Q2 | 命名清晰 | 7% | 一睇就知做咩 |
+| Q3 | 結構合理 | 6% | 分層清晰，職責單一 |
+| Q4 | 重複代碼 | 5% | DRY，唔好 copy-paste |
 
 ### 安全性（20%）
 | # | 檢查項 | 權重 | 判斷標準 |
@@ -30,6 +30,14 @@ description: Evaluator Agent 完整職責同流程（L3 - 手動載入）
 | S2 | XSS 防護 | 5% | Output encoding |
 | S3 | 認證 / 授權 | 3% | 唔好 hardcode credentials |
 | S4 | 敏感資料處理 | 2% | 唔好 log password / token |
+
+### 可測試性（15%）
+| # | 檢查項 | 權重 | 判斷標準 |
+|---|--------|------|----------|
+| T1 | Test 存在 | 5% | 每個 public method 都有對應 test |
+| T2 | Test 覆蓋度 | 4% | Happy + Error + Edge case 都有覆蓋 |
+| T3 | Test 獨立性 | 3% | 唔依賴執行順序、外部服務、其他 test |
+| T4 | Test 可讀性 | 3% | 命名清晰、AAA pattern、一個 test 一個 assert |
 
 ### 可維護性（10%）
 | # | 檢查項 | 權重 | 判斷標準 |
@@ -57,6 +65,41 @@ description: Evaluator Agent 完整職責同流程（L3 - 手動載入）
 
 ---
 
+## 2.5 自動測試執行流程
+
+### 執行步驟
+1. **確認 test 文件存在**
+   - 掃描 output 目錄搵 `*.test.*` / `*_test.*` / `Test*.*` 文件
+   - 冇搵到 → 直接 FAIL（T1 得 0 分，總分上限 50）
+
+2. **靜態分析 test 品質**
+   - 檢查每個 test 有冇 assert / expect
+   - 檢查有冇 mock 外部依賴
+   - 檢查命名是否清晰
+   - 檢查 AAA (Arrange-Act-Assert) pattern
+
+3. **嘗試執行 test**（如果環境允許）
+   - 確認 test framework 已安裝
+   - 執行 test command（例如 `pytest`、`npm test`、`dotnet test`）
+   - 記錄結果：pass / fail / error / skip
+   - 如果環境唔允許執行 → 只做靜態分析，喺 verdict 註明
+
+4. **對照 Test Criteria**
+   - 讀取 Planner 嘅 Test Criteria
+   - 逐項確認 test 有冇覆蓋
+   - 缺少嘅 criteria → 扣分 + 列入反饋
+
+### Test 執行結果對 Verdict 嘅影響
+| 情況 | 影響 |
+|------|------|
+| 全部 test PASS | 正常評分 |
+| 有 test FAIL | 直接 FAIL verdict（唔理其他分數） |
+| 冇 test 文件 | 直接 FAIL verdict（分數上限 50） |
+| Test 有但品質差（冇 assert） | T1-T4 扣分 |
+| 環境唔支援執行 | 靜態分析，verdict 註明「未能執行 test」 |
+
+---
+
 ## 3. IT 公司特別關注
 
 ### Critical（發現即 FAIL，唔理其他分數）
@@ -66,6 +109,9 @@ description: Evaluator Agent 完整職責同流程（L3 - 手動載入）
 | Hardcoded Password | 合規要求 | Critical |
 | 無 Error Handling 嘅 DB 操作 | 生產穩定性 | Critical |
 | 暴露 Stack Trace 俾用戶 | 安全風險 | Critical |
+| **完全冇 Unit Test** | **品質保證基本要求** | **Critical** |
+| **Test 有但全部冇 Assert** | **假 test，冇驗證價值** | **Critical** |
+| **Test 依賴真實外部服務** | **唔可重複、唔可獨立** | **Critical** |
 
 ### High（扣分 ×2）
 | 問題 | 原因 |

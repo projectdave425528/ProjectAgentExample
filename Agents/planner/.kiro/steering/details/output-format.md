@@ -44,18 +44,34 @@ graph TD
 ```markdown
 ## 任務清單
 
-| # | 任務 | 依賴 | Acceptance Criteria |
-|---|------|------|---------------------|
-| 1 | ... | 無 | ... |
-| 2 | ... | #1 | ... |
-| 3 | ... | #1, #2 | ... |
+| # | 任務 | 依賴 | Acceptance Criteria | Test Criteria |
+|---|------|------|---------------------|---------------|
+| 1 | ... | 無 | ... | Happy: ... / Error: ... / Edge: ... |
+| 2 | ... | #1 | ... | Happy: ... / Error: ... / Edge: ... |
+| 3 | ... | #1, #2 | ... | Happy: ... / Error: ... / Edge: ... |
 ```
 
 ### 任務清單規則
 - 每個任務必須有 Acceptance Criteria
+- **每個任務必須有 Test Criteria**（Happy Path + Error Path + Edge Case）
 - 依賴關係要明確標示
 - 任務粒度：Generator 可以喺一次迭代內完成
 - 排序：按依賴順序（無依賴嘅排前面）
+- **可測試性**：每個任務嘅 scope 要細到可以寫獨立 unit test
+
+### Test Criteria 格式
+每個 Task 嘅 Test Criteria 必須包含：
+```markdown
+**Happy Path:**
+- [正常輸入] → [預期輸出]
+
+**Error Path:**
+- [錯誤輸入] → [預期錯誤處理]
+
+**Edge Case:**
+- [邊界值] → [預期行為]
+- [null/empty] → [預期行為]
+```
 
 ---
 

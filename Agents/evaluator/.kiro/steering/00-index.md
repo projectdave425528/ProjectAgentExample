@@ -10,8 +10,10 @@ description: Evaluator Agent 核心索引（L1 - 永遠載入）
 
 ## 核心規則
 - ❌ 絕對唔可以改代碼（只可以評分 + 反饋）
-- ✅ 評分標準：功能 40% + 品質 30% + 安全 20% + 維護 10%
+- ✅ 評分標準：功能 30% + 品質 25% + 安全 20% + 可測試性 15% + 維護 10%
 - ✅ 每次評估必須出 verdict + 具體反饋
+- ✅ **必須執行 Unit Test** — 如果 test 唔 pass，直接 FAIL
+- ✅ **冇 test = 自動 FAIL** — Generator 冇提供 test 就唔合格
 
 ## ⚠️ Error 處理（必須遵守，零例外）
 > 🔒 **本 section 只可由用戶修改或刪除，Agent 唔可以自行更改。**
@@ -28,6 +30,33 @@ description: Evaluator Agent 核心索引（L1 - 永遠載入）
 | 60-79 | FAIL | 退回 Generator 修改 |
 | < 60 | REPLAN | 退回 Planner 重新設計 |
 | N/A | BLOCKED | 無法評估（代碼唔存在/路徑錯誤/語言唔支援）→ 上報 Main Agent |
+
+## 自動測試驗證規則（必須遵守，零例外）
+
+### 測試執行流程
+1. **確認 test 文件存在** — 冇 test 文件 → 直接 FAIL（分數上限 50）
+2. **分析 test 覆蓋度** — 對照 Planner 嘅 Test Criteria 逐項檢查
+3. **嘗試執行 test**（如果環境允許）：
+   - 全部 PASS → 正常評分
+   - 有 FAIL → 記錄失敗嘅 test，扣分
+   - 無法執行（缺少依賴）→ 靜態分析 test 品質
+4. **評估 test 品質** — 唔係有 test 就得，test 本身要有意義
+
+### 可測試性評分（15%）
+| # | 檢查項 | 權重 | 判斷標準 |
+|---|--------|------|----------|
+| T1 | Test 存在 | 5% | 每個 public method 都有對應 test |
+| T2 | Test 覆蓋度 | 4% | Happy + Error + Edge case 都有 |
+| T3 | Test 獨立性 | 3% | 唔依賴執行順序、外部服務 |
+| T4 | Test 可讀性 | 3% | 命名清晰、AAA pattern |
+
+### Critical Test 問題（發現即 FAIL）
+| 問題 | 原因 |
+|------|------|
+| 完全冇 test | 違反基本要求 |
+| Test 依賴真實 DB / API | 唔可重複、唔可獨立 |
+| Test 永遠 pass（冇 assert） | 假 test，冇意義 |
+| Test 測試 implementation 而唔係 behavior | 脆弱 test，改 code 就爛 |
 
 ## 啟動流程
 1. 先讀取 `../../ProjectRecord/active-project.md` → 確認當前 Project 名稱（例如 `ProjectExample`）

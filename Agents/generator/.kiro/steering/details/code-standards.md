@@ -103,3 +103,101 @@ catch (SqlException ex)
 | Not Found | 返回 404 | "User not found" |
 | Auth Error | 返回 401/403 | "Unauthorized" |
 | System Error | 返回 500 + log 詳情 | "Internal server error" |
+
+---
+
+## 5. 可測試性設計規範（必須遵守）
+
+### 依賴注入（DI）— 所有外部依賴必須可注入
+```csharp
+// ✅ 正確：透過 constructor 注入 interface
+public class UserService
+{
+    private readonly IUserRepository _repo;
+    private readonly ILogger<UserService> _logger;
+
+    public UserService(IUserRepository repo, ILogger<UserService> logger)
+    {
+        _repo = repo;
+        _logger = logger;
+    }
+}
+
+// ❌ 錯誤：直接 new 具體 class
+public class UserService
+{
+    private readonly UserRepository _repo = new UserRepository();
+}
+```
+
+```python
+# ✅ 正確：依賴注入
+class UserService:
+    def __init__(self, repository: IUserRepository, logger: ILogger):
+        self._repo = repository
+        self._logger = logger
+
+# ❌ 錯誤：直接建立依賴
+class UserService:
+    def __init__(self):
+        self._repo = UserRepository("connection_string")
+```
+
+### Interface 分離 — 外部依賴必須有 interface
+```csharp
+// ✅ 定義 interface
+public interface IUserRepository
+{
+    Task<User?> GetByIdAsync(int id);
+    Task<IEnumerable<User>> GetAllAsync();
+    Task<int> CreateAsync(User user);
+}
+
+// ✅ 實作
+public class UserRepository : IUserRepository { /* ... */ }
+
+// ✅ Test 用 Mock
+public class MockUserRepository : IUserRepository { /* ... */ }
+```
+
+### Pure Function 優先 — 業務邏輯盡量寫成 pure function
+```python
+# ✅ Pure function — 容易 test
+def calculate_discount(price: float, membership_level: str) -> float:
+    rates = {"gold": 0.2, "silver": 0.1, "bronze": 0.05}
+    return price * rates.get(membership_level, 0)
+
+# ❌ 有 side effect — 難 test
+def apply_discount(order_id: int) -> None:
+    order = db.get_order(order_id)  # side effect
+    order.price *= 0.8
+    db.save(order)  # side effect
+```
+
+### 分層架構 — 每層獨立可測試
+```
+Controller（薄層，只做 routing + validation）
+    ↓ 調用
+Service（業務邏輯，pure function 為主，可獨立 unit test）
+    ↓ 調用
+Repository（interface，data access，mock 呢層做 unit test）
+    ↓ 實作
+Database（真實 DB，只喺 integration test 用）
+```
+
+### 避免 Static / Global State
+```csharp
+// ❌ 錯誤：static method 依賴 global state
+public static class UserHelper
+{
+    public static User GetCurrentUser() => HttpContext.Current.User;  // 無法 mock
+}
+
+// ✅ 正確：注入 context
+public class UserHelper
+{
+    private readonly IHttpContextAccessor _context;
+    public UserHelper(IHttpContextAccessor context) { _context = context; }
+    public User GetCurrentUser() => _context.HttpContext.User;
+}
+```

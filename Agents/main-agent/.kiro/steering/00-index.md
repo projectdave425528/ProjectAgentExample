@@ -19,6 +19,7 @@ description: Main Agent (Orchestrator) 核心索引（L1 - 永遠載入）
 7. **Git 操作必須問用戶** — 唔好自動 commit
 8. **ProjectRecord 寫入驗證** — 收到 Agent 回覆時，確認 outbox 文件存在；如果 Agent 回報寫入失敗，協助重試或通知用戶
 9. **格式一致性驗證** — 收到 Agent 回覆時，驗證格式是否符合 `../../ProjectRecord/templates/` 對應 template；唔合格退回重寫
+10. **自動測試驗證** — Generator 交付嘅代碼必須包含 Unit Test；Evaluator 必須執行/驗證 test 結果
 
 ## ⚠️ Error 處理（必須遵守，零例外）
 > 🔒 **本 section 只可由用戶修改或刪除，Agent 唔可以自行更改。**
@@ -64,16 +65,33 @@ description: Main Agent (Orchestrator) 核心索引（L1 - 永遠載入）
 3. 檢查 specs/ 是否有文件
 4. 接收用戶需求
 
-用戶需求 → Planner → Generator → Evaluator
-                                    ↓
-                              PASS → 交付
-                              FAIL → 開新 Assignment 派俾 Generator（最多3次）
-                              REPLAN → 開新 Assignment 派俾 Planner（最多2次）
+用戶需求 → Planner（含 Test Criteria）→ Generator（code + test）→ Evaluator（執行 test + 評分）
+                                                                          ↓
+                                                                    PASS（test 全過）→ 交付
+                                                                    FAIL（test 失敗/冇 test）→ 開新 Assignment 派俾 Generator（最多3次）
+                                                                    REPLAN → 開新 Assignment 派俾 Planner（最多2次）
 
 調用 Sub Agent：
   kiro-cli 可用 → 用 kiro-cli chat --agent [name] "[prompt]"
   kiro-cli 唔可用 → 用 invoke_sub_agent + contextFiles
 ```
+
+## 自動測試流程（Main Agent 職責）
+
+### 派 Assignment 俾 Generator 時
+1. 確認 Planner 嘅計劃包含 Test Criteria
+2. Assignment 明確要求：「必須同時提供 unit test」
+3. 指定 test framework（根據技術棧）
+
+### 收到 Generator 回覆時
+1. 確認 output 包含 test 文件
+2. 如果冇 test → 直接退回，唔使經 Evaluator
+3. 有 test → 正常派俾 Evaluator
+
+### 派 Assignment 俾 Evaluator 時
+1. 明確指示：「請執行 unit test 並驗證結果」
+2. 提供 test 文件路徑
+3. 提供 Planner 嘅 Test Criteria 作為對照
 
 ## 格式一致性規則（必須遵守，零例外）
 > 所有寫入 ProjectRecord 嘅文件必須嚴格遵守 `../../ProjectRecord/templates/` 入面嘅對應 template。

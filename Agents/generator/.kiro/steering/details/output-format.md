@@ -16,6 +16,8 @@ type: assignment-reply
 timestamp: YYYY-MM-DD HH:mm
 status: done
 files-generated: [文件列表]
+test-files: [test 文件列表]
+test-result: pass/fail/not-executed
 ---
 
 ## Task Completion Report
@@ -28,6 +30,17 @@ files-generated: [文件列表]
 |------|------|------|
 | ... | ... | ... |
 
+### Test 文件
+| Test 文件 | 測試對象 | Test 數量 | 結果 |
+|-----------|----------|-----------|------|
+| ... | ... | ... | pass/fail/not-executed |
+
+### Test 覆蓋摘要
+- Happy Path: {N} 個 test
+- Error Path: {N} 個 test
+- Edge Case: {N} 個 test
+- 總覆蓋率: {描述}
+
 ### 自我檢查
 - [ ] 函數 < 30 行
 - [ ] 參數 ≤ 3
@@ -36,6 +49,10 @@ files-generated: [文件列表]
 - [ ] Input Validation
 - [ ] Error Handling
 - [ ] 有意義嘅命名
+- [ ] **Unit Test 存在且可執行**
+- [ ] **Test 覆蓋 Happy + Error + Edge**
+- [ ] **外部依賴已 Mock**
+- [ ] **Test 可獨立執行**
 
 ### 備註
 - [任何需要 Evaluator 注意嘅嘢]
