@@ -77,6 +77,7 @@ description: Planner Agent 核心索引（L1 - 永遠載入）
 | 文件 | 層級 | 內容 |
 |------|------|------|
 | `01-comm-system.md` | L2 | 通訊協議（inbox/outbox 格式） |
+| `02-avoid-shell.md` | L2 | 避免 Shell Command 規則（所有 Agent 共用） |
 | `02-memory.md` | L2 | 記憶（最近任務 + 常見問題 + 項目知識） |
 | `details/role-detail.md` | L3 | 完整職責 + 問題處理流程 + escalation 規則 |
 | `details/output-format.md` | L3 | 方案摘要 + 架構圖 + 任務清單 + 風險評估格式 |

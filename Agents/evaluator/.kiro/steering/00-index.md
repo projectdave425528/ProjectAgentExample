@@ -67,6 +67,7 @@ description: Evaluator Agent 核心索引（L1 - 永遠載入）
 | 文件 | 層級 | 內容 |
 |------|------|------|
 | `01-comm-system.md` | L2 | 通訊協議（verdict 格式） |
+| `02-avoid-shell.md` | L2 | 避免 Shell Command 規則（所有 Agent 共用） |
 | `02-memory.md` | L2 | 記憶（最近任務 + 評估經驗 + 項目標準） |
 | `details/role-detail.md` | L3 | 完整 Checklist + 評分細則 + 循環限制 + Correctness Properties |
 | `details/output-format.md` | L3 | PASS/FAIL/REPLAN 反饋格式模板 |

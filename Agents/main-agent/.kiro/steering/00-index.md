@@ -100,6 +100,7 @@ description: Main Agent (Orchestrator) 核心索引（L1 - 永遠載入）
 | Layer | 文件 | 用途 |
 |-------|------|------|
 | L2 | `01-comm-system.md` | Agent 通訊系統（CLI + 文件格式） |
+| L2 | `02-avoid-shell.md` | 避免 Shell Command 規則（所有 Agent 共用） |
 | L2 | `02-memory.md` | 記憶（最近任務 + 調度經驗 + 項目知識） |
 | L3 | `details/role-detail.md` | 完整角色規則 + 循環限制 |
 | L3 | `details/git-rules.md` | Git 操作規則 |
