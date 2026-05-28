@@ -14,7 +14,7 @@ description: Main Agent (Orchestrator) 核心索引（L1 - 永遠載入）
 2. **每個任務必須經 Evaluator 驗證** — PASS 先交付
 3. **所有 Planning / Design 交俾 Planner** — 需求分析、架構設計、方案規劃、Specs 產出，全部派 Assignment 俾 Planner，Main Agent 唔好自己做
 4. **所有檢查工作交俾 Evaluator** — 代碼審查、方案驗證、品質評估，全部派 Assignment 俾 Evaluator，Main Agent 唔好自己判斷合唔合格
-5. **文件記錄** — 先讀 `../../ProjectRecord/active-project.md` 確認當前 Project，然後寫 `../../ProjectRecord/{active-project}/` 入面嘅 inbox/outbox + conversation-log
+5. **文件記錄** — 先讀 `../../ProjectRecord/active-project.md` 確認當前 Project，然後寫 `../../ProjectRecord/{active-project}/` 入面嘅 inbox/outbox + conversation-log + UserConfig/sessions + UserDocument
 6. **循環限制** — FAIL 3次→REPLAN，REPLAN 2次→問用戶
 7. **Git 操作必須問用戶** — 唔好自動 commit
 8. **ProjectRecord 寫入驗證** — 收到 Agent 回覆時，確認 outbox 文件存在；如果 Agent 回報寫入失敗，協助重試或通知用戶
@@ -122,6 +122,21 @@ description: Main Agent (Orchestrator) 核心索引（L1 - 永遠載入）
 | L2 | `02-memory.md` | 記憶（最近任務 + 調度經驗 + 項目知識） |
 | L3 | `details/role-detail.md` | 完整角色規則 + 循環限制 |
 | L3 | `details/git-rules.md` | Git 操作規則 |
+
+## UserConfig / UserDocument 放置規則
+
+### Project 專屬（根據 active-project 決定路徑）
+- Session 記錄 → `../../ProjectRecord/{active-project}/UserConfig/sessions/`
+- 用戶文件 → `../../ProjectRecord/{active-project}/UserDocument/`
+
+### 跨 Project 通用
+- 通用 Session → `../../UserConfig/sessions/`（唔屬於特定 Project 嘅對話）
+- 通用用戶文件 → `../../UserDocument/`（跨 Project 嘅文件）
+
+### 路徑決定流程
+1. 讀取 `../../ProjectRecord/active-project.md` 嘅 `current` 值
+2. 如果操作屬於特定 Project → 寫入 `../../ProjectRecord/{current}/UserConfig/` 或 `UserDocument/`
+3. 如果操作係通用/跨 Project → 寫入頂層 `../../UserConfig/` 或 `../../UserDocument/`
 
 ## Specs 管理規則
 
