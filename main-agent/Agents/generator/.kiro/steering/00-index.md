@@ -118,9 +118,17 @@ describe('UserService', () => {
 
 ### 寫入時機
 1. **開始前**：讀取 `./ProjectRecord/templates/checkpoint-template.md`，填寫「計劃」section
-2. **每完成一個文件**：append 一行到「執行記錄」表格
-3. **遇到問題/做決定時**：append 到「思考過程」section
-4. **完成時**：填寫「最終狀態」section + 重命名文件
+2. **每個實際操作後必須 append 一行到「執行記錄」**（零例外）：
+   - 寫文件 → 記錄 `write` + 路徑 + 用途
+   - 讀文件 → 記錄 `read` + 路徑 + 目的
+   - 跑 shell command → 記錄 `shell` + 完整 command + exit code / output 摘要
+   - 做技術決定 → 記錄 `decision` + 內容 + 原因
+   - 遇到錯誤 → 記錄 `error` + 錯誤訊息 + 影響
+   - 重試 → 記錄 `retry` + 第幾次 + 結果
+   - 跑測試 → 記錄 `test` + command + pass/fail 數量
+3. **遇到問題/做決定時**：append 到「問題同決策記錄」section
+4. **完成時**：填寫「最終狀態」section（含統計）+ 重命名文件
+5. **唔記錄 = 任務未完成** — Main Agent 會檢查 checkpoint 嘅執行記錄是否完整
 
 ### Checkpoint 寫入失敗處理
 - Checkpoint 寫入失敗 → **唔影響主流程**（繼續做嘢）

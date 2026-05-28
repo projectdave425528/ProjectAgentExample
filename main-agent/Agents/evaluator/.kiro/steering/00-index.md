@@ -65,7 +65,25 @@ description: Evaluator Agent 核心索引（L1 - 永遠載入）
 4. 逐項評估 → 計算分數
 5. **每完成一個評估類別 → 更新 Checkpoint 執行記錄**
 6. **嚴格按照 `./ProjectRecord/templates/assignment-reply-template.md` 格式**寫 verdict 到 `./ProjectRecord/{active-project}/outbox/evaluator/`
-7. **更新 Checkpoint Status → completed，重命名文件**
+7. **如果 Verdict = FAIL → 執行 Output Folder 標記**（見下方 FAIL Output 標記規則）
+8. **更新 Checkpoint Status → completed，重命名文件**
+
+## FAIL Output 標記規則（必須遵守，零例外）
+> 當 Verdict 為 FAIL 時，必須將對應嘅 output folder 重命名加入 `-FAILED` 標記，方便識別。
+
+### 重命名規則
+- 原路徑：`./ProjectRecord/{active-project}/output/assignment-{id}/`
+- FAIL 後重命名為：`./ProjectRecord/{active-project}/output/assignment-{id}-FAILED/`
+- 如果同一個 Assignment 第 2 次 FAIL：`assignment-{id}-FAILED-2/`
+- 如果同一個 Assignment 第 3 次 FAIL：`assignment-{id}-FAILED-3/`
+
+### 執行時機
+- 寫完 verdict（verdict-fail）到 outbox 之後
+- 重命名 output folder 之後
+
+### 重命名失敗處理
+- 重命名失敗 → 唔影響主流程，喺 verdict 備註標記「Output folder 重命名失敗」
+- 如果 folder 唔存在（Generator 冇寫 output）→ 跳過，唔報錯
 
 ## Checkpoint 規則（必須遵守，零例外）
 > 每個 Assignment 必須有一份 Checkpoint 文件，記錄計劃、中間步驟、思考過程。
@@ -79,9 +97,18 @@ description: Evaluator Agent 核心索引（L1 - 永遠載入）
 
 ### 寫入時機
 1. **開始前**：讀取 `./ProjectRecord/templates/checkpoint-template.md`，填寫「計劃」section
-2. **每完成一個評估類別**：append 一行到「執行記錄」表格
-3. **遇到問題/做決定時**：append 到「思考過程」section
-4. **完成時**：填寫「最終狀態」section + 重命名文件
+2. **每個實際操作後必須 append 一行到「執行記錄」**（零例外）：
+   - 讀文件 → 記錄 `read` + 路徑 + 目的
+   - 做評估判斷 → 記錄 `validate` + 驗證咩 + 結果
+   - 做技術決定 → 記錄 `decision` + 內容 + 原因
+   - 遇到錯誤 → 記錄 `error` + 錯誤訊息 + 影響
+   - 跑 shell command → 記錄 `shell` + 完整 command + exit code / output 摘要
+   - 跑測試 → 記錄 `test` + command + pass/fail 數量
+   - 寫 verdict → 記錄 `write` + 路徑
+   - 重命名 output folder → 記錄 `rename` + 原路徑 → 新路徑
+3. **遇到問題/做決定時**：append 到「問題同決策記錄」section
+4. **完成時**：填寫「最終狀態」section（含統計）+ 重命名文件
+5. **唔記錄 = 任務未完成** — Main Agent 會檢查 checkpoint 嘅執行記錄是否完整
 
 ### Checkpoint 寫入失敗處理
 - Checkpoint 寫入失敗 → **唔影響主流程**（繼續做嘢）

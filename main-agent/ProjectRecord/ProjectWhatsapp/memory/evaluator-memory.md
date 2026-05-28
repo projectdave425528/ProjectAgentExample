@@ -3,9 +3,10 @@
 ## 最近任務
 | # | 日期 | 任務摘要 | Verdict | 主要問題 |
 |---|------|---------|---------|----------|
-| 1 | 2026-05-28 | Task 1: 項目初始化 + Data Models（54 tests） | PASS (88) | 無 critical issue；建議加 JSON round-trip test、更新 Design Spec 嘅 date→transaction_date |
-| 2 | 2026-05-28 | Task 2: Regex Patterns + Utils（105 tests） | PASS (85) | split_sender_content 重複定義（patterns.py + utils.py）；_try_date_format 參數過多；日期順序嘗試邏輯缺文檔 |
-| 3 | 2026-05-28 | Task 3: Text Parser 主解析邏輯（28 tests） | PASS (90) | _build_message 剛好 30 行（borderline）；pending state 用 dict 缺 type safety |
+| 1 | 2026-05-28 | Task 2: Regex Patterns + Utils（105 tests） | PASS (85) | split_sender_content 重複定義（patterns.py + utils.py）；_try_date_format 參數過多；日期順序嘗試邏輯缺文檔 |
+| 2 | 2026-05-28 | Task 3: Text Parser 主解析邏輯（28 tests） | PASS (90) | _build_message 剛好 30 行（borderline）；pending state 用 dict 缺 type safety |
+| 3 | 2026-05-28 | Task 4: Image Analyzer Base + OCR（首次評估） | FAIL (72) | Test import 路徑錯誤；OCR test mock 目標唔匹配 lazy import；extract_amounts 唔支援多金額/去重 |
+| 4 | 2026-05-28 | Task 4: Image Analyzer Base + OCR（修改後重評） | PASS (88) | 5 個問題全部解決；_parse_amount 重複定義（minor）；module-level import trade-off 可接受 |
 
 ## 項目標準
 - Python 3.9+、Pydantic v2、pytest
@@ -32,3 +33,9 @@
 - 28 tests 對於 1 個 module（text_parser.py，13 functions）嚟講覆蓋度充足
 - AST 計算嘅函數行數包含 docstring — 評估時要區分「含 docstring 嘅總行數」同「實際邏輯行數」
 - Task 3 成功解決 Task 2 嘅 split_sender_content 重複問題（直接用 match_message_line 返回 tuple）
+- **Lazy import pattern（喺 function 入面 import）會導致 module-level mock 失效** — test 必須 patch 原始 module（如 `pytesseract.image_to_string`）或者將 import 移到 module level
+- **Convenience wrapper functions 應該放喺對應嘅模組** — 唔好放喺另一個模組然後 test import 原始模組，會造成 ImportError
+- **Test 同 source 嘅 interface 一致性** — 寫 test 前要確認 import path 同 function signature 正確
+- **FAIL → 修改 → 重評流程有效** — Generator 按方案 A 修改後全部問題解決，證明具體修改建議（含代碼範例）對 Generator 最有幫助
+- **Module-level convenience function + class API 並存** — 好嘅設計 pattern，但要注意 helper function 唔好重複定義（DRY）
+- **finditer + set 去重** — 處理多 pattern 多 match 嘅標準做法，保持 insertion order

@@ -133,12 +133,21 @@ description: Main Agent (Orchestrator) 核心索引（L1 - 永遠載入）
 
 ### Main Agent 自己嘅 Checkpoint 規則
 > Main Agent 每次調度（派 assignment / 收 reply / 做決定）都要記錄 checkpoint。
+> **每個實際操作後必須 append 一行到「執行記錄」**（零例外）。唔記錄 = 任務未完成。
 
 1. **派 Assignment 前**：建立 `./ProjectRecord/{active-project}/checkpoints/main-agent/checkpoint-A{id}-main-agent-in_progress.md`
-   - 填寫「計劃」section：打算派俾邊個 Agent、做咩 Task、預期結果
-2. **收到 Sub Agent reply 後**：append 到「執行記錄」
-3. **做調度決定時**（PASS → 下一步 / FAIL → 重派 / REPLAN → 退回）：append 到「思考過程」
-4. **Task 完成（PASS）後**：重命名為 `checkpoint-A{id}-main-agent-completed.md`
+   - 讀取 `./ProjectRecord/templates/checkpoint-template.md`，按格式填寫「計劃」section
+2. **每個實際操作後必須 append 一行到「執行記錄」**：
+   - 寫 inbox assignment → 記錄 `write` + 路徑 + 派俾邊個 Agent
+   - 調用 Sub Agent → 記錄 `shell` 或 `decision` + 調用方法（CLI / invoke_sub_agent）
+   - 收到 Sub Agent reply → 記錄 `read` + outbox 路徑 + verdict/status
+   - 做調度決定（PASS/FAIL/REPLAN）→ 記錄 `decision` + 決定內容 + 原因
+   - 更新 tasks.md → 記錄 `write` + 更新咗邊個 Task status
+   - 更新 SearchIndex → 記錄 `write` + 加咗幾行
+   - 遇到錯誤 → 記錄 `error` + 錯誤訊息
+   - 重試 → 記錄 `retry` + 第幾次 + 結果
+3. **遇到問題/做決定時**：append 到「問題同決策記錄」section
+4. **Task 完成（PASS）後**：填寫「最終狀態」section（含統計）+ 重命名為 `checkpoint-A{id}-main-agent-completed.md`
 5. **Checkpoint 路徑統一用 active-project**：`./ProjectRecord/{active-project}/checkpoints/main-agent/`
 
 ### Checkpoints 目錄結構（所有 Project 通用）
