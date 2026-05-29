@@ -31,3 +31,6 @@
 - **Test import 路徑必須同 source 一致** — 如果 test import `from src.analyzer.amount_extractor import extract_amounts`，source 必須有呢個 function
 - **Lazy import 會令 module-level mock patch 失效** — 如果 test 用 `@patch("src.module.dependency")`，dependency 必須係 module-level import
 - **Convenience function 放喺對應模組** — `extract_amounts` 放 `amount_extractor.py`，唔好放 `ocr_analyzer.py`
+- **系統訊息冇 `: ` 分隔符** — `match_message_line` 要處理呢個情況，返回 (ts, "", content) 而唔係 None
+- **Floating point 加法要 round** — `0.3 + 0.35 + 0.35 ≠ 1.0`，confidence 計算用 `round(score, 2)`
+- **Integration test 會暴露單元測試搵唔到嘅問題** — 各 Task 獨立 pass 唔代表合併後 pass

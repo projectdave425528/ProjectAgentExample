@@ -34,3 +34,6 @@
 | 010 | generator | assignment-reply | completed | Task4 修改完成 | 2026-05-28 | outbox/generator/assignment-010-reply-completed.md |
 | 011 | main-agent | assignment | dispatched | Task4 重新評估 | 2026-05-28 | inbox/evaluator/assignment-011.md |
 | 011 | evaluator | verdict | PASS (88) | Task4 通過評估 | 2026-05-28 | outbox/evaluator/assignment-011-reply-verdict.md |
+
+| 012 | main-agent | assignment | completed | Test-Env Integration Fix | 2026-05-29 | inbox/main-agent/assignment-012.md |
+| 012 | main-agent | assignment-reply | completed | Test-Env 修正完成 | 2026-05-29 | outbox/main-agent/assignment-012-reply-completed.md |
