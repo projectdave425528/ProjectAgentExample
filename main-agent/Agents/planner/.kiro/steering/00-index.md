@@ -39,6 +39,22 @@ description: Planner Agent 核心索引（L1 - 永遠載入）
 - **Happy Path**: 正常情況下嘅預期行為（至少 1 個）
 - **Error Path**: 錯誤情況下嘅預期行為（至少 1 個）
 - **Edge Case**: 邊界情況（至少 1 個）
+- **Integration Point**: 同其他模組/服務嘅互動驗證（如適用，至少 1 個）
+
+### Integration Testing 設計規則
+> 當任務涉及多個模組、服務、或外部系統互動時，必須設計 Integration Test。
+
+1. **識別 Integration Point** — 每個 Task 列出同邊啲模組/服務有互動
+2. **定義 Integration Test Scenario** — 描述端到端嘅數據流同預期行為
+3. **環境要求** — 列出 integration test 需要嘅環境（test DB、mock server、etc.）
+4. **隔離策略** — 定義點樣隔離外部依賴（test container、in-memory DB、mock API）
+5. **任務清單格式加入 Integration 欄**：
+
+```markdown
+| # | 任務 | 依賴 | Acceptance Criteria | Test Criteria | Integration Points |
+|---|------|------|---------------------|---------------|-------------------|
+| 1 | ... | 無 | ... | ... | 列出同邊啲模組互動 |
+```
 
 ### 架構設計要求
 - 業務邏輯同 infrastructure（DB / API / File）必須分層

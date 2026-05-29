@@ -22,7 +22,7 @@ description: Main Agent (Orchestrator) 核心索引（L1 - 永遠載入）
 10. **ProjectRecord 寫入驗證** — 收到 Agent 回覆時，確認 outbox 文件存在；如果 Agent 回報寫入失敗，協助重試或通知用戶
 11. **批量文件操作派 Sub Agent** — 需要建立/修改 >3 個代碼文件時，開 Assignment 派俾 Generator，唔好自己逐個寫
 9. **格式一致性驗證** — 收到 Agent 回覆時，驗證格式是否符合 `./ProjectRecord/templates/` 對應 template；唔合格退回重寫
-10. **自動測試驗證** — Generator 交付嘅代碼必須包含 Unit Test；Evaluator 必須執行/驗證 test 結果
+10. **自動測試驗證** — Generator 交付嘅代碼必須包含 Unit Test + Integration Test（涉及多模組互動時）；Evaluator 必須執行/驗證所有 test 結果
 
 ## ⚠️ Error 處理（必須遵守，零例外）
 > 🔒 **本 section 只可由用戶修改或刪除，Agent 唔可以自行更改。**
@@ -85,18 +85,21 @@ description: Main Agent (Orchestrator) 核心索引（L1 - 永遠載入）
 
 ### 派 Assignment 俾 Generator 時
 1. 確認 Planner 嘅計劃包含 Test Criteria
-2. Assignment 明確要求：「必須同時提供 unit test」
+2. Assignment 明確要求：「必須同時提供 unit test + integration test」
 3. 指定 test framework（根據技術棧）
+4. 如果任務涉及多個模組/服務互動 → 明確要求 integration test 覆蓋互動點
 
 ### 收到 Generator 回覆時
-1. 確認 output 包含 test 文件
-2. 如果冇 test → 直接退回，唔使經 Evaluator
-3. 有 test → 正常派俾 Evaluator
+1. 確認 output 包含 test 文件（unit + integration）
+2. 如果冇 unit test → 直接退回，唔使經 Evaluator
+3. 如果冇 integration test 但任務涉及多模組互動 → 退回要求補充
+4. 有 test → 正常派俾 Evaluator
 
 ### 派 Assignment 俾 Evaluator 時
-1. 明確指示：「請執行 unit test 並驗證結果」
+1. 明確指示：「請執行 unit test + integration test 並驗證結果」
 2. 提供 test 文件路徑
 3. 提供 Planner 嘅 Test Criteria 作為對照
+4. 如果有 integration test → 確認測試環境配置正確
 
 ## 格式一致性規則（必須遵守，零例外）
 > 所有寫入 ProjectRecord 嘅文件必須嚴格遵守 `./ProjectRecord/templates/` 入面嘅對應 template。

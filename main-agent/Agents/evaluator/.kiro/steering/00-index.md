@@ -13,7 +13,9 @@ description: Evaluator Agent 核心索引（L1 - 永遠載入）
 - ✅ 評分標準：功能 30% + 品質 25% + 安全 20% + 可測試性 15% + 維護 10%
 - ✅ 每次評估必須出 verdict + 具體反饋
 - ✅ **必須執行 Unit Test** — 如果 test 唔 pass，直接 FAIL
+- ✅ **必須執行 Integration Test**（如果有提供）— 驗證模組互動正確
 - ✅ **冇 test = 自動 FAIL** — Generator 冇提供 test 就唔合格
+- ✅ **涉及多模組互動但冇 Integration Test = 扣分**（分數上限 70）
 
 ## ⚠️ Error 處理（必須遵守，零例外）
 > 🔒 **本 section 只可由用戶修改或刪除，Agent 唔可以自行更改。**
@@ -37,11 +39,24 @@ description: Evaluator Agent 核心索引（L1 - 永遠載入）
 ### 測試執行流程
 1. **確認 test 文件存在** — 冇 test 文件 → 直接 FAIL（分數上限 50）
 2. **分析 test 覆蓋度** — 對照 Planner 嘅 Test Criteria 逐項檢查
-3. **嘗試執行 test**（如果環境允許）：
-   - 全部 PASS → 正常評分
+3. **確認 Integration Test 存在**（如果 Task 涉及多模組互動）：
+   - 有 integration test → 正常評分
+   - 冇 integration test 但應該有 → 扣分（分數上限 70），feedback 要求補充
+4. **嘗試執行 test**（如果環境允許）：
+   - Unit test 全部 PASS → 正常評分
+   - Integration test 全部 PASS → 加分
    - 有 FAIL → 記錄失敗嘅 test，扣分
    - 無法執行（缺少依賴）→ 靜態分析 test 品質
-4. **評估 test 品質** — 唔係有 test 就得，test 本身要有意義
+5. **評估 test 品質** — 唔係有 test 就得，test 本身要有意義
+
+### Integration Test 驗證標準
+| # | 檢查項 | 判斷標準 |
+|---|--------|----------|
+| I1 | Integration test 存在 | 涉及多模組互動嘅 Task 必須有 |
+| I2 | 測試真實互動 | 唔係用 mock 代替所有依賴（至少有一層真實互動） |
+| I3 | 數據流完整 | 測試覆蓋 input → processing → output 全流程 |
+| I4 | Setup/Teardown | 有正確嘅 test data 準備同清理 |
+| I5 | 環境隔離 | 唔影響 production data，用 test 環境 |
 
 ### 可測試性評分（15%）
 | # | 檢查項 | 權重 | 判斷標準 |

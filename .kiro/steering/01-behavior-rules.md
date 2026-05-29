@@ -145,3 +145,28 @@ inclusion: always
 
 ### 自我檢查
 > 「呢個 step 會唔會跑超過 15 分鐘？」如果可能，先拆細再執行。
+
+## Integration Testing 規則
+
+### 核心原則
+- **所有涉及多模組/服務互動嘅任務，必須考慮 Integration Testing**
+- Unit Test 驗證單個模組正確，Integration Test 驗證模組之間嘅互動正確
+- 兩者缺一不可（涉及互動時）
+
+### 觸發條件（任何一個符合就要考慮 Integration Test）
+- 任務涉及 2 個或以上模組嘅互動
+- 任務涉及 Database CRUD 操作
+- 任務涉及 API endpoint（HTTP request/response）
+- 任務涉及 message queue / event bus / webhook
+- 任務涉及 file I/O 同其他模組嘅配合
+
+### 各 Agent 職責
+| Agent | Integration Testing 職責 |
+|-------|-------------------------|
+| Planner | 識別 Integration Points，定義 Integration Test Scenario |
+| Generator | 寫 Integration Test code，確保環境隔離 |
+| Evaluator | 執行 Integration Test，驗證模組互動正確 |
+| Main Agent | 確認 Assignment 包含 Integration Test 要求，驗證交付完整 |
+
+### 自我檢查
+> 「呢個任務有冇涉及多個模組互動？」如果有，確保 Integration Test 被考慮。

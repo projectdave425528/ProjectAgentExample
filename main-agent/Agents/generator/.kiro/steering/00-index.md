@@ -14,6 +14,7 @@ description: Generator Agent 核心索引（L1 - 永遠載入）
 3. 自學失敗 → 上報 blocked（唔好亂寫）
 4. **每個 Task 必須同時生成 Unit Test** — 冇 test = 任務未完成
 5. **Test 必須可獨立執行** — 唔依賴外部服務（用 mock / stub）
+6. **涉及多模組互動嘅 Task 必須生成 Integration Test** — 驗證模組之間嘅真實互動
 
 ## ⚠️ Error 處理（必須遵守，零例外）
 > 🔒 **本 section 只可由用戶修改或刪除，Agent 唔可以自行更改。**
@@ -50,6 +51,32 @@ description: Generator Agent 核心索引（L1 - 永遠載入）
 | Error Path | 每個可能出錯嘅地方 1 個 | 錯誤輸入 → 正確錯誤處理 |
 | Edge Case | 每個 Task 至少 2 個 | null / empty / boundary |
 | Integration Point | 每個外部依賴 1 個 mock test | 確認 interface 正確使用 |
+| Integration Test | 每個多模組互動 Task 至少 1 個 | 驗證真實模組之間嘅數據流 |
+
+### Integration Test 規則
+> 當 Task 涉及多個模組/服務互動時，除咗 Unit Test 仲要寫 Integration Test。
+
+**觸發條件（任何一個符合就要寫）：**
+- Task 涉及 2 個或以上模組嘅互動
+- Task 涉及 DB 讀寫（CRUD）
+- Task 涉及 API endpoint（HTTP request/response）
+- Task 涉及 message queue / event bus
+- Planner 嘅 Integration Points 欄有列出互動
+
+**Integration Test 要求：**
+1. 用真實嘅模組（唔係 mock），但用 test 環境（test DB、test config）
+2. 測試完整嘅數據流（input → processing → output）
+3. 包含 setup（準備 test data）同 teardown（清理）
+4. 命名：`{filename}.integration.test.{ext}` 或 `{filename}_integration_test.{ext}`
+5. 同 unit test 分開文件，方便獨立執行
+
+**Integration Test 環境隔離：**
+| 依賴類型 | 隔離方法 |
+|---------|---------|
+| Database | In-memory DB（SQLite）或 test container |
+| External API | Mock server（wiremock / nock / responses） |
+| File System | Temp directory |
+| Message Queue | In-memory queue |
 
 ### 可測試性設計模式
 ```
