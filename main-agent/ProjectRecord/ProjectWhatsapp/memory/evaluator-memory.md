@@ -3,10 +3,10 @@
 ## 最近任務
 | # | 日期 | 任務摘要 | Verdict | 主要問題 |
 |---|------|---------|---------|----------|
-| 1 | 2026-05-28 | Task 2: Regex Patterns + Utils（105 tests） | PASS (85) | split_sender_content 重複定義（patterns.py + utils.py）；_try_date_format 參數過多；日期順序嘗試邏輯缺文檔 |
-| 2 | 2026-05-28 | Task 3: Text Parser 主解析邏輯（28 tests） | PASS (90) | _build_message 剛好 30 行（borderline）；pending state 用 dict 缺 type safety |
-| 3 | 2026-05-28 | Task 4: Image Analyzer Base + OCR（首次評估） | FAIL (72) | Test import 路徑錯誤；OCR test mock 目標唔匹配 lazy import；extract_amounts 唔支援多金額/去重 |
-| 4 | 2026-05-28 | Task 4: Image Analyzer Base + OCR（修改後重評） | PASS (88) | 5 個問題全部解決；_parse_amount 重複定義（minor）；module-level import trade-off 可接受 |
+| 1 | 2026-05-28 | Task 3: Text Parser 主解析邏輯（28 tests） | PASS (90) | _build_message 剛好 30 行（borderline）；pending state 用 dict 缺 type safety |
+| 2 | 2026-05-28 | Task 4: Image Analyzer Base + OCR（首次評估） | FAIL (72) | Test import 路徑錯誤；OCR test mock 目標唔匹配 lazy import；extract_amounts 唔支援多金額/去重 |
+| 3 | 2026-05-28 | Task 4: Image Analyzer Base + OCR（修改後重評） | PASS (88) | 5 個問題全部解決；_parse_amount 重複定義（minor）；module-level import trade-off 可接受 |
+| 4 | 2026-05-30 | Task 6: Transaction Record Builder 配對邏輯（17 tests） | PASS (85) | match_images_to_messages 邏輯行數 36（超 30 行 borderline）；重複 filename image_results 會產生重複 pair |
 
 ## 項目標準
 - Python 3.9+、Pydantic v2、pytest
@@ -39,8 +39,10 @@
 - **FAIL → 修改 → 重評流程有效** — Generator 按方案 A 修改後全部問題解決，證明具體修改建議（含代碼範例）對 Generator 最有幫助
 - **Module-level convenience function + class API 並存** — 好嘅設計 pattern，但要注意 helper function 唔好重複定義（DRY）
 - **finditer + set 去重** — 處理多 pattern 多 match 嘅標準做法，保持 insertion order
-
 - **Integration gap 係盲點** — 各 Task 獨立評估時 PASS，但合併後暴露 3 個問題：(1) 系統訊息冇 `: ` 被跳過 (2) floating point 0.3+0.35+0.35≠1.0 (3) text_parser 未處理 empty sender
 - **系統訊息格式要特別注意** — WhatsApp 系統訊息冇 sender: content 結構，只有 [timestamp] description。評估 parser 時要確認呢類格式有被 test 覆蓋
 - **Confidence 計算嘅 boundary value** — 要測試 exact 1.0 case（所有 component 都有時），floating point 加法可能唔等於預期值
 - **未來建議**：評估時加一個 "integration readiness" 檢查項 — 確認 module 嘅 public API 同其他 module 嘅 import 一致
+- **Matcher 模組嘅 index-based 配對策略** — 用 dict[str, ParsedMessage] 做 O(1) lookup 係正確做法，但要注意 index 只保留第一次出現嘅 message
+- **函數行數 borderline 判斷** — 36 行含 6 行空行分隔，實際 statement 約 30 行。已做合理 delegation（3 個 helpers），進一步拆分反而降低可讀性。作為建議記錄但唔影響 PASS
+- **重複 filename 嘅 image_results** — 當前實現允許多個同名 image 配對到同一 message。實際場景中每個 image file 應有唯一 filename，但 Task 7/8 整合時要注意呢個行為

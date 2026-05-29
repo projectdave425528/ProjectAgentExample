@@ -31,7 +31,8 @@ description: Main Agent (Orchestrator) 核心索引（L1 - 永遠載入）
 2. **搵簡單替代方案** — 如果原方法太複雜（會消耗大量 Token/Credit），改用更簡單嘅方法。搵唔到就問用戶
 3. **Assignment Fail 必須記錄** — 即使 Assignment 失敗，都要寫 outbox assignment reply（記錄做咗咩、點解失敗、試過咩方法），然後向用戶請求指示
 4. **唔好死撐** — 寧願早啲問用戶，唔好浪費 Token/Credit 喺明顯做唔到嘅嘢上面
-5. **Sub Agent 調用失敗處理** — 如果調用 Sub Agent 出現 Error 或 Cancelled：
+5. **超時拆細** — 任何 step（command、API call、file operation）如果預計或實際運行超過 15 分鐘，必須將該 step 拆成更細嘅子步驟再逐個執行（例如：跑全部 test → 拆成逐個模組跑；處理 5000 個文件 → 分批 50 個）
+6. **Sub Agent 調用失敗處理** — 如果調用 Sub Agent 出現 Error 或 Cancelled：
    - 第 1 次失敗 → 重試（用同一方法）
    - 第 2 次失敗 → 切換方法（CLI → invoke_sub_agent，或反過來）
    - 第 3 次失敗 → 停止，向用戶上報：

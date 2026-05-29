@@ -158,7 +158,7 @@
 ---
 
 ### Task 6: Transaction Record Builder — 配對邏輯
-- **Status**: pending
+- **Status**: completed
 - **Required**: yes
 - **Depends on**: Task 3, Task 4
 

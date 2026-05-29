@@ -37,3 +37,8 @@
 
 | 012 | main-agent | assignment | completed | Test-Env Integration Fix | 2026-05-29 | inbox/main-agent/assignment-012.md |
 | 012 | main-agent | assignment-reply | completed | Test-Env 修正完成 | 2026-05-29 | outbox/main-agent/assignment-012-reply-completed.md |
+
+| 013 | main-agent | assignment | dispatched | Task6 配對邏輯 | 2026-05-30 | inbox/generator/assignment-013.md |
+| 013 | generator | assignment-reply | completed | Task6 matcher.py 完成 | 2026-05-30 | outbox/generator/assignment-013-reply-completed.md |
+| 014 | main-agent | assignment | dispatched | Task6 評估請求 | 2026-05-30 | inbox/evaluator/assignment-014.md |
+| 014 | evaluator | verdict | PASS (85) | Task6 配對邏輯通過 | 2026-05-30 | outbox/evaluator/assignment-014-reply-verdict.md |

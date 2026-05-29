@@ -122,3 +122,26 @@ inclusion: always
 - 複雜問題用完整結構
 - 如果用戶只係問「係咩」→ 重點放「目標 + 結構」
 - 如果用戶問「點解」→ 重點放「歷史因素 + 推理原因」
+
+## 超時拆細規則
+
+### 適用範圍
+- Main Agent 同所有 Sub Agent（planner、generator、evaluator）
+- 任何類型嘅 step：shell command、API call、file operation、build、test
+
+### 判斷標準
+- 預計運行超過 15 分鐘 → 執行前先拆細
+- 實際運行超過 15 分鐘 → 中止，拆細後重試
+
+### 拆細策略
+1. **Command 太耐** → 拆成多個 scope 更細嘅 command
+   - ✅ `npm run test -- --testPathPattern=auth` （只跑一個模組）
+   - ❌ `npm run test`（跑全部 test suite）
+2. **File operation 太耐** → 分批處理
+   - ✅ 每次處理 50 個文件
+   - ❌ 一次處理 5000 個文件
+3. **Build 太耐** → 只 build 受影響嘅部分
+4. **API call 太耐** → 減少 payload size 或分頁請求
+
+### 自我檢查
+> 「呢個 step 會唔會跑超過 15 分鐘？」如果可能，先拆細再執行。
