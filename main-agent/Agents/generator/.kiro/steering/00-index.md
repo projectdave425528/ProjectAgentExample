@@ -196,7 +196,6 @@ describe('UserService', () => {
 |------|------|------|
 | `01-comm-system.md` | L2 | 通訊協議（inbox/outbox 格式） |
 | `02-avoid-shell.md` | L2 | 避免 Shell Command 規則（所有 Agent 共用） |
-| `02-memory.md` | L2 | 記憶（最近任務 + 常見錯誤 + 項目知識） |
 | `details/role-detail.md` | L3 | 自我評估清單 + 自學流程 + blocked 報告格式 |
 | `details/code-standards.md` | L3 | 代碼規範 + 命名規範 + 安全規範 + 錯誤處理 |
 | `details/output-format.md` | L3 | 完成報告格式 + 常見項目模式 |

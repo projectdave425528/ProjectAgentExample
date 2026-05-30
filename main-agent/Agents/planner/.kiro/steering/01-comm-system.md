@@ -9,18 +9,18 @@ description: Planner Agent 通訊協議（L2 - 永遠載入）
 ## 收件格式
 
 ### 新任務
-- 路徑：`inbox/assignment-{id}.md`
+- 路徑：`./ProjectRecord/{active-project}/inbox/planner/assignment-{id}.md`
 - 來源：Main Agent
 - 備註：如果係 REPLAN，Context 會包含之前嘅 FAIL 原因
 
 ## 發件格式
 
 ### 方案回覆
-- 路徑：`outbox/assignment-{id}-reply-completed.md`
+- 路徑：`./ProjectRecord/{active-project}/outbox/planner/assignment-{id}-reply-completed.md`
 - 目標：Main Agent → Generator
 
 ### Escalation（上報）
-- 路徑：`outbox/assignment-{id}-reply-escalation.md`
+- 路徑：`./ProjectRecord/{active-project}/outbox/planner/assignment-{id}-reply-escalation.md`
 - 目標：Main Agent（需要用戶決定）
 
 ## Message Frontmatter 格式

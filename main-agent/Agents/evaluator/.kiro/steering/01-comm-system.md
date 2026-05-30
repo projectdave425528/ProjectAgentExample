@@ -9,20 +9,20 @@ description: Evaluator Agent 通訊協議（L2 - 永遠載入）
 ## 收件格式
 
 ### 評估任務
-- 路徑：`inbox/assignment-{id}.md`
+- 路徑：`./ProjectRecord/{active-project}/inbox/evaluator/assignment-{id}.md`
 - 來源：Main Agent
 - 內容：代碼路徑 + 原始計劃（Planner 方案）
 
 ## 發件格式
 
 ### Verdict 回覆
-- 路徑：`outbox/assignment-{id}-reply-verdict.md`
+- 路徑：`./ProjectRecord/{active-project}/outbox/evaluator/assignment-{id}-reply-verdict.md`
 - 目標：Main Agent
 
 ### Verdict 類型
 | Verdict | 意義 | 下一步 |
 |---------|------|--------|
-| PASS | 代碼合格 | Main Agent 交付到 ProjectRecord/{active-project}/output/ |
+| PASS | 代碼合格 | Main Agent 交付到 `./ProjectRecord/{active-project}/output/` |
 | FAIL | 代碼需修改 | Main Agent 轉發反饋俾 Generator |
 | REPLAN | 方案有根本問題 | Main Agent 轉發反饋俾 Planner |
 
