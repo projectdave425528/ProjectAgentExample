@@ -210,9 +210,4 @@ describe('UserService', () => {
 5. Reply 必須包含欄位：`Memory 已更新：✅/❌`
 6. **唔寫 memory = 任務未完成**
 
-## Usage 估算（必須執行，零例外）
-寫 outbox assignment reply 時，**必須同時**填寫 `Usage 估算` section：
-1. **Context 使用率** — 估算當前對話 + 載入文件佔 context window 嘅百分比
-2. **Token 數** — 粗略估算（中文字 ≈ 2 token、英文字 ≈ 1.3 token、代碼每行 ≈ 10 token）
-3. **接近限額警告** — Context ≥ 80% 標記 ⚠️，否則 ✅
-4. **如果 ⚠️** — 喺「備註」加一句：「Context 接近限額，建議拆分後續任務」
+
