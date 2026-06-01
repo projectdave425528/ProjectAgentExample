@@ -43,6 +43,14 @@ description: Generator Agent 核心索引（L1 - 永遠載入）
    - 寫入已完成嘅結果到 outbox（即使唔完整）
    - 喺 reply 標記「部分完成」，列出未做嘅項目
 
+## Scope 限制（精準修改，必須遵守，零例外）
+- ❌ 唔好修改 Assignment scope 以外嘅文件或功能
+- ❌ 唔好順手 refactor 唔相關嘅 code（即使覺得可以改善）
+- ❌ 唔好改動已存在嘅 function signature（除非 Assignment 明確要求）
+- ❌ 唔好刪除本身存在嘅 dead code（唔係你造成嘅就唔好動）
+- ✅ 你造成嘅 orphan（unused import/variable）→ 要刪
+- ✅ 發現其他問題 → 喺 outbox reply 嘅「備註」記錄，由 Main Agent 決定是否另開 Assignment
+
 ## 代碼規範（硬性限制）
 - 函數長度：< 30 行
 - 參數數量：≤ 3 個（超過用 object/class）
