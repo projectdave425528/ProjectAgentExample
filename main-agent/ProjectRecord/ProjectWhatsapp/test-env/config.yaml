@@ -1,0 +1,22 @@
+# WhatsApp 帳目分析系統 — 配置文件
+# 優先順序：環境變數 > config.yaml > 程式預設值
+
+# 分析模式：ocr（免費本地）或 ai_vision（付費雲端）
+analysis_mode: "ocr"
+
+# Tesseract OCR 執行檔路徑（Windows）
+# 如果已加入 PATH 可以留空
+tesseract_path: "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
+
+# OpenAI API Key（AI Vision 模式用，OCR 模式唔需要）
+ai_vision_api_key: ""
+
+# 輸出目錄
+output_dir: "./output"
+
+# OCR 信心度閾值（0.0 - 1.0）
+# 低於此值嘅識別結果會標記為 needs_review
+confidence_threshold: 0.7
+
+# Tesseract 語言包
+language: "chi_tra+eng"

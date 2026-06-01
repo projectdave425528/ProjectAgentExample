@@ -3,10 +3,9 @@
 ## 最近任務
 | # | 日期 | 任務摘要 | Verdict | 主要問題 |
 |---|------|---------|---------|----------|
-| 1 | 2026-05-28 | Task 3: Text Parser 主解析邏輯（28 tests） | PASS (90) | _build_message 剛好 30 行（borderline）；pending state 用 dict 缺 type safety |
-| 2 | 2026-05-28 | Task 4: Image Analyzer Base + OCR（首次評估） | FAIL (72) | Test import 路徑錯誤；OCR test mock 目標唔匹配 lazy import；extract_amounts 唔支援多金額/去重 |
-| 3 | 2026-05-28 | Task 4: Image Analyzer Base + OCR（修改後重評） | PASS (88) | 5 個問題全部解決；_parse_amount 重複定義（minor）；module-level import trade-off 可接受 |
-| 4 | 2026-05-30 | Task 6: Transaction Record Builder 配對邏輯（17 tests） | PASS (85) | match_images_to_messages 邏輯行數 36（超 30 行 borderline）；重複 filename image_results 會產生重複 pair |
+| 1 | 2026-05-30 | Task 10: CLI 入口 + 主流程串接（14 CLI tests + 254 total pass） | PASS (88) | `config` 參數缺 type hint；bare `list` 缺 element type；Pipeline 設計清晰，錯誤處理完善 |
+| 2 | 2026-05-31 | Task 11: 端到端整合測試（6 E2E tests） | PASS (88) | Happy Path 重複 pipeline 執行；column index magic number；整體覆蓋度優秀 |
+| 3 | 2026-05-31 | Task 12: 文檔 + README（內容審查） | PASS (92) | 全部 section 齊全；FAQ 6 個；Tesseract 安裝指南完整；建議加 macOS/Linux 提示 |
 
 ## 項目標準
 - Python 3.9+、Pydantic v2、pytest
@@ -17,6 +16,7 @@
 - Regex patterns 用模組化設計（_DATE_PART、_DATE_SEP 等組件拼接）
 - 所有 public functions 必須接受 None/empty 輸入唔 crash
 - 函數 < 30 行、參數 ≤ 3（Generator 已遵守）
+- Decimal 用於金額計算（避免 floating point 問題）
 
 ## 評估經驗
 - Pydantic v2 field name 唔可以同 type annotation 同名（date: date 會衝突）— Generator 嘅改名決策合理
@@ -46,3 +46,20 @@
 - **Matcher 模組嘅 index-based 配對策略** — 用 dict[str, ParsedMessage] 做 O(1) lookup 係正確做法，但要注意 index 只保留第一次出現嘅 message
 - **函數行數 borderline 判斷** — 36 行含 6 行空行分隔，實際 statement 約 30 行。已做合理 delegation（3 個 helpers），進一步拆分反而降低可讀性。作為建議記錄但唔影響 PASS
 - **重複 filename 嘅 image_results** — 當前實現允許多個同名 image 配對到同一 message。實際場景中每個 image file 應有唯一 filename，但 Task 7/8 整合時要注意呢個行為
+- **group_by_time_window 45 行（含 15 行 docstring）** — 實際邏輯約 30 行（borderline）。建議提取 `_should_merge()` helper 但唔影響 PASS。連續兩個 Task 都有 borderline 行數問題，Generator 應注意
+- **Duck typing 用於跨模組接口** — `extract_from_matched_pair(pair)` 冇 type hint，依賴 duck typing。雖然 test 用 MagicMock 可以 pass，但日後 refactor 時缺少 type checker 保護。建議用 Protocol 或 string annotation
+- **Decimal 用於金額** — 正確避免 floating point 問題。`_calculate_confidence` 用 float 但只做加法且 round(2)，0.3+0.35+0.35=1.0 在 float 下精確（已有 test 驗證）
+- **Dead code path 識別** — `_extract_chinese_amount` 嘅 `f"{text}蚊"` 永遠唔會觸發（因為 `text in content` 已經 match 並 return）。唔影響功能但增加維護負擔
+- **`__import__()` inline import 係 anti-pattern** — 喺 `_build_unmatched_single` 用 `__import__("datetime").date.today()` 避免 module-level import，但降低可讀性。應該直接用已 import 嘅 type 或加一行 module-level import
+- **`id()` 作為 dict key** — 用 object memory address 做 mapping key 喺 function scope 內安全（所有 object alive），但語義唔清晰。用 enumerate index 更直觀
+- **Pipeline 設計模式** — record_builder 作為 orchestrator 只負責調度（match → extract → group → resolve → assemble），每個步驟委託專門模組。呢個係好嘅 separation of concerns
+- **Unmatched image 處理** — 即使冇 match 到 message，仍然產出 record（flagged needs_review=True）。呢個設計確保唔會遺漏任何付款證據
+- **Excel Exporter 模組化設計** — formatters.py 獨立於 Excel 邏輯，可以單獨測試同重用。`__init__.py` 提供乾淨嘅 public API。呢個係好嘅 package 設計 pattern
+- **openpyxl ws 參數 duck typing** — openpyxl 嘅 type stubs 唔完整，所以 `ws` 參數用 duck typing 係合理嘅 trade-off。但建議至少加 `# type: ignore` 或 `Worksheet` annotation
+- **format_amount 返回 str 寫入 Excel** — 總計行用 string 格式，唔支援 Excel 內計算。作為報表匯出用途可接受，但如果需要 Excel formula 功能就要改為 numeric type
+- **CLI 入口 Click pattern** — `@click.group()` + `@cli.command()` 係標準做法。Click options 數量唔受「參數 ≤ 3」限制（framework constraint）。Helper functions 正確保持 ≤ 3 params
+- **Lazy import for optional dependencies** — `_run_ocr_analysis` 內 import `OcrAnalyzer` 係正確做法，避免 Tesseract 未安裝時 CLI 完全無法啟動
+- **bare `list` type hint 係 recurring issue** — Task 9 同 Task 10 都有呢個問題。Generator 應統一用 generic type（`list[T]`）而唔係 bare `list`
+- **E2E test 嘅 class-level fixture 優化** — Happy Path 3 個 test 重複執行相同 pipeline，可以用 `@pytest.fixture(scope="class")` 或 session fixture 減少重複。但唔影響正確性
+- **E2E fixture 設計** — sample_chat.txt 包含多種金額格式（$500、三百蚊、$1,200）係好嘅做法，測試 parser 嘅多格式支援
+- **文檔評估要點** — README 必須有：簡介、功能列表、安裝步驟、快速開始、項目結構。usage.md 必須有：CLI 參數表、配置選項、輸出格式、安裝指南、FAQ（≥5 個）。語言一致性同技術準確性係重點

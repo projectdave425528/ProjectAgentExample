@@ -42,3 +42,34 @@
 | 013 | generator | assignment-reply | completed | Task6 matcher.py 完成 | 2026-05-30 | outbox/generator/assignment-013-reply-completed.md |
 | 014 | main-agent | assignment | dispatched | Task6 評估請求 | 2026-05-30 | inbox/evaluator/assignment-014.md |
 | 014 | evaluator | verdict | PASS (85) | Task6 配對邏輯通過 | 2026-05-30 | outbox/evaluator/assignment-014-reply-verdict.md |
+
+| 015 | main-agent | assignment | dispatched | Task7 交易資訊提取 | 2026-05-30 | inbox/generator/assignment-015.md |
+| 015 | generator | assignment-reply | completed | Task7 extractor+status_resolver 完成 | 2026-05-30 | outbox/generator/assignment-015-reply-completed.md |
+| 016 | main-agent | assignment | dispatched | Task7 評估請求 | 2026-05-30 | inbox/evaluator/assignment-016.md |
+| 016 | evaluator | verdict | PASS (84) | Task7 通過評估 | 2026-05-30 | outbox/evaluator/assignment-016-reply-verdict.md |
+
+| 017 | main-agent | assignment | dispatched | Task8 主整合邏輯 | 2026-05-30 | inbox/generator/assignment-017.md |
+| 017 | generator | assignment-reply | completed | Task8 record_builder 完成 | 2026-05-30 | outbox/generator/assignment-017-reply-completed.md |
+
+| 019 | main-agent | assignment | dispatched | Task9 Excel Exporter | 2026-05-30 | inbox/generator/assignment-019.md |
+| 019 | generator | assignment-reply | completed | Task9 exporter 完成 | 2026-05-30 | outbox/generator/assignment-019-reply-completed.md |
+
+| 021 | main-agent | assignment | dispatched | Task10 CLI 入口 | 2026-05-30 | inbox/generator/assignment-021.md |
+| 021 | generator | assignment-reply | completed | Task10 main.py 完成 | 2026-05-30 | outbox/generator/assignment-021-reply-completed.md |
+
+| 018 | main-agent | assignment | dispatched | Task8 評估請求 | 2026-05-30 | inbox/evaluator/assignment-018.md |
+| 018 | evaluator | verdict | PASS (87) | Task8 通過評估 | 2026-05-30 | outbox/evaluator/assignment-018-reply-verdict.md |
+| 020 | main-agent | assignment | dispatched | Task9 評估請求 | 2026-05-30 | inbox/evaluator/assignment-020.md |
+| 020 | evaluator | verdict | PASS (90) | Task9 通過評估 | 2026-05-30 | outbox/evaluator/assignment-020-reply-verdict.md |
+| 022 | main-agent | assignment | dispatched | Task10 評估請求 | 2026-05-30 | inbox/evaluator/assignment-022.md |
+| 022 | evaluator | verdict | PASS (88) | Task10 通過評估 | 2026-05-30 | outbox/evaluator/assignment-022-reply-verdict.md |
+
+| 023 | main-agent | assignment | dispatched | Task11 E2E 測試 | 2026-05-31 | inbox/generator/assignment-023.md |
+| 023 | generator | assignment-reply | completed | Task11 E2E tests 完成 | 2026-05-31 | outbox/generator/assignment-023-reply-completed.md |
+| 024 | main-agent | assignment | dispatched | Task11 評估請求 | 2026-05-31 | inbox/evaluator/assignment-024.md |
+| 024 | evaluator | verdict | PASS (88) | Task11 通過評估 | 2026-05-31 | outbox/evaluator/assignment-024-reply-verdict.md |
+
+| 025 | main-agent | assignment | dispatched | Task12 文檔 README | 2026-05-31 | inbox/generator/assignment-025.md |
+| 025 | generator | assignment-reply | completed | Task12 文檔完成 | 2026-05-31 | outbox/generator/assignment-025-reply-completed.md |
+| 026 | main-agent | assignment | dispatched | Task12 評估請求 | 2026-05-31 | inbox/evaluator/assignment-026.md |
+| 026 | evaluator | verdict | PASS (92) | Task12 通過評估 | 2026-05-31 | outbox/evaluator/assignment-026-reply-verdict.md |

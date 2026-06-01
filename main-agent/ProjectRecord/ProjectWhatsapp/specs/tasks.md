@@ -186,7 +186,7 @@
 ---
 
 ### Task 7: Transaction Record Builder — 交易資訊提取
-- **Status**: pending
+- **Status**: completed
 - **Required**: yes
 - **Depends on**: Task 6
 
@@ -217,7 +217,7 @@
 ---
 
 ### Task 8: Transaction Record Builder — 主整合邏輯
-- **Status**: pending
+- **Status**: completed
 - **Required**: yes
 - **Depends on**: Task 7
 
@@ -246,7 +246,7 @@
 ---
 
 ### Task 9: Excel Exporter
-- **Status**: pending
+- **Status**: completed
 - **Required**: yes
 - **Depends on**: Task 8
 
@@ -276,7 +276,7 @@
 ---
 
 ### Task 10: CLI 入口 + 主流程串接
-- **Status**: pending
+- **Status**: completed
 - **Required**: yes
 - **Depends on**: Task 9
 
@@ -307,7 +307,7 @@
 ---
 
 ### Task 11: 端到端整合測試
-- **Status**: pending
+- **Status**: completed
 - **Required**: yes
 - **Depends on**: Task 10
 
@@ -337,7 +337,7 @@
 ---
 
 ### Task 12: 文檔 + README
-- **Status**: pending
+- **Status**: completed
 - **Required**: yes
 - **Depends on**: Task 10
 

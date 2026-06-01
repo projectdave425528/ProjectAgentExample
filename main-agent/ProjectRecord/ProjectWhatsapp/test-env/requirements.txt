@@ -1,0 +1,18 @@
+# WhatsApp 帳目分析系統 — Python 依賴
+# 安裝：pip install -r requirements.txt
+
+# 核心依賴
+pydantic>=2.5.0
+openpyxl>=3.1.2
+click>=8.1.7
+pillow>=10.0.0
+pytesseract>=0.3.10
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+
+# 可選依賴（AI Vision 模式）
+# openai>=1.6.0
+
+# 開發依賴
+# pytest>=7.4.3
+# pytest-cov>=4.1.0

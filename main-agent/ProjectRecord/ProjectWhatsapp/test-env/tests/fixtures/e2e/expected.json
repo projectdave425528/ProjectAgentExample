@@ -1,0 +1,62 @@
+[
+  {
+    "transaction_date": "2024-01-15",
+    "customer_name": "陳大文",
+    "repair_item": "換屏",
+    "quoted_amount": "500",
+    "received_amount": "500",
+    "payment_method": "payme",
+    "payment_status": "paid",
+    "source_images": ["img001.jpg"],
+    "confidence_min": 0.5,
+    "needs_review": false
+  },
+  {
+    "transaction_date": "2024-01-15",
+    "customer_name": "李小明",
+    "repair_item": "換電池",
+    "quoted_amount": "300",
+    "received_amount": "600",
+    "payment_method": "fps",
+    "payment_status": "paid",
+    "source_images": ["img002.jpg"],
+    "confidence_min": 0.5,
+    "needs_review": false
+  },
+  {
+    "transaction_date": "2024-01-15",
+    "customer_name": "王美麗",
+    "repair_item": "維修",
+    "quoted_amount": "800",
+    "received_amount": "800",
+    "payment_method": "bank_transfer",
+    "payment_status": "paid",
+    "source_images": ["img003.jpg"],
+    "confidence_min": 0.5,
+    "needs_review": false
+  },
+  {
+    "transaction_date": "2024-01-15",
+    "customer_name": "張三",
+    "repair_item": "貼膜",
+    "quoted_amount": "300",
+    "received_amount": "300",
+    "payment_method": "payme",
+    "payment_status": "paid",
+    "source_images": ["img004.jpg"],
+    "confidence_min": 0.5,
+    "needs_review": false
+  },
+  {
+    "transaction_date": "2024-01-15",
+    "customer_name": "趙四",
+    "repair_item": "整機",
+    "quoted_amount": "1200",
+    "received_amount": "1200",
+    "payment_method": "fps",
+    "payment_status": "paid",
+    "source_images": ["img005.jpg"],
+    "confidence_min": 0.5,
+    "needs_review": false
+  }
+]

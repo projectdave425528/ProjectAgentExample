@@ -28,9 +28,10 @@ description: ProjectAgentExample 核心指令（唯一 always-on steering）
 1. **最多重試 3 次** — 出錯時重試，3 次仍然失敗就停止
 2. **搵簡單替代方案** — 原方法太複雜就改用更簡單嘅方法，搵唔到就問用戶
 3. **唔好死撐** — 寧願早啲問用戶，唔好浪費 Token/Credit
-4. **超時拆細** — 任何 step 預計或實際超過 15 分鐘，必須拆成更細嘅子步驟
+4. **超時拆細** — 任何 step 預計或實際超過 10 分鐘，必須拆成更細嘅子步驟
    - ✅ `npm run test -- --testPathPattern=auth`（只跑一個模組）
    - ❌ `npm run test`（跑全部 test suite）
+5. **Shell Command 必須加 timeout** — 所有 `execute_pwsh` 必須加 `timeout: 600000`（10 分鐘），零例外
 
 ## 其他行為規則
 - 操作前先確認目標文件／目錄是否存在

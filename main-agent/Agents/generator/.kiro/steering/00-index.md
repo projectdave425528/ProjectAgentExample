@@ -23,7 +23,25 @@ description: Generator Agent 核心索引（L1 - 永遠載入）
 2. **搵簡單替代方案** — 如果原方法太複雜（會消耗大量 Token/Credit），改用更簡單嘅方法。如果簡單方法都搵唔到，向 Main Agent 或用戶請求指示
 3. **Assignment Fail 必須記錄** — 即使 Assignment 失敗，都要寫 outbox assignment reply（記錄做咗咩、點解失敗、試過咩方法），然後向 Main Agent 或用戶請求指示
 4. **唔好死撐** — 寧願早啲上報，唔好浪費 Token/Credit 喺明顯做唔到嘅嘢上面
-5. **超時拆細** — 任何 step（command、API call、file operation）如果預計或實際運行超過 15 分鐘，必須將該 step 拆成更細嘅子步驟再逐個執行（例如：跑全部 test → 拆成逐個模組跑；處理 5000 個文件 → 分批 50 個）
+5. **超時拆細** — 任何 step（command、API call、file operation）如果預計或實際運行超過 10 分鐘，必須將該 step 拆成更細嘅子步驟再逐個執行（例如：跑全部 test → 拆成逐個模組跑；處理 5000 個文件 → 分批 50 個）
+6. **Shell Command 必須加 timeout** — 所有 `execute_pwsh` 必須加 `timeout: 600000`（10 分鐘），零例外
+
+## Context 管理（防止 Cancel / Timeout）
+> 🔒 **本 section 只可由用戶修改或刪除，Agent 唔可以自行更改。**
+
+1. **任務大小自我評估** — 收到 Assignment 後，先評估任務量：
+   - 需要產出 > 5 個文件 → 優先完成核心文件，確保 outbox reply 寫入
+   - 需要跑 > 50 個 tests → 分批跑（每批 ≤ 25 個），每批完成後記錄結果
+   - 需要 review > 3 個文件 → 按重要性排序，逐個 review
+2. **優先保證 outbox 寫入** — 寧願簡化內容，都要確保 outbox reply 成功寫入。被 cancel 但冇寫 outbox = 任務完全浪費
+3. **分階段完成** — 如果任務太大，主動拆分為多個階段：
+   - 階段 1：核心功能 / 最重要嘅評估
+   - 階段 2：補充內容 / 次要評估
+   - 每個階段完成後立即寫入 checkpoint
+4. **Context 使用率監控** — 如果感覺 context 接近上限（output 已經好長），立即：
+   - 停止當前步驟
+   - 寫入已完成嘅結果到 outbox（即使唔完整）
+   - 喺 reply 標記「部分完成」，列出未做嘅項目
 
 ## 代碼規範（硬性限制）
 - 函數長度：< 30 行
@@ -142,6 +160,7 @@ describe('UserService', () => {
 - 開始時建立：`./ProjectRecord/{active-project}/checkpoints/generator/checkpoint-A{id}-generator-in_progress.md`
 - 完成時重命名：`./ProjectRecord/{active-project}/checkpoints/generator/checkpoint-A{id}-generator-completed.md`
 - Blocked 時重命名：`./ProjectRecord/{active-project}/checkpoints/generator/checkpoint-A{id}-generator-blocked.md`
+- **重命名方法**：用 `smartRelocate` 工具（唔好用 shell command `Remove-Item` + 重新建立）
 - Cancelled（斷線）：文件保持 `in_progress`（Main Agent 恢復時可以讀取）
 
 ### 寫入時機

@@ -1,0 +1,5323 @@
+[
+  {
+    "id": "97399f4d-481b-4e7d-ae4c-d0c696bf9576",
+    "transaction_date": "2019-01-15",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000031-PHOTO-2019-01-15-19-55-04.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "ad4fa321-7f4d-4692-97cb-2103ca00360a",
+    "transaction_date": "2019-01-15",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000036-PHOTO-2019-01-15-20-00-12.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "3c8ba4f6-19fe-4ab3-a1f0-d3830855d252",
+    "transaction_date": "2019-01-16",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000050-PHOTO-2019-01-16-22-56-15.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "af70b6a9-c51a-429f-87c9-da5c9524503b",
+    "transaction_date": "2019-01-17",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": "100",
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000052-PHOTO-2019-01-17-09-05-25.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.47,
+    "needs_review": true
+  },
+  {
+    "id": "3c846f93-2a7f-41d1-b57e-c184e4c5de47",
+    "transaction_date": "2019-03-22",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": "390",
+    "payment_method": null,
+    "payment_status": "paid",
+    "source_messages": [],
+    "source_images": [
+      "00000137-PHOTO-2019-03-22-10-21-05.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.47,
+    "needs_review": true
+  },
+  {
+    "id": "cc3af301-e534-4dcb-a9da-c8bf79ca050f",
+    "transaction_date": "2019-03-29",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000176-PHOTO-2019-03-29-21-51-49.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "3a8ffcc3-8b22-4fef-814b-229235b37645",
+    "transaction_date": "2019-03-30",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000189-PHOTO-2019-04-01-15-33-28.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "59dd6ebb-6162-4ff5-a82e-e37d77f0e45d",
+    "transaction_date": "2019-04-01",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000192-PHOTO-2019-04-01-15-34-27.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "4204bb34-4c0e-4ae1-afc6-d5fe298f9882",
+    "transaction_date": "2019-04-06",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000213-PHOTO-2019-04-06-10-47-19.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "26200380-7dd4-4721-b6ec-8b6419be8a4f",
+    "transaction_date": "2019-04-09",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000238-PHOTO-2019-04-09-20-56-48.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "7fe49094-2063-4042-b7b8-4cc7d0b97561",
+    "transaction_date": "2019-04-10",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000267-PHOTO-2019-04-10-15-20-38.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "a247279f-86a4-465c-8fe8-40ecc846c621",
+    "transaction_date": "2019-04-24",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": "2830",
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000319-PHOTO-2019-04-25-18-17-24.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.47,
+    "needs_review": true
+  },
+  {
+    "id": "64f7521b-e8a2-4e67-80eb-41939dcd39a5",
+    "transaction_date": "2019-04-25",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": "2960",
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000323-PHOTO-2019-04-25-22-03-46.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.47,
+    "needs_review": true
+  },
+  {
+    "id": "54449263-d79e-4b16-8fba-4ec982e48765",
+    "transaction_date": "2019-04-30",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000338-PHOTO-2019-05-01-21-20-29.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "382cefdf-b4a2-4218-a576-e2ca8a53d923",
+    "transaction_date": "2019-05-08",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000378-PHOTO-2019-05-08-14-50-36.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "1aee1d9d-9e21-4f3e-ac31-b63c52a14abd",
+    "transaction_date": "2019-05-23",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000391-PHOTO-2019-05-23-11-23-26.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "e66112a8-0bd2-4a1e-96f4-72a3e2c44e13",
+    "transaction_date": "2019-05-23",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000399-PHOTO-2019-05-23-18-08-57.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "547219aa-590f-432c-a24c-e33eced4aa40",
+    "transaction_date": "2019-06-29",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000430-PHOTO-2019-06-29-17-32-15.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "e1095dd5-2499-46f0-83fa-c56f877d6df2",
+    "transaction_date": "2019-06-29",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000444-PHOTO-2019-06-29-20-30-05.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "ac3922d5-34c8-4500-a6ca-f2a079a13c9a",
+    "transaction_date": "2019-07-16",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000484-PHOTO-2019-07-25-19-07-39.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "d0724669-78f8-4ee3-9cc0-92f8723b9656",
+    "transaction_date": "2019-08-19",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000529-PHOTO-2019-08-19-21-48-52.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "ea4e6952-3860-4e00-8192-cb6b0771951a",
+    "transaction_date": "2019-09-03",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000554-PHOTO-2019-09-03-21-17-48.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "a8cac569-3d54-466d-a9f6-fd68093dd059",
+    "transaction_date": "2019-09-09",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000558-PHOTO-2019-09-09-18-14-29.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "4144d3df-16cb-4c5f-9f8f-2c4ba955bd67",
+    "transaction_date": "2019-09-11",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000577-PHOTO-2019-09-11-07-46-30.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "12cd0f27-97cc-49cd-8e36-ddc68b304280",
+    "transaction_date": "2019-09-11",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000583-PHOTO-2019-09-11-17-39-55.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "22a0a87a-faec-4925-b3d9-cae9e095f7e4",
+    "transaction_date": "2019-09-16",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000610-PHOTO-2019-09-16-21-43-35.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "a888cd6b-7a56-49d2-a067-35a00bcd92fa",
+    "transaction_date": "2019-09-17",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000620-PHOTO-2019-09-17-21-14-00.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "29e70b8e-bf06-4f5a-8f95-7e33c784486a",
+    "transaction_date": "2019-09-24",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000653-STICKER-2019-09-24-17-55-22.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "a3bb26ef-6b13-415e-b75b-3379d47156b1",
+    "transaction_date": "2019-10-18",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000723-PHOTO-2019-10-18-22-56-41.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "abe0332b-efa0-433b-8d55-a9814805df2d",
+    "transaction_date": "2019-10-20",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000747-PHOTO-2019-10-20-20-07-06.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "e510dbcc-05b3-432b-be65-751de228c386",
+    "transaction_date": "2019-10-21",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000752-PHOTO-2019-10-21-16-14-36.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "8cda90b0-c6c1-47dd-a211-8e2e9c63c240",
+    "transaction_date": "2019-10-22",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000761-PHOTO-2019-10-22-20-10-13.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "5273f6f4-236a-4427-9396-0282a3349693",
+    "transaction_date": "2019-11-29",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000891-PHOTO-2019-11-29-19-52-48.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "59b120ff-f77b-436f-9fc4-331d08aee02d",
+    "transaction_date": "2019-11-29",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": "6940",
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000894-PHOTO-2019-11-29-22-18-41.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.47,
+    "needs_review": true
+  },
+  {
+    "id": "1e8df703-a049-4278-a976-b0359e81b725",
+    "transaction_date": "2019-12-11",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": "130",
+    "payment_method": null,
+    "payment_status": "paid",
+    "source_messages": [],
+    "source_images": [
+      "00000923-PHOTO-2019-12-11-22-04-28.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.47,
+    "needs_review": true
+  },
+  {
+    "id": "77a4a552-3ebd-4496-b2fb-f7f7ace4af87",
+    "transaction_date": "2019-12-25",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000989-STICKER-2019-12-25-17-19-54.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "3ddbe534-8276-483c-8eab-b7067bd10f79",
+    "transaction_date": "2020-01-05",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": "payme",
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000999-PHOTO-2020-01-05-21-27-32.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.47,
+    "needs_review": true
+  },
+  {
+    "id": "bbdebb32-f813-4a95-b875-4f6d311d0f23",
+    "transaction_date": "2020-03-01",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001098-PHOTO-2020-03-01-21-33-31.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "143e1dbc-f682-4931-bd1a-cfbd82c543a0",
+    "transaction_date": "2020-03-06",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001132-PHOTO-2020-03-08-21-32-50.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "00931697-8b40-4c46-b2bd-d342c2e36eac",
+    "transaction_date": "2020-04-08",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001236-PHOTO-2020-04-08-23-51-16.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "c5b00c91-f08b-4dd6-ac74-e947a2d5ae59",
+    "transaction_date": "2020-04-10",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001257-PHOTO-2020-04-10-16-30-28.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "bb3867b1-aa13-402f-ae9f-19fc2802e8d7",
+    "transaction_date": "2020-05-05",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": "69",
+    "payment_method": null,
+    "payment_status": "paid",
+    "source_messages": [],
+    "source_images": [
+      "00001344-PHOTO-2020-05-05-17-08-03.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.47,
+    "needs_review": true
+  },
+  {
+    "id": "5af5e581-84fc-4665-a3ec-608aefbcb5cc",
+    "transaction_date": "2020-05-06",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001354-PHOTO-2020-05-06-22-25-31.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "adba1c0c-a10e-4cd2-aba8-03f372588eab",
+    "transaction_date": "2020-05-07",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001364-PHOTO-2020-05-07-22-19-18.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "fdf7dd39-8b2e-494d-b11e-4fbd17a9380c",
+    "transaction_date": "2020-05-08",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001368-PHOTO-2020-05-08-12-53-44.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "e194a94c-7b27-4e59-89d2-b6f658df1f42",
+    "transaction_date": "2020-05-21",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001444-PHOTO-2020-05-21-16-28-06.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "8d18823b-622c-4e0d-85b4-130aa578a61d",
+    "transaction_date": "2020-05-21",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001450-PHOTO-2020-05-21-19-29-37.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "75dcea08-5a56-4795-a2d1-3213b020ff15",
+    "transaction_date": "2020-06-03",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001498-PHOTO-2020-06-03-08-58-42.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "8796695b-26b2-46c0-9ce8-607d8cc6b984",
+    "transaction_date": "2020-06-04",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001522-PHOTO-2020-06-04-13-38-24.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "70e717d0-2eb7-4a2e-bbc2-50f403f91a11",
+    "transaction_date": "2020-06-04",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001541-PHOTO-2020-06-04-17-13-00.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "79d48721-0cb9-4f83-8423-c9a0384ba251",
+    "transaction_date": "2020-06-23",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001598-PHOTO-2020-06-23-18-04-05.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "42b9b75c-e682-4f8b-bdac-84282e2f3275",
+    "transaction_date": "2020-07-07",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001630-PHOTO-2020-07-07-17-05-54.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "dba5fd7a-6189-4b4d-ab17-9c24aa1e99fe",
+    "transaction_date": "2020-07-15",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001634-PHOTO-2020-07-15-18-35-12.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "83a32ca8-5425-43ea-8154-24c540b86b68",
+    "transaction_date": "2020-08-10",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001705-PHOTO-2020-08-10-20-18-47.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "8668011d-5ccb-4de4-b2f6-3e71f2067b7b",
+    "transaction_date": "2020-08-18",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001754-PHOTO-2020-08-18-17-57-40.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "6f9c4b1d-8239-46c8-ada8-7f14142688cc",
+    "transaction_date": "2020-09-21",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001893-PHOTO-2020-09-21-22-01-30.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "aa76fb77-0ebb-4512-aee9-3c4e3ae1e79f",
+    "transaction_date": "2020-10-06",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001899-PHOTO-2020-10-06-16-18-39.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "e97c6a11-e4dc-4107-89f7-6eec7154f74a",
+    "transaction_date": "2020-10-08",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001916-PHOTO-2020-10-08-11-40-25.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "c2e4c0d6-7a80-447b-89ba-ad1c396f1627",
+    "transaction_date": "2020-10-11",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001937-PHOTO-2020-10-11-16-06-28.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "e8f7bf25-7070-42ad-9e1a-c11322f6e99e",
+    "transaction_date": "2020-11-10",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001960-PHOTO-2020-11-10-18-04-46.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "cf24556c-6aea-4030-9af1-40b188656a5c",
+    "transaction_date": "2020-11-11",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001992-PHOTO-2020-11-11-19-50-21.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "463edcde-5207-434e-8cbe-e0379edf882b",
+    "transaction_date": "2020-11-24",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002010-PHOTO-2020-11-24-17-39-40.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "8558c146-6cc9-43e4-af78-99c068b1d0ed",
+    "transaction_date": "2020-12-07",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002031-STICKER-2020-12-07-21-30-21.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "928c32be-8e90-49be-bd7e-553320976509",
+    "transaction_date": "2020-12-31",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002068-PHOTO-2020-12-31-14-57-31.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "fbd7a6d8-f01a-4faf-b34f-e9733bc2a5ea",
+    "transaction_date": "2021-01-18",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002124-PHOTO-2021-01-18-18-42-53.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "c6a9bf2d-d9d4-47ba-96f6-c9109dc7898c",
+    "transaction_date": "2021-02-26",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002220-STICKER-2021-02-26-21-25-50.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "21b4f89a-85e2-4a30-a0d3-beeac9246e0a",
+    "transaction_date": "2021-03-30",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002238-PHOTO-2021-03-30-16-30-35.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "1dbc0af2-715f-4402-aa23-150863f85ad9",
+    "transaction_date": "2021-04-28",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002293-PHOTO-2021-04-28-15-32-12.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "2417f19b-88ae-4d77-9331-46f13b1d3f07",
+    "transaction_date": "2021-05-03",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002318-PHOTO-2021-05-03-09-03-04.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "27d62964-555d-44ab-bb25-251d67783423",
+    "transaction_date": "2021-05-03",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002325-PHOTO-2021-05-03-17-22-59.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "1d341b08-2002-46be-bcfe-6c55fa691e4c",
+    "transaction_date": "2021-05-03",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002336-STICKER-2021-05-03-21-05-05.webp"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "2ac8c862-f35c-4a34-84c7-4a82aa665496",
+    "transaction_date": "2021-05-06",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002366-PHOTO-2021-05-06-20-25-48.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "367c3828-2d4d-4005-aad2-6c687b6b3e31",
+    "transaction_date": "2021-05-09",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002373-PHOTO-2021-05-09-11-53-28.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "5f7af794-3655-4b46-b84c-e6d4a2110af6",
+    "transaction_date": "2021-05-10",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002384-PHOTO-2021-05-10-22-41-30.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "0e6315dd-2c1b-4478-85b6-51ba6c97457c",
+    "transaction_date": "2021-05-21",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": "63",
+    "payment_method": null,
+    "payment_status": "paid",
+    "source_messages": [],
+    "source_images": [
+      "00002417-PHOTO-2021-05-21-16-43-39.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.47,
+    "needs_review": true
+  },
+  {
+    "id": "1ea2d6a5-d03a-424a-911a-6f9b73e1fef3",
+    "transaction_date": "2021-05-28",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002449-PHOTO-2021-05-28-21-09-16.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "63ff54f0-25f3-41b6-986f-411c11409306",
+    "transaction_date": "2021-06-05",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002479-PHOTO-2021-06-05-17-42-10.jpg"
+    ],
+    "notes": "數量: 11",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "ac9ffff1-8a72-411b-82ff-c75262931c6f",
+    "transaction_date": "2021-06-07",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002485-PHOTO-2021-06-07-20-54-11.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "c26c2e2f-cad9-4297-822b-365a31a11666",
+    "transaction_date": "2021-07-11",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002572-PHOTO-2021-07-12-17-00-56.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "a8856e6f-6f12-4b40-9b47-4b39ccd03bf1",
+    "transaction_date": "2021-07-12",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002580-PHOTO-2021-07-14-21-03-46.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "b6d2c6bb-e80d-4af9-a1a2-eb089ebc59f8",
+    "transaction_date": "2021-08-01",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002608-PHOTO-2021-08-01-16-59-09.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "99a55df0-9a80-44b7-b505-f35f0b017307",
+    "transaction_date": "2021-08-02",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002612-PHOTO-2021-08-02-17-17-11.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "240ea55d-6e6f-4f8e-b09d-080de5278612",
+    "transaction_date": "2021-08-09",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002625-PHOTO-2021-08-18-13-04-15.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "d0acecc2-a48f-4752-8336-73cbc8ec28eb",
+    "transaction_date": "2021-08-18",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": "100",
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002631-PHOTO-2021-08-18-22-06-31.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.33,
+    "needs_review": true
+  },
+  {
+    "id": "be9e12d6-5777-42e7-a785-185e56755c9d",
+    "transaction_date": "2021-09-13",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002664-PHOTO-2021-09-13-20-03-29.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "3e278ba4-bcbb-4973-856f-f6d69b6b64a7",
+    "transaction_date": "2021-09-13",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002666-PHOTO-2021-09-13-21-52-59.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "299db39e-deab-4c31-9794-d98a41ef8b93",
+    "transaction_date": "2021-09-17",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002676-PHOTO-2021-09-17-15-46-11.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "06a30028-d386-4cee-9db7-b8181837091f",
+    "transaction_date": "2021-09-23",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002697-PHOTO-2021-09-23-13-17-31.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "1e9c8ba4-f1a0-4c64-a306-6a86f850f157",
+    "transaction_date": "2021-09-27",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002713-PHOTO-2021-09-27-21-32-24.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "8aced0be-3e1e-4e4f-9cb8-4b0f50c18fc6",
+    "transaction_date": "2021-10-05",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002731-PHOTO-2021-10-05-16-29-08.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "479aeeb2-f82a-4564-a9cc-a1249c71c7ca",
+    "transaction_date": "2021-10-08",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": "3010",
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002733-PHOTO-2021-10-08-20-40-15.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.33,
+    "needs_review": true
+  },
+  {
+    "id": "a3a05ee8-5e55-468c-b81e-9cc057daac2d",
+    "transaction_date": "2021-11-02",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002775-PHOTO-2021-11-02-15-25-39.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "0f8687af-ce0a-4360-ad37-5005befb8b0d",
+    "transaction_date": "2021-11-07",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002790-PHOTO-2021-11-16-11-02-11.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "f47474ff-3e09-4f73-acfa-1f47efddec8a",
+    "transaction_date": "2021-11-25",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002816-PHOTO-2021-11-25-20-36-52.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "be76b128-ee7b-4478-bd5b-31f63db31591",
+    "transaction_date": "2021-12-03",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002825-PHOTO-2021-12-03-19-30-12.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "8f9310a0-d419-4345-80e7-015c293ce87d",
+    "transaction_date": "2021-12-08",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002890-PHOTO-2021-12-09-19-58-02.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "291856d2-1127-40ed-864a-0f360058b1cb",
+    "transaction_date": "2021-12-11",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002895-PHOTO-2021-12-11-16-34-07.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "1170e332-9f29-479a-87d4-200b74e259d7",
+    "transaction_date": "2022-01-10",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002976-PHOTO-2022-01-10-16-37-31.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "e9181aa3-af8c-4d49-a2a3-47c1509ddd9c",
+    "transaction_date": "2022-01-10",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002983-PHOTO-2022-01-10-21-24-39.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "a3bc83c8-21ae-453d-b705-125a4eb2952b",
+    "transaction_date": "2022-02-08",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003010-PHOTO-2022-02-09-21-46-02.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "63490c30-245d-4184-b41f-8ed13095c65d",
+    "transaction_date": "2022-02-09",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003014-PHOTO-2022-02-10-20-23-35.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "c05c925c-0ddd-4504-b2d4-00c3bbd28e7e",
+    "transaction_date": "2022-03-26",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003029-PHOTO-2022-03-28-21-49-04.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "5ebf886b-8551-4cab-817b-77302084e0b7",
+    "transaction_date": "2022-04-07",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003050-PHOTO-2022-04-07-21-20-26.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "f4955982-f8cd-4fc2-9da0-526cd58ded96",
+    "transaction_date": "2022-04-07",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003053-PHOTO-2022-04-08-20-44-56.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "075e6d1d-6d63-4875-9485-15f4540efb74",
+    "transaction_date": "2022-04-28",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003061-PHOTO-2022-05-15-15-13-51.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "b01d5dba-40ae-4e25-b46f-25c93d37b26b",
+    "transaction_date": "2022-05-18",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003072-PHOTO-2022-05-18-20-33-50.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "358c9ddf-b32d-45dd-a193-c10c71dde795",
+    "transaction_date": "2022-05-28",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003091-STICKER-2022-05-28-21-22-10.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "f070729f-4399-4264-bac9-0cdf6154999b",
+    "transaction_date": "2022-06-06",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003095-PHOTO-2022-06-06-21-09-21.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "33b9af14-a650-4c8d-a74f-c1a2f6a2bdc5",
+    "transaction_date": "2022-06-22",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003168-PHOTO-2022-06-22-15-41-32.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "580eb79a-e94a-4779-ae4c-ce081b468820",
+    "transaction_date": "2022-06-28",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003190-PHOTO-2022-06-29-17-02-33.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "d9444b6f-f584-400a-89e7-15a27c3b4752",
+    "transaction_date": "2022-06-29",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003192-PHOTO-2022-07-05-17-47-31.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "54f73df0-e19e-4981-af78-e45c07bb21a3",
+    "transaction_date": "2022-07-05",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003194-PHOTO-2022-07-05-21-37-50.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "4f8d9cb6-e25f-4b8c-be1e-082d3ceb865c",
+    "transaction_date": "2022-07-06",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003204-PHOTO-2022-07-06-19-16-41.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "0476ece7-b060-490a-950f-14a1bf46a493",
+    "transaction_date": "2022-08-09",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003231-PHOTO-2022-08-10-18-15-13.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "8b9fed35-8186-482f-8578-fb1a7881a127",
+    "transaction_date": "2022-08-10",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003235-PHOTO-2022-08-12-21-23-13.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "839ac973-0dfa-4034-9302-c5d577c1e6e7",
+    "transaction_date": "2022-08-15",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003251-STICKER-2022-08-15-23-36-52.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "fa58d88d-6727-4aa9-baa4-077b8665d571",
+    "transaction_date": "2022-08-16",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003253-PHOTO-2022-08-16-17-54-19.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "04c99187-dcae-43eb-92fe-7862f3f31180",
+    "transaction_date": "2022-09-15",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003313-PHOTO-2022-09-15-17-08-24.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "3565a76e-e6a0-4631-8d51-934f80bf6595",
+    "transaction_date": "2022-09-16",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003327-PHOTO-2022-09-16-17-46-38.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "40c1f8af-7929-47e7-b68c-44d643c03420",
+    "transaction_date": "2022-09-16",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": "100",
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003330-PHOTO-2022-09-16-18-22-02.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.33,
+    "needs_review": true
+  },
+  {
+    "id": "88e29d1c-7bda-4dfc-9655-1f41f8b1f0e2",
+    "transaction_date": "2022-09-18",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003347-PHOTO-2022-09-24-08-48-09.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "421490f3-ae40-471e-bd2b-8e4821a96ac2",
+    "transaction_date": "2022-10-07",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003366-PHOTO-2022-10-07-16-06-50.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "8aa10e12-3fb4-4f51-8ba6-7ec03fe5a936",
+    "transaction_date": "2022-10-11",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003374-PHOTO-2022-10-11-18-15-21.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "30ec4368-14c4-4509-8a23-0d42acde4e5b",
+    "transaction_date": "2022-11-01",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003410-PHOTO-2022-11-01-10-48-02.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "f036a5fa-255f-4799-b9be-9ded97d1001b",
+    "transaction_date": "2023-02-16",
+    "customer_name": "Dave",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003530-PHOTO-2023-02-17-23-46-58.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "999c7c23-bbd1-491c-91af-00703c005225",
+    "transaction_date": "2019-01-11",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000013-PHOTO-2019-01-11-17-39-47.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "2f63b079-5046-42ef-a6dd-39c6e969f96a",
+    "transaction_date": "2019-01-15",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000028-PHOTO-2019-01-15-06-58-16.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "e8efbd0e-ba33-427a-95a3-8323fd2a632e",
+    "transaction_date": "2019-01-16",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000046-PHOTO-2019-01-16-22-05-35.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "69144f3c-d6e8-4a4c-8283-fdcabec4f151",
+    "transaction_date": "2019-01-17",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000055-PHOTO-2019-01-17-18-03-32.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "47cc4d6d-192d-406d-9c13-ac699f95e523",
+    "transaction_date": "2019-02-16",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000071-PHOTO-2019-02-16-16-06-53.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "2f8b5772-9207-4b59-a190-5fa36c8add0b",
+    "transaction_date": "2019-02-24",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000107-PHOTO-2019-02-24-15-45-28.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "7e4d056d-20df-4bb6-b13d-9b8a19e6b0c4",
+    "transaction_date": "2019-03-04",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": "0",
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000128-PHOTO-2019-03-04-17-33-45.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.47,
+    "needs_review": true
+  },
+  {
+    "id": "de3e3ed0-0e8b-42e0-b779-59a64547503f",
+    "transaction_date": "2019-03-22",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000144-PHOTO-2019-03-27-21-00-18.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "2c9d069b-e229-4f5e-ba1c-e50530ab0405",
+    "transaction_date": "2019-03-28",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": "390",
+    "payment_method": null,
+    "payment_status": "paid",
+    "source_messages": [],
+    "source_images": [
+      "00000153-PHOTO-2019-03-29-19-42-18.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.47,
+    "needs_review": true
+  },
+  {
+    "id": "9915e245-77b5-4566-86c9-00b8c589da3e",
+    "transaction_date": "2019-03-29",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000170-PHOTO-2019-03-29-21-32-35.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "a5cb04e7-8edd-437c-a49a-97115d282d80",
+    "transaction_date": "2019-04-03",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000210-PHOTO-2019-04-03-19-34-25.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "6d5de14a-3a40-4738-9c65-b674f4bff92e",
+    "transaction_date": "2019-04-06",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000216-PHOTO-2019-04-06-19-43-36.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "a31537a8-7b54-4c8a-8d5e-b84a469682aa",
+    "transaction_date": "2019-04-07",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": "12",
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000223-PHOTO-2019-04-08-19-00-10.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.47,
+    "needs_review": true
+  },
+  {
+    "id": "9c5e72ef-8f1a-44da-b604-b6dc0427a61b",
+    "transaction_date": "2019-04-09",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000241-PHOTO-2019-04-09-21-04-08.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "0d14a64b-ec29-450c-a8b9-35f1136f2957",
+    "transaction_date": "2019-04-10",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000275-PHOTO-2019-04-10-15-38-39.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "4e6d3114-db0e-4671-9f55-5656b206a6d1",
+    "transaction_date": "2019-04-19",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000287-PHOTO-2019-04-19-03-16-04.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "be3a1386-d87b-4fdd-9fd1-2e3fc2a5b995",
+    "transaction_date": "2019-04-19",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000295-PHOTO-2019-04-19-06-09-45.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "6cee0b3d-77ed-4c81-8c5b-937893b23f46",
+    "transaction_date": "2019-04-24",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000299-PHOTO-2019-04-24-17-42-38.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "c2a04790-98eb-4286-89b6-890b8f953774",
+    "transaction_date": "2019-04-25",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000325-PHOTO-2019-04-27-16-23-30.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "5ff43b0b-81ea-40cf-8c34-6a1682f472f5",
+    "transaction_date": "2019-05-05",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000354-PHOTO-2019-05-06-17-51-44.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "5201fd83-4c6b-4a93-befb-99ade02999d6",
+    "transaction_date": "2019-05-06",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": "100",
+    "received_amount": "2000",
+    "payment_method": null,
+    "payment_status": "paid",
+    "source_messages": [],
+    "source_images": [
+      "00000360-PHOTO-2019-05-07-17-17-39.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.65,
+    "needs_review": false
+  },
+  {
+    "id": "f72e1bbf-283e-4774-989a-c591a415b000",
+    "transaction_date": "2019-05-08",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000369-PHOTO-2019-05-08-12-58-39.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "67c7887f-b61d-421c-881e-41c3835774a5",
+    "transaction_date": "2019-05-08",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000384-PHOTO-2019-05-08-15-06-06.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "3b1d780d-f652-4562-91a9-fa3aabe07a84",
+    "transaction_date": "2019-06-28",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000423-PHOTO-2019-06-28-21-10-22.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "566a1632-699e-4950-88ed-d689a1be689f",
+    "transaction_date": "2019-07-04",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000452-PHOTO-2019-07-08-23-53-38.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "6c06d39d-4969-4e1e-8a86-5742f3d2826a",
+    "transaction_date": "2019-07-11",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000473-PHOTO-2019-07-11-20-02-00.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "4a6e8d52-209c-4aef-94e1-98462fc0f2fb",
+    "transaction_date": "2019-08-17",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000503-PHOTO-2019-08-18-21-18-35.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "a5ef0587-b189-44b3-a8e4-9fe9ba8982f3",
+    "transaction_date": "2019-08-18",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": "130",
+    "payment_method": null,
+    "payment_status": "paid",
+    "source_messages": [],
+    "source_images": [
+      "00000514-PHOTO-2019-08-19-17-00-02.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.47,
+    "needs_review": true
+  },
+  {
+    "id": "cf641d07-bad5-4b84-adda-4c5718c2a3e0",
+    "transaction_date": "2019-08-29",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000536-PHOTO-2019-08-30-20-07-36.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "bbeb3755-e6f0-4691-8979-2b3de766c835",
+    "transaction_date": "2019-09-09",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000564-PHOTO-2019-09-10-12-50-52.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "06f48f55-2305-460a-878d-d8cc34ca0204",
+    "transaction_date": "2019-09-11",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000586-PHOTO-2019-09-11-17-53-24.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "43742c59-6b6d-4310-8bc1-f2d9d7ba2f7f",
+    "transaction_date": "2019-09-17",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000624-PHOTO-2019-09-17-21-34-43.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "ad8cf478-79c9-4328-80cf-176beb3bebb1",
+    "transaction_date": "2019-09-18",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000638-PHOTO-2019-09-20-17-16-54.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "a7ae8513-df70-45a7-acc7-51fc8336786d",
+    "transaction_date": "2019-09-22",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000644-STICKER-2019-09-22-21-20-40.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "8c670d42-cd93-46e6-8c66-505f0d69635f",
+    "transaction_date": "2019-09-27",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000659-STICKER-2019-09-27-15-50-15.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "f25c1b68-1fbe-47c9-9291-8e1d5ef802d6",
+    "transaction_date": "2019-10-01",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000672-STICKER-2019-10-01-15-41-15.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "78633613-4b43-4b44-9290-dc0afec74ff4",
+    "transaction_date": "2019-10-07",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000693-STICKER-2019-10-07-15-12-08.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "519cf2dd-3d28-4722-9884-f3907c0e32c3",
+    "transaction_date": "2019-10-10",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000697-STICKER-2019-10-10-17-04-49.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "7432078a-f945-4582-8c9b-dfbb817b6afd",
+    "transaction_date": "2019-10-16",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000710-STICKER-2019-10-16-20-32-33.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "35e658fb-145b-4c8f-9b7a-9632dbb001d3",
+    "transaction_date": "2019-10-18",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000721-PHOTO-2019-10-18-22-54-57.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "ee0f7b07-328e-4ca4-9400-329204c5655e",
+    "transaction_date": "2019-10-31",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000793-PHOTO-2019-10-31-20-47-05.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "b2319975-ffed-49ca-94cd-5686b6b28aac",
+    "transaction_date": "2019-11-03",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": "20",
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000799-PHOTO-2019-11-03-18-47-39.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.47,
+    "needs_review": true
+  },
+  {
+    "id": "478ec68f-c64a-43bb-93c1-8bd811073d74",
+    "transaction_date": "2019-11-03",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000801-STICKER-2019-11-03-18-48-03.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "e87b9718-6581-40a6-8966-c4fbd37174fa",
+    "transaction_date": "2019-11-03",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000814-PHOTO-2019-11-03-21-00-16.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "1d02e37c-f735-4b58-acb2-3ee519dbcf89",
+    "transaction_date": "2019-11-04",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000818-PHOTO-2019-11-04-21-34-05.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "13582034-110d-4629-aa41-79f3452abfd4",
+    "transaction_date": "2019-11-05",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000822-PHOTO-2019-11-05-17-16-51.jpg"
+    ],
+    "notes": "數量: 3",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "620bb6bd-d637-4a74-9bf3-848d8ca0fe8b",
+    "transaction_date": "2019-11-09",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000858-PHOTO-2019-11-09-17-35-11.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "914ad270-d2de-4b7e-aa83-d59b930e8d4b",
+    "transaction_date": "2019-11-10",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000883-PHOTO-2019-11-10-20-20-20.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "d9b6bbb2-d474-4532-85fc-533ee3c30fe5",
+    "transaction_date": "2019-11-10",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000887-PHOTO-2019-11-28-05-47-58.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "ab5f66ea-64bf-48b9-87bd-3a492e7fb3e1",
+    "transaction_date": "2019-12-10",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000903-PHOTO-2019-12-10-14-45-56.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "af2ccfb8-83b1-4c33-9725-2892e18e9715",
+    "transaction_date": "2019-12-11",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000916-PHOTO-2019-12-11-21-51-43.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "d6733ada-f575-4c7b-9e0e-296258098990",
+    "transaction_date": "2019-12-15",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000956-PHOTO-2019-12-17-17-22-30.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "d00e8a69-ba48-4d69-ae93-ab47854b5789",
+    "transaction_date": "2019-12-19",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000967-PHOTO-2019-12-19-21-13-41.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "f7e7c93f-38e7-4f07-b113-8e20a6ba6cca",
+    "transaction_date": "2020-01-01",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00000991-STICKER-2020-01-01-17-34-21.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "34772720-eb08-495b-a101-1cde5a709974",
+    "transaction_date": "2020-01-10",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001003-PHOTO-2020-01-11-16-45-51.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "05c9e1d3-873c-4f2c-99b6-0b9daa547d14",
+    "transaction_date": "2020-01-11",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001006-PHOTO-2020-01-11-20-27-25.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "a7a6574b-9fee-46b7-804d-4fed88b959ff",
+    "transaction_date": "2020-01-13",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001020-PHOTO-2020-01-14-06-12-38.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "e6736a64-570c-4841-9040-79df20f114fd",
+    "transaction_date": "2020-01-22",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001037-PHOTO-2020-01-23-20-22-24.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "727f7c75-af74-4f79-9dd0-5e487369f77d",
+    "transaction_date": "2020-01-23",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001039-STICKER-2020-01-23-20-48-44.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "d7558931-823f-4d0a-b877-8ff087db2f32",
+    "transaction_date": "2020-02-17",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001060-PHOTO-2020-02-21-21-05-31.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "7f3eb54e-000b-4af9-b2ae-1017c7045bae",
+    "transaction_date": "2020-02-27",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001085-STICKER-2020-02-27-16-39-25.webp"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "c7ef9d43-c532-4b09-9dd9-066557d0d342",
+    "transaction_date": "2020-02-29",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001095-STICKER-2020-02-29-17-05-13.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "27d6302c-51c3-4733-99bd-0df76d73810a",
+    "transaction_date": "2020-03-02",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001116-STICKER-2020-03-02-22-00-12.webp"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "3f7e6a75-f7e9-4413-a6c7-56ba9fa9a231",
+    "transaction_date": "2020-03-08",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001140-PHOTO-2020-03-08-21-44-37.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "1e9e772c-99a2-49e7-a415-a3d98332d747",
+    "transaction_date": "2020-03-27",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001143-PHOTO-2020-03-27-07-18-55.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "83ba189b-cb11-4293-88c9-952ad4fcebd4",
+    "transaction_date": "2020-04-03",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001213-PHOTO-2020-04-03-04-13-07.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "50068ee2-9ed2-42ae-9595-01226fbced32",
+    "transaction_date": "2020-04-06",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001233-PHOTO-2020-04-08-22-56-56.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "da80df41-7690-4e22-a818-e19190dd128c",
+    "transaction_date": "2020-04-14",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001271-PHOTO-2020-04-14-18-19-55.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "be65cd7f-46a3-4b2f-ac04-73042040c687",
+    "transaction_date": "2020-04-14",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": "150",
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001281-PHOTO-2020-04-14-22-25-34.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.33,
+    "needs_review": true
+  },
+  {
+    "id": "87888174-43b7-44b3-ae32-c8b69ce74e0c",
+    "transaction_date": "2020-04-15",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001286-STICKER-2020-04-16-12-17-27.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "00c73418-882f-452b-a3a7-4213a5ba1ee0",
+    "transaction_date": "2020-04-16",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001290-PHOTO-2020-04-16-17-06-07.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "df9dcbe8-9f5d-4a85-a52f-6b1d4ed910ef",
+    "transaction_date": "2020-04-16",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001297-PHOTO-2020-04-17-15-23-28.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "0d09bfe8-3a71-4df9-a244-f8069c2338f9",
+    "transaction_date": "2020-04-23",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001312-PHOTO-2020-04-28-21-49-09.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "a42b3cda-9158-4ade-8962-64331ff7d55e",
+    "transaction_date": "2020-05-05",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001347-PHOTO-2020-05-05-21-52-40.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "612a72ed-79ee-4ae1-b45f-ca111a16a0f8",
+    "transaction_date": "2020-05-10",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001379-PHOTO-2020-05-10-19-26-47.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "adda91be-2942-4012-a3b0-af59caf4df12",
+    "transaction_date": "2020-05-12",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001418-STICKER-2020-05-12-17-47-27.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "b3a09350-9961-45ad-8de0-9efd3946872f",
+    "transaction_date": "2020-05-12",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001425-STICKER-2020-05-12-20-59-27.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "df2855f1-f822-4200-ad97-748d377abc83",
+    "transaction_date": "2020-05-14",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001437-STICKER-2020-05-14-21-27-22.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "c3817b0c-3ed4-445f-9c21-710f6d1d97f0",
+    "transaction_date": "2020-05-21",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001442-STICKER-2020-05-21-12-55-40.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "f75dd5c5-b104-42cd-9d53-8901d7941bd5",
+    "transaction_date": "2020-05-21",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001454-PHOTO-2020-05-22-13-40-49.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "45307a53-fb29-40fa-8a17-3e5455739a09",
+    "transaction_date": "2020-05-22",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001458-PHOTO-2020-05-22-16-26-05.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "eb8be393-a8ea-42a4-ad7c-f4b5aa97a94b",
+    "transaction_date": "2020-05-29",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001479-STICKER-2020-05-29-16-49-31.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "7fa8bedb-5ff5-4542-92af-a579330b7cf2",
+    "transaction_date": "2020-06-15",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001560-PHOTO-2020-06-15-17-18-48.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "a99e8ff8-a7e4-4ef6-81dc-4d03b2da8863",
+    "transaction_date": "2020-06-16",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001567-PHOTO-2020-06-16-22-46-00.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "38839d19-2fad-4996-968d-d2169562f4f5",
+    "transaction_date": "2020-06-19",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001590-PHOTO-2020-06-20-16-49-41.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "42d136ab-5e78-417b-bd96-a588251cc009",
+    "transaction_date": "2020-06-22",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001594-PHOTO-2020-06-23-17-59-13.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "d8999eca-45eb-4893-8509-552392951b89",
+    "transaction_date": "2020-06-23",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001604-PHOTO-2020-06-23-20-48-47.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "50a51c0a-d23a-4185-addc-385c73fe1b62",
+    "transaction_date": "2020-06-29",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001616-PHOTO-2020-06-29-16-28-49.jpg"
+    ],
+    "notes": "數量: 3",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "b2c1e435-4637-4b82-8555-fec0243d3629",
+    "transaction_date": "2020-07-20",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001641-PHOTO-2020-07-20-17-08-51.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "707221a4-1dc4-4991-be0a-36219ee59577",
+    "transaction_date": "2020-07-21",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001652-PHOTO-2020-07-21-17-16-00.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "e8d7518e-7b84-43cf-845f-d71ca53be4b3",
+    "transaction_date": "2020-07-25",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001670-PHOTO-2020-07-30-21-43-12.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "149f7b0a-d261-4758-9277-43168e1fca97",
+    "transaction_date": "2020-07-30",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001672-PHOTO-2020-07-31-20-03-12.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "bce7bb0f-dc53-4136-b1bc-ee648fe0c7b6",
+    "transaction_date": "2020-08-10",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001718-PHOTO-2020-08-11-17-03-26.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "7a50298f-0fe8-4562-8954-549893dbea2a",
+    "transaction_date": "2020-08-18",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001761-PHOTO-2020-08-19-18-24-26.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "c2671668-f935-49ed-bbe1-d95ffd2c1663",
+    "transaction_date": "2020-08-23",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001784-PHOTO-2020-08-24-17-49-39.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "2d00a4f2-ad90-43d7-a425-c0c98d4af015",
+    "transaction_date": "2020-08-24",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001789-PHOTO-2020-08-26-16-24-04.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "5b342932-dad8-4280-8783-055167ecc36f",
+    "transaction_date": "2020-08-30",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001807-PHOTO-2020-09-01-17-46-48.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "9a9c1cd5-b17d-4302-89db-9d10300cf129",
+    "transaction_date": "2020-09-02",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001814-PHOTO-2020-09-02-18-06-51.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "fbd89188-9649-4a8d-a557-18f2efa8044c",
+    "transaction_date": "2020-09-04",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001831-PHOTO-2020-09-04-19-31-31.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "ae7cdc01-79f8-4f65-ad52-82d744886816",
+    "transaction_date": "2020-09-05",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001846-PHOTO-2020-09-05-22-04-35.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "4c2580c4-fd61-4cbe-8247-12007925e5ea",
+    "transaction_date": "2020-09-07",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001859-PHOTO-2020-09-07-16-33-53.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "95e52e9a-3f56-4b9a-a555-77ef5f28dba9",
+    "transaction_date": "2020-09-07",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001870-PHOTO-2020-09-07-20-17-31.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "bc16c24e-cea0-4b7c-b248-a416c783bc55",
+    "transaction_date": "2020-09-19",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001886-PHOTO-2020-09-21-21-57-27.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "9492c251-ee21-4ffb-80dc-3dbb3a27725d",
+    "transaction_date": "2020-10-06",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001910-PHOTO-2020-10-07-21-23-14.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "2fe22083-cb30-4626-8e67-beb83b6e2e69",
+    "transaction_date": "2020-10-07",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001913-STICKER-2020-10-08-07-23-34.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "8152e4c4-db09-4f0f-aa10-4534d10049ed",
+    "transaction_date": "2020-10-08",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001918-PHOTO-2020-10-08-14-28-52.jpg"
+    ],
+    "notes": "數量: 3",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "b0170dcc-ec89-4a70-8500-3ccf3c488d5d",
+    "transaction_date": "2020-10-12",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001942-PHOTO-2020-10-12-16-03-05.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "95252add-7237-40c3-bb29-34f242006456",
+    "transaction_date": "2020-10-29",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001949-PHOTO-2020-10-29-16-46-19.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "a4ae8af7-ec48-450e-93a8-355bbe758352",
+    "transaction_date": "2020-11-01",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001956-PHOTO-2020-11-03-21-44-21.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "0155ccef-cb17-4d68-bae3-7ec26590407e",
+    "transaction_date": "2020-11-10",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00001962-STICKER-2020-11-10-18-13-56.webp"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "f5f807e5-c627-4fa4-8730-982e9c9570df",
+    "transaction_date": "2020-11-11",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002005-PHOTO-2020-11-12-16-46-10.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "0d20dcd4-ed54-4592-97cf-c37baefb2617",
+    "transaction_date": "2020-11-24",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002013-PHOTO-2020-11-24-17-42-13.jpg"
+    ],
+    "notes": "數量: 3",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "0ce046c2-e2bd-4719-881c-1da5670638b4",
+    "transaction_date": "2020-11-29",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002025-PHOTO-2020-12-01-22-32-26.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "b8a9588d-bb76-4fa7-8a18-02314d785c4b",
+    "transaction_date": "2020-12-07",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002029-PHOTO-2020-12-07-21-16-15.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "240162d4-2f21-4e38-b46f-3abe626724e2",
+    "transaction_date": "2021-01-01",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002074-STICKER-2021-01-01-00-35-48.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "7fd0ab62-aec7-45b3-8074-bafbd13e475e",
+    "transaction_date": "2021-01-16",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002108-PHOTO-2021-01-16-15-28-26.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "5863ca1a-3af6-4b24-81c8-2b51f6e087b0",
+    "transaction_date": "2021-01-25",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002134-STICKER-2021-01-25-17-08-02.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "aa0f5d52-fe28-4451-9355-1eb654326ead",
+    "transaction_date": "2021-02-11",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002140-PHOTO-2021-02-11-18-21-26.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "ebb20d33-2726-417e-b62b-7924b41204f7",
+    "transaction_date": "2021-02-24",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002160-PHOTO-2021-02-25-17-54-01.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "4b2f3ea7-a0df-446d-a6c2-08e766a0b9d2",
+    "transaction_date": "2021-02-25",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002165-PHOTO-2021-02-25-22-14-23.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "883fd600-59a5-470d-823d-63c92b10de75",
+    "transaction_date": "2021-02-26",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002175-STICKER-2021-02-26-17-07-40.webp"
+    ],
+    "notes": "數量: 3",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "fd194722-2c18-4216-bcfe-80ec5798b0e6",
+    "transaction_date": "2021-02-26",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002195-STICKER-2021-02-26-20-36-55.webp"
+    ],
+    "notes": "數量: 4",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "ef619b74-1dd0-4314-a264-ddff6a72de82",
+    "transaction_date": "2021-03-28",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002235-PHOTO-2021-03-30-16-28-43.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "a3a7a795-7973-4844-8fbb-a93ae7562038",
+    "transaction_date": "2021-03-30",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002241-PHOTO-2021-03-30-17-59-36.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "132ed829-9c33-4742-80ec-6797d19a020d",
+    "transaction_date": "2021-04-06",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002265-PHOTO-2021-04-09-21-31-25.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "46a94da2-7a7b-4769-ad33-715129a912b9",
+    "transaction_date": "2021-04-28",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002305-STICKER-2021-04-28-20-25-29.webp"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "cfcb5595-f2cf-4855-9dff-3281b85830c7",
+    "transaction_date": "2021-05-03",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002350-PHOTO-2021-05-05-20-02-13.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "3fed1ef3-b665-40dd-92c2-91b87c36f6f6",
+    "transaction_date": "2021-05-05",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002364-PHOTO-2021-05-06-20-25-12.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "9dedc5c0-6b16-4422-96bc-92b4541d23e3",
+    "transaction_date": "2021-05-06",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002370-PHOTO-2021-05-07-18-22-31.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "84b74c9b-763f-450a-8e99-aab17e6cb9cd",
+    "transaction_date": "2021-05-17",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002396-PHOTO-2021-05-17-21-36-57.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "b20401a5-06d1-4978-b660-9022b8f7253b",
+    "transaction_date": "2021-05-21",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002413-STICKER-2021-05-21-16-06-41.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "403d28e2-a939-4a3c-8be4-d5c2a600af06",
+    "transaction_date": "2021-05-27",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002444-PHOTO-2021-05-28-20-56-24.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "bfd6184b-c43f-44fa-ae7c-b959b7fc27eb",
+    "transaction_date": "2021-05-28",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002460-PHOTO-2021-05-28-22-26-58.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "74d79f6a-c7e8-4ac8-8746-619103043ffa",
+    "transaction_date": "2021-06-06",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": "600",
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002482-STICKER-2021-06-06-18-18-47.webp"
+    ],
+    "notes": "",
+    "confidence": 0.33,
+    "needs_review": true
+  },
+  {
+    "id": "001143e2-12b2-4afc-9999-5f5ab65c8937",
+    "transaction_date": "2021-06-07",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002491-STICKER-2021-06-07-21-05-11.webp"
+    ],
+    "notes": "數量: 3",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "1f1eb675-6d94-4efc-95bf-6006400f6660",
+    "transaction_date": "2021-06-15",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002511-PHOTO-2021-06-17-17-16-51.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "e9e47e9c-bbf2-459c-91d5-861975779285",
+    "transaction_date": "2021-06-19",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002516-PHOTO-2021-06-20-21-28-49.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "5702b6a8-d8cb-4ebf-9429-8da9a08902c7",
+    "transaction_date": "2021-06-27",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": "450",
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002525-STICKER-2021-06-28-05-06-15.webp"
+    ],
+    "notes": "",
+    "confidence": 0.33,
+    "needs_review": true
+  },
+  {
+    "id": "98c9cd58-d768-40b7-a033-3ed2521628b3",
+    "transaction_date": "2021-07-05",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": "550",
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002555-PHOTO-2021-07-05-17-20-14.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.33,
+    "needs_review": true
+  },
+  {
+    "id": "ab5c24b9-0622-4b75-bf3a-396be01550b2",
+    "transaction_date": "2021-07-05",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002560-PHOTO-2021-07-05-17-24-02.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "31b5e14b-7719-428a-a734-44efce4b419e",
+    "transaction_date": "2021-08-02",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002616-PHOTO-2021-08-02-18-23-00.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "a37fa9f6-9fbe-4b90-9cc8-10ea303512ae",
+    "transaction_date": "2021-08-07",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002623-PHOTO-2021-08-09-17-26-46.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "90334ba9-9889-4192-8091-edaddb0b259b",
+    "transaction_date": "2021-08-18",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002627-PHOTO-2021-08-18-22-02-47.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "890a9377-c929-4945-b434-1f21e34c3587",
+    "transaction_date": "2021-09-02",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002656-PHOTO-2021-09-04-20-01-21.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "1e530341-554e-4e02-993d-450106d4c089",
+    "transaction_date": "2021-09-13",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002671-PHOTO-2021-09-13-22-27-43.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "ab903636-bd3f-440d-84ab-1c511ca95a9f",
+    "transaction_date": "2021-09-17",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002683-PHOTO-2021-09-17-16-08-04.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "704cfe7c-b331-4d89-9630-928bc8b09860",
+    "transaction_date": "2021-09-19",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": "100",
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002686-PHOTO-2021-09-19-22-21-49.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.33,
+    "needs_review": true
+  },
+  {
+    "id": "2417bada-64a0-4dbb-9b85-ded1c8a7effa",
+    "transaction_date": "2021-09-19",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002694-PHOTO-2021-09-20-16-13-10.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "2f2392ac-1f26-42a4-b774-8d637a8429ac",
+    "transaction_date": "2021-09-27",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002711-PHOTO-2021-09-27-21-26-38.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "b6495224-ccfa-42d7-b616-1d207607bf04",
+    "transaction_date": "2021-10-18",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002742-PHOTO-2021-10-19-17-26-13.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "06925855-150e-47fd-bcf4-53e850465935",
+    "transaction_date": "2021-10-19",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": "500",
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002747-PHOTO-2021-10-19-21-59-32.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.33,
+    "needs_review": true
+  },
+  {
+    "id": "a8717a13-f74a-4d6d-b038-5fbcd486d251",
+    "transaction_date": "2021-11-02",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002780-PHOTO-2021-11-02-18-41-14.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "9af8a84c-9e85-4668-a4b0-682e3801a1ff",
+    "transaction_date": "2021-11-20",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002806-PHOTO-2021-11-25-20-24-27.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "24e04a1e-d6b0-476f-8585-9dc2890bb25c",
+    "transaction_date": "2021-12-04",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002842-PHOTO-2021-12-04-19-28-07.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "9ed5b095-1215-477f-afdd-b42fa6d6f267",
+    "transaction_date": "2021-12-06",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002870-PHOTO-2021-12-06-17-19-47.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "39916bd0-f9f5-4d20-b471-e77a24d672d3",
+    "transaction_date": "2021-12-15",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002923-PHOTO-2021-12-16-20-36-26.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "19803f5f-b56d-4d03-90d5-d0923b5b62f4",
+    "transaction_date": "2021-12-16",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002931-PHOTO-2021-12-16-20-42-36.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "b4fff1ea-e555-48cf-8362-c0af2fad401c",
+    "transaction_date": "2022-01-04",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": "300",
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002948-PHOTO-2022-01-04-20-38-21.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.33,
+    "needs_review": true
+  },
+  {
+    "id": "ab5e32bf-9f1d-4588-91b0-cc514d088519",
+    "transaction_date": "2022-01-10",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00002981-PHOTO-2022-01-10-19-58-56.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "d73bc161-9503-4252-a90e-fabc11913292",
+    "transaction_date": "2022-01-30",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003002-PHOTO-2022-02-08-19-34-02.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "9fbd8948-8090-4190-92e7-5206b643ff53",
+    "transaction_date": "2022-02-16",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003018-PHOTO-2022-02-16-21-21-53.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "9c4b70b7-b7ab-42a1-94e3-77092444c034",
+    "transaction_date": "2022-03-26",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003027-PHOTO-2022-03-26-17-44-12.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "4bd939ca-5124-4eac-8389-cb0f3c460613",
+    "transaction_date": "2022-04-01",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003040-PHOTO-2022-04-02-19-29-34.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "112981ce-a45f-4a85-a189-b42839451205",
+    "transaction_date": "2022-04-04",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003048-PHOTO-2022-04-07-18-15-54.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "dd2de60a-4569-402c-9523-8bc0e6f0f7b3",
+    "transaction_date": "2022-04-08",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003056-PHOTO-2022-04-08-20-54-59.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "55bb4b5c-1a4d-4ca0-b1ec-1cf02cd98876",
+    "transaction_date": "2022-05-15",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003069-PHOTO-2022-05-18-20-09-15.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "e2188194-efee-49b5-aa81-9db47d065864",
+    "transaction_date": "2022-05-24",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003077-PHOTO-2022-05-24-18-40-29.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "b7952b6e-f30e-4cd6-b878-8cc41e6d3877",
+    "transaction_date": "2022-06-06",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003102-PHOTO-2022-06-06-22-00-38.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "a24d9eb4-5158-43b0-9ca1-3703f35995a4",
+    "transaction_date": "2022-06-14",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003117-PHOTO-2022-06-15-19-00-57.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "d300a901-7b28-479c-bf07-e423164eb234",
+    "transaction_date": "2022-06-20",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003131-PHOTO-2022-06-21-16-53-15.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "8e56c1b8-024a-45ac-b200-29f8f09c5fe6",
+    "transaction_date": "2022-06-21",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003146-PHOTO-2022-06-21-20-52-05.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "38532534-7e87-48eb-83f4-7fd52cd65701",
+    "transaction_date": "2022-06-22",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003173-PHOTO-2022-06-22-15-43-18.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "04387b02-ee44-474f-8052-b54ec809e820",
+    "transaction_date": "2022-06-23",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003185-PHOTO-2022-06-23-21-28-05.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "ee08ccf9-ebc3-450d-b185-497204072cb0",
+    "transaction_date": "2022-07-05",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003202-PHOTO-2022-07-06-18-41-37.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "b2848a09-2d18-4a36-8a72-30e6437585bb",
+    "transaction_date": "2022-07-21",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003209-PHOTO-2022-07-21-17-27-41.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "f77b68d4-096b-4bcf-b6b8-91a870e82fcf",
+    "transaction_date": "2022-08-03",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003219-PHOTO-2022-08-03-19-37-17.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "3993d8fa-e2c5-4cbc-bb77-b3c1e986d402",
+    "transaction_date": "2022-08-27",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003271-PHOTO-2022-08-29-19-44-55.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "de83d34f-4d89-4efc-ae6c-07856423addc",
+    "transaction_date": "2022-09-16",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003321-PHOTO-2022-09-16-10-43-45.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "bc200028-491b-4e93-bc01-671565537a75",
+    "transaction_date": "2022-09-17",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003343-PHOTO-2022-09-17-22-26-10.jpg"
+    ],
+    "notes": "數量: 2",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "a26b0bc9-fbc0-4549-a450-4254ff854696",
+    "transaction_date": "2022-10-07",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003372-PHOTO-2022-10-11-17-16-35.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "555834b2-776a-438c-b74e-0b381402387f",
+    "transaction_date": "2022-10-17",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003385-PHOTO-2022-10-18-20-28-47.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "bfae61e8-e748-4618-835b-f59d07b702bd",
+    "transaction_date": "2022-10-25",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003393-PHOTO-2022-10-25-18-57-40.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "e7ddbbe7-eab5-41fc-9e1f-ae38c218d5ba",
+    "transaction_date": "2022-10-31",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003400-PHOTO-2022-10-31-20-46-23.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.3,
+    "needs_review": true
+  },
+  {
+    "id": "9f4a5ffa-86b8-4d5f-a5f6-ad9f5247040f",
+    "transaction_date": "2022-11-21",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003442-PHOTO-2022-11-22-21-05-35.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "4cab99fb-30c9-4427-a1f5-f95744da94e1",
+    "transaction_date": "2022-11-24",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003456-PHOTO-2022-11-28-22-07-14.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "f923cd15-8fdd-43d2-8646-054cc74f41f3",
+    "transaction_date": "2022-12-01",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003467-PHOTO-2022-12-02-19-41-53.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "c5a02861-6a52-41a6-8b36-c09881525463",
+    "transaction_date": "2022-12-07",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003474-PHOTO-2022-12-30-21-06-29.jpg"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  },
+  {
+    "id": "81e5d0c5-136d-4251-a241-8d0024cdbdea",
+    "transaction_date": "2023-02-21",
+    "customer_name": "Scofield 阿黎",
+    "repair_item": null,
+    "quoted_amount": null,
+    "received_amount": null,
+    "payment_method": null,
+    "payment_status": "unpaid",
+    "source_messages": [],
+    "source_images": [
+      "00003543-STICKER-2023-02-21-13-11-01.webp"
+    ],
+    "notes": "",
+    "confidence": 0.15,
+    "needs_review": true
+  }
+]
