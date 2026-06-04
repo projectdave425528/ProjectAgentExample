@@ -4,10 +4,10 @@
   "description": "偵測子 Agent outbox 有新回覆，自動讀取並處理",
   "when": {
     "type": "fileCreated",
-    "patterns": ["ProjectRecord/*/outbox/planner/*.md", "ProjectRecord/*/outbox/generator/*.md", "ProjectRecord/*/outbox/evaluator/*.md"]
+    "patterns": ["main-agent/ProjectRecord/*/outbox/planner/*.md", "main-agent/ProjectRecord/*/outbox/generator/*.md", "main-agent/ProjectRecord/*/outbox/evaluator/*.md"]
   },
   "then": {
     "type": "askAgent",
-    "prompt": "有子 Agent 回覆咗。先讀取 ProjectRecord/active-project.md 確認當前 Project，然後讀取對應 Project 嘅最新 outbox 文件，根據內容判斷下一步：如果係 Planner 回覆就審視計劃並問用戶確認；如果係 Generator 回覆就派發 Evaluator；如果係 Evaluator 回覆就根據 verdict 決定交付或通知用戶；如果係 escalation 就問用戶取得資源。"
+    "prompt": "有子 Agent 回覆咗。先讀取 main-agent/ProjectRecord/active-project.md 確認當前 Project，然後讀取對應 Project 嘅最新 outbox 文件，根據內容判斷下一步：如果係 Planner 回覆就審視計劃並問用戶確認；如果係 Generator 回覆就派發 Evaluator；如果係 Evaluator 回覆就根據 verdict 決定交付或通知用戶；如果係 escalation 就問用戶取得資源。"
   }
 }

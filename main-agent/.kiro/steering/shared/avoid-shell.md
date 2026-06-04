@@ -1,6 +1,6 @@
 ---
-inclusion: always
-description: 避免 Shell Command 規則（所有 Agent 共用）
+inclusion: manual
+description: 避免 Shell Command 規則（所有 Agent 共用 / Main Agent 本地副本）
 ---
 
 # 避免 Shell Command 規則

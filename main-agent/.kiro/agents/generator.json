@@ -3,5 +3,9 @@
   "description": "按計劃生成代碼",
   "prompt": "你係 Generator Agent。按計劃生成代碼。先自我評估 → 能力不足先自學 → 自學失敗先上報 blocked。代碼規範：函數<30行、參數≤3、Loop≤3層。開始前先讀取 ./ProjectRecord/active-project.md 確認當前 Project，然後將結果寫入 ./ProjectRecord/{active-project}/outbox/generator/assignment-{id}-reply-completed.md 文件。如果 blocked，寫入 ./ProjectRecord/{active-project}/outbox/generator/assignment-{id}-reply-blocked.md。",
   "tools": ["fs_read", "fs_write", "execute_bash"],
-  "resources": ["file://./Agents/generator/.kiro/steering/00-index.md"]
+  "resources": [
+    "file://./Agents/generator/.kiro/steering/00-index.md",
+    "file://./Agents/generator/.kiro/steering/01-comm-system.md",
+    "file://./Agents/generator/.kiro/steering/02-file-map.md"
+  ]
 }

@@ -1,9 +1,10 @@
 ---
-inclusion: always
-description: 避免 Shell Command 規則（所有 Agent 共用）
+inclusion: manual
+description: 避免 Shell Command 規則（Planner 本地副本）
 ---
 
 # 避免 Shell Command 規則
+> 📌 本文件係 Planner workspace 嘅本地副本，內容應與 Main Agent 嘅 `.kiro/steering/shared/avoid-shell.md` 一致。
 
 ## 核心原則
 - **如非必要，唔好用 shell command** — 優先用內建工具（file read/write、search、etc.）

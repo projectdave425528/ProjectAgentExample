@@ -44,21 +44,14 @@ kiro-cli chat --agent [agent-name] "[prompt]"
 ```
 invoke_sub_agent:
   name: "general-task-execution"
-  prompt: "[assignment 內容]"
-  contextFiles:
-    - path: "./Agents/{agent}/.kiro/steering/00-index.md"
-    - path: "./Agents/{agent}/.kiro/steering/01-comm-system.md"
-    - path: "./ProjectRecord/active-project.md"
-    - path: "./ProjectRecord/{active-project}/specs/tasks.md"
-    - path: "./ProjectRecord/{active-project}/memory/{agent}-memory.md"
-    - path: "./ProjectRecord/templates/assignment-reply-template.md"
+  prompt: "[assignment 內容 + 明確指示 Agent 角色/任務/輸出路徑]"
+  contextFiles: [見上表，按 {agent} 揀對應幾個]
 ```
 
 **調用前必做：**
 1. 寫 Assignment 到 inbox（同方法 1 一樣）
 2. 確認 `{agent}` 同 `{active-project}` 已替換為實際值
-3. Prompt 入面明確指示 Agent 角色 + 任務 + 輸出路徑
-4. 如果 specs/ 入面嘅文件唔存在 → 移除該 contextFile（唔好報錯）
+3. 如果 specs/ 入面嘅文件唔存在 → 移除該 contextFile（唔好報錯）
 
 ### 調用決策流程
 ```
@@ -78,39 +71,12 @@ invoke_sub_agent:
 
 ## 文件記錄規則
 
-### 目錄結構
-```
-./ProjectRecord/
-├── active-project.md            ← 當前 active project（切換用）
-├── templates/                   ← 共用 Message 模板
-│
-└── {active-project}/            ← 當前 Project 嘅所有記錄
-    ├── specs/                   ← Spec 文件（requirements/design/tasks）
-    ├── memory/                  ← Agent 記憶（每個 Agent 獨立文件）
-    │   ├── main-agent-memory.md
-    │   ├── planner-memory.md
-    │   ├── generator-memory.md
-    │   └── evaluator-memory.md
-    ├── SearchIndex.md           ← 本 Project 嘅搜尋索引
-    ├── conversation-log.md      ← 所有對話記錄（append-only）
-    ├── checkpoints/             ← Checkpoint 文件（每個 Agent 獨立子目錄）
-    │   ├── main-agent/
-    │   ├── planner/
-    │   ├── generator/
-    │   └── evaluator/
-    ├── control/                 ← 控制指令
-    ├── output/                  ← 生成嘅代碼
-    ├── inbox/                   ← 所有 Agent 嘅收件
-    │   ├── planner/
-    │   ├── generator/
-    │   ├── evaluator/
-    │   └── main-agent/
-    └── outbox/                  ← 所有 Agent 嘅發件
-        ├── planner/
-        ├── generator/
-        ├── evaluator/
-        └── main-agent/
-```
+> 完整目錄結構見 `details/comm-detail.md`。常用路徑：
+> - `./ProjectRecord/active-project.md` — 當前 Project
+> - `./ProjectRecord/{active-project}/inbox/{agent}/` — 收件
+> - `./ProjectRecord/{active-project}/outbox/{agent}/` — 發件
+> - `./ProjectRecord/{active-project}/{specs,memory,checkpoints,output,control}/`
+> - `./ProjectRecord/{active-project}/{SearchIndex.md,conversation-log.md}`
 
 ### 記錄時機
 - **開始前**：讀取 `./ProjectRecord/active-project.md` 確認當前 Project
@@ -138,63 +104,5 @@ SearchIndex 最後一行：| 003 | evaluator | verdict | ...
 ```
 
 ## Message 格式
-
-### Assignment Message（寫入 inbox）
-```markdown
-# Assignment {id}
-
-- **From**: main-agent
-- **To**: {agent-name}
-- **Timestamp**: {ISO timestamp}
-- **Type**: plan-request | generate-request | evaluate-request
-
-## 需求
-{具體內容}
-
-## Context
-{相關背景資訊}
-
-## 預期輸出
-{期望 Agent 回覆咩}
-```
-
-### Reply Message（從 outbox 讀取）
-```markdown
-# Assignment Reply: {id}
-
-- **From**: {agent-name}
-- **To**: main-agent
-- **Timestamp**: {ISO timestamp}
-- **AssignmentStatus**: completed | blocked | verdict-pass | verdict-fail | verdict-replan | escalation
-- **TaskRef**: Task {task-number}: {task-title}
-- **TaskID**: {active-project}/Task-{task-number}
-- **TaskStatus**: in_progress → completed | blocked
-
-## 驗證標準
-- [x] {已完成嘅 outcome}
-- [ ] {未完成嘅 outcome}
-
-## 結果
-{Agent 嘅回覆內容}
-
-## 備註
-{任何額外資訊}
-
-## Memory 已更新
-✅ / ❌
-
-## Usage 估算
-- **Context 使用率**: {百分比}%
-- **估算 Token 數**: {input_tokens} input / {output_tokens} output
-- **接近限額警告**: ⚠️ / ✅
-```
-
-### Conversation Log Entry
-```markdown
----
-## [{timestamp}] {from} → {to}
-
-**Type**: {message-type}
-**Status**: {status}
-**Summary**: {一句話摘要}
-```
+> 完整 Message 格式（Assignment / Reply / Conversation Log）見 `./ProjectRecord/templates/` 嘅對應 template，
+> 快速參考見 `details/comm-detail.md`。寫入前先讀 template 按格式填寫。
