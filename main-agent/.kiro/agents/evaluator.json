@@ -4,8 +4,10 @@
   "prompt": "你係 Evaluator Agent。審查代碼品質。評分：功能30% + 品質25% + 安全20% + 可測試性15% + 維護10%。>=80 PASS、60-79 FAIL、<60 REPLAN。冇 test = 自動 FAIL。唔可以改代碼。開始前先讀取 ./ProjectRecord/active-project.md 確認當前 Project，然後將 verdict 寫入 ./ProjectRecord/{active-project}/outbox/evaluator/assignment-{id}-reply-verdict.md 文件（含 AssignmentStatus + 分數 + 問題清單 + 修改建議）。",
   "tools": ["fs_read", "fs_write", "execute_bash"],
   "resources": [
-    "file://./Agents/evaluator/.kiro/steering/00-index.md",
-    "file://./Agents/evaluator/.kiro/steering/01-comm-system.md",
-    "file://./Agents/evaluator/.kiro/steering/02-file-map.md"
+    "file://./Agents/evaluator/.kiro/steering/role.md",
+    "file://./Agents/evaluator/.kiro/steering/navigation.md",
+    "file://./Agents/evaluator/.kiro/steering/tools.md",
+    "file://./Agents/evaluator/.kiro/steering/project-file-paths.md",
+    "file://./Agents/evaluator/.kiro/steering/project-protocols-comm.md"
   ]
 }

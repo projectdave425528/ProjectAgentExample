@@ -11,3 +11,7 @@ Desktop.ini
 # Temp
 *.tmp
 *.log
+
+# CodeGraph (local index, per-machine)
+.codegraph/
+**/.codegraph/

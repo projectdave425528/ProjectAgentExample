@@ -1,0 +1,24 @@
+---
+inclusion: always
+description: Planner 文件清單 + 幾時讀（L1 - 永遠載入）
+---
+
+# Planner 文件導航
+
+| 文件 | L層 | inclusion | 幾時讀 |
+|------|-----|-----------|--------|
+| `role.md` | L1 | always | 身份 + 核心規則（自動載入） |
+| `navigation.md` | L1 | always | 本文件（自動載入） |
+| `tools.md` | L2 | always | 工具權限（自動載入） |
+| `project-file-paths.md` | L2 | always | Project 路徑查表（自動載入） |
+| `project-protocols-comm.md` | L2 | always | 通訊協議（自動載入） |
+| `project-protocols-checkpoint.md` | L3 | manual | 建立/恢復 Checkpoint 時 |
+| `project-protocols-memory.md` | L3 | manual | 寫 outbox reply 時 |
+| `project-protocols-record-write.md` | L3 | manual | 寫入 ProjectRecord 遇到問題時 |
+| `project-protocols-format.md` | L3 | manual | 寫 outbox reply 前 |
+| `project-protocols-error-handling.md` | L3 | manual | 遇到 error 時 |
+| `project-protocols-size-rules.md` | L3 | manual | 任務太大 / 怕 timeout 時 |
+| `project-protocols-shell-policy.md` | L3 | manual | 想用 shell 前 |
+| `role-execution.md` | L3 | manual | **設計方案前必讀**（可測試性/Specs） |
+| `role-constraints.md` | L3 | manual | 問題處理 / escalation 時 |
+| `domain-knowledge-tech-stack.md` | L3 | manual | 選技術方案時 |

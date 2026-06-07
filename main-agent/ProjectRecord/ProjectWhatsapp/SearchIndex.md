@@ -73,3 +73,6 @@
 | 025 | generator | assignment-reply | completed | Task12 文檔完成 | 2026-05-31 | outbox/generator/assignment-025-reply-completed.md |
 | 026 | main-agent | assignment | dispatched | Task12 評估請求 | 2026-05-31 | inbox/evaluator/assignment-026.md |
 | 026 | evaluator | verdict | PASS (92) | Task12 通過評估 | 2026-05-31 | outbox/evaluator/assignment-026-reply-verdict.md |
+
+| 027 | main-agent | assignment | dispatched | CodeGraph Auto-Testing 可行性規劃 | 2026-06-05 | inbox/planner/assignment-027.md |
+| 027 | planner | assignment-reply | completed | CodeGraph Auto-Testing Plan 完成 | 2026-06-05 | outbox/planner/assignment-027-reply-completed.md |
