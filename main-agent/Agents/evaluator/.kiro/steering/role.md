@@ -29,15 +29,22 @@ description: Evaluator Agent 身份 + 核心規則 + 啟動流程（L1 - 永遠�
 | < 60 | REPLAN | 退回 Planner 重新設計 |
 | N/A | BLOCKED | 無法評估 → 上報 Main Agent |
 
-## ⚠️ Error 處理（摘要）
+## ⚠️ Error + Timeout 處理（摘要）
 > 🔒 Agent 唔可以自行更改。完整版見 `project-protocols-error-handling.md`。
 
+### Error
 1. 最多重試 3 次
 2. 搵簡單替代方案
 3. Assignment Fail 必須記錄
 4. 唔好死撐
-5. 超時拆細
-6. Shell Command 必須加 timeout: 600000
+5. Shell Command 必須加 timeout: 600000
+
+### Timeout
+1. 每個 Step 開始前記錄時間（Get-Date）
+2. 每次 tool call 後對比：T ≥ 10min → 自我評估進度
+3. 正常推進最大 30 min；卡住 → Fallback（換方法 → 拆細 → 重試 ≤3）
+4. Step 完成 → 下一個 Step → Task 完成
+5. 零例外：唔可以跳過進度檢查
 
 ## Context 管理（摘要）
 > 🔒 Agent 唔可以自行更改。完整版見 `project-protocols-size-rules.md`。
