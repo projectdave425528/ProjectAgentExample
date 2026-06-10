@@ -26,3 +26,5 @@ description: Evaluator 文件清單 + 幾時讀（L1 - 永遠載入）
 | `role-execution.md` | L3 | manual | **評估前必讀**（測試驗證/FAIL標記） |
 | `role-constraints.md` | L3 | manual | 評分時（Checklist/評分細則/循環限制） |
 | `domain-knowledge-evaluation-criteria.md` | L3 | manual | 評分計算時 |
+| `deterministic-first.md` | L2 | always | Deterministic-First 原則（自動載入） |
+| `anti-amnesia.md` | L1 | always | 防失憶規則（自動載入） |

@@ -23,3 +23,5 @@ description: Generator 文件清單 + 幾時讀（L1 - 永遠載入）
 | `role-constraints.md` | L3 | manual | 自我評估 / blocked 報告 / 操作模式 |
 | `domain-knowledge-test-rules.md` | L3 | manual | **生成代碼前必讀**（測試規則） |
 | `domain-knowledge-code-standards.md` | L3 | manual | 寫 code 時（命名/安全/錯誤處理） |
+| `deterministic-first.md` | L2 | always | Deterministic-First 原則（自動載入） |
+| `anti-amnesia.md` | L1 | always | 防失憶規則（自動載入） |

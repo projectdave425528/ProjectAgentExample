@@ -16,6 +16,8 @@ description: Root Agent 配置文件路徑索引（L2 - 永遠載入）
 | agent-config-file-paths.md | `.kiro/steering/agent-config-file-paths.md` |
 | role-execution.md | `.kiro/steering/role-execution.md` |
 | role-constraints.md | `.kiro/steering/role-constraints.md` |
+| deterministic-first.md | `.kiro/steering/deterministic-first.md` |
+| anti-amnesia.md | `.kiro/steering/anti-amnesia.md` |
 
 ## Hooks
 | Hook | 路徑 | 觸發條件 |
@@ -30,3 +32,8 @@ description: Root Agent 配置文件路徑索引（L2 - 永遠載入）
 | 文件 | 路徑 |
 |------|------|
 | MCP Config | `.kiro/settings/mcp.json`（如存在） |
+
+## Templates
+| 文件 | 路徑 |
+|------|------|
+| Session Log Entry Template | `UserConfig/session-log-entry-template.md` |

@@ -26,6 +26,8 @@ description: Evaluator 配置文件路徑索引（L2 - 永遠載入）
 | role-execution.md | `Agents/evaluator/.kiro/steering/role-execution.md` |
 | role-constraints.md | `Agents/evaluator/.kiro/steering/role-constraints.md` |
 | domain-knowledge-evaluation-criteria.md | `Agents/evaluator/.kiro/steering/domain-knowledge-evaluation-criteria.md` |
+| deterministic-first.md | `Agents/evaluator/.kiro/steering/deterministic-first.md` |
+| anti-amnesia.md | `Agents/evaluator/.kiro/steering/anti-amnesia.md` |
 
 ## Hooks
 （空 — Evaluator 冇自己嘅 hooks）

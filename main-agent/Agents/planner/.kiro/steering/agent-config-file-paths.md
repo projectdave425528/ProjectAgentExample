@@ -26,6 +26,8 @@ description: Planner 配置文件路徑索引（L2 - 永遠載入）
 | role-execution.md | `Agents/planner/.kiro/steering/role-execution.md` |
 | role-constraints.md | `Agents/planner/.kiro/steering/role-constraints.md` |
 | domain-knowledge-tech-stack.md | `Agents/planner/.kiro/steering/domain-knowledge-tech-stack.md` |
+| deterministic-first.md | `Agents/planner/.kiro/steering/deterministic-first.md` |
+| anti-amnesia.md | `Agents/planner/.kiro/steering/anti-amnesia.md` |
 
 ## Hooks
 （空 — Planner 冇自己嘅 hooks）

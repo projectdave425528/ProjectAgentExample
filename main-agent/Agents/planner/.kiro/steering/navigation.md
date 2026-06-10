@@ -22,3 +22,5 @@ description: Planner 文件清單 + 幾時讀（L1 - 永遠載入）
 | `role-execution.md` | L3 | manual | **設計方案前必讀**（可測試性/Specs） |
 | `role-constraints.md` | L3 | manual | 問題處理 / escalation 時 |
 | `domain-knowledge-tech-stack.md` | L3 | manual | 選技術方案時 |
+| `deterministic-first.md` | L2 | always | Deterministic-First 原則（自動載入） |
+| `anti-amnesia.md` | L1 | always | 防失憶規則（自動載入） |

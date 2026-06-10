@@ -83,6 +83,39 @@ Sub Agent 唔需要知道完整大局，只需知自己嘅「介面定位」（�
 ### 2.5 共用規則（shared/）— 單一邏輯來源
 
 `error-handling`、`context-management`、`avoid-shell` 三份共用規則，每個 Agent 嘅 workspace 都有一份本地副本（`shared/`），確保跨 workspace 都讀到。
+
+### 2.6 Deterministic-First 原則 — 確定性任務用代碼
+
+> **「可確定嘅嘢用代碼，唔確定嘅嘢用 AI」**
+
+當 Task/Step 有標準答案、可驗證、重複性高、唔容許錯誤、或有明確規則時，
+Agent 必須編寫 JS 腳本執行，唔可以用 LLM 推理代替。
+
+- **Planner**：標記 Step 類型（`deterministic` / `ai-driven`），提供 input/output 規格
+- **Generator**：遇到 deterministic Step → 寫 JS 腳本放 `scripts/deterministic/`
+- **Evaluator**：跑腳本驗證，睇 exit code（0=pass, 1=fail），唔用 LLM 判斷
+
+腳本模板：`scripts/deterministic/_templates/`
+
+### 2.7 Anti-Amnesia — 防止 Context Compaction 導致失憶
+
+所有 Agent（Root/Main/Sub）都有 `anti-amnesia.md`（inclusion: always）。
+當執行多步驟任務時，每個 Step 開始前讀取 `progress-marker.md`，完成後覆蓋更新。
+
+Progress Marker 格式（覆蓋式，永遠 5 行，~20 tokens）：
+```
+# Progress
+task: {任務描述}
+last_completed: Step {N} - {描述}
+next: Step {N+1} - {描述}
+total: {總步數}
+```
+
+路徑規則：
+- Project 操作 → `ProjectRecord/{project}/progress-marker.md`
+- 非 Project 操作 → Agent 目錄 `./progress-marker.md`
+
+與 Checkpoint 並行：Marker = 極簡狀態（做到邊）；Checkpoint = 詳細記錄（做過咩）。
 ---
 
 ## 3. 實際目錄結構
@@ -90,7 +123,15 @@ Sub Agent 唔需要知道完整大局，只需知自己嘅「介面定位」（�
 ```
 ProjectAgentExample/                          ← Root（頂層 workspace）
 ├── .kiro/
-│   ├── steering/00-index.md                  ← Root 核心指令（5 條通用規則，always）
+│   ├── steering/
+│   │   ├── role.md                           ← Root 身份 + 核心規則（always）
+│   │   ├── navigation.md                     ← 文件導航（always）
+│   │   ├── tools.md                          ← 工具權限（always）
+│   │   ├── agent-config-file-paths.md        ← 配置路徑索引（always）
+│   │   ├── deterministic-first.md            ← 確定性任務用腳本原則（always）
+│   │   ├── anti-amnesia.md                   ← 防失憶規則（always）
+│   │   ├── role-execution.md                 ← 操作流程（manual）
+│   │   └── role-constraints.md               ← 行為邊界（manual）
 │   └── hooks/                                ← Root 層自動化
 │       ├── auto-log-session.kiro.hook        ← 每次對話完自動寫 session log
 │       ├── watch-agent-replies.kiro.hook     ← 偵測 outbox 新 reply 自動處理
@@ -98,7 +139,14 @@ ProjectAgentExample/                          ← Root（頂層 workspace）
 │       ├── sync-config-from-github.kiro.hook
 │       └── remind-update-config-deleted.kiro.hook
 ├── README.md                                 ← 本文件
+├── scripts/
+│   └── deterministic/                        ← 確定性任務腳本
+│       ├── _templates/                       ← 腳本模板
+│       │   ├── deterministic-template.js     ← 通用模板
+│       │   └── validator-template.js         ← 格式驗證模板
+│       └── README.md
 ├── UserConfig/sessions/                      ← 通用對話記錄（跨 Project）
+├── UserConfig/session-log-entry-template.md  ← Root Agent Session Log 格式模板
 ├── UserDocument/                             ← 通用設計文件
 │
 └── main-agent/                               ← Main Agent workspace（日常開發喺呢度開）
@@ -124,20 +172,26 @@ ProjectAgentExample/                          ← Root（頂層 workspace）
     │
     ├── Agents/                               ← 3 個 Sub Agent 各自嘅 steering
     │   ├── planner/.kiro/steering/
-    │   │   ├── 00-index.md  02-file-map.md   ← L1 always
-    │   │   ├── 01-comm-system.md             ← L2 always
-    │   │   ├── details/ {workflow, role-detail, output-format}.md
-    │   │   └── shared/ {error-handling, context-management, avoid-shell}.md
+    │   │   ├── role.md  navigation.md        ← L1 always（身份 + 導航）
+    │   │   ├── tools.md  project-file-paths.md  ← L2 always（工具 + 路徑）
+    │   │   ├── deterministic-first.md        ← L2 always（確定性原則）
+    │   │   ├── anti-amnesia.md               ← L1 always（防失憶）
+    │   │   ├── project-protocols-*.md        ← L3 manual（各種 protocol）
+    │   │   └── domain-knowledge-*.md         ← L3 manual（領域知識）
     │   ├── generator/.kiro/steering/
-    │   │   ├── 00-index.md  02-file-map.md   ← L1 always
-    │   │   ├── 01-comm-system.md             ← L2 always
-    │   │   ├── details/ {test-rules, workflow, code-standards, role-detail, output-format}.md
-    │   │   └── shared/ {error-handling, context-management, avoid-shell}.md
+    │   │   ├── role.md  navigation.md        ← L1 always
+    │   │   ├── tools.md  project-file-paths.md  ← L2 always
+    │   │   ├── deterministic-first.md        ← L2 always（確定性原則）
+    │   │   ├── anti-amnesia.md               ← L1 always（防失憶）
+    │   │   ├── project-protocols-*.md        ← L3 manual
+    │   │   └── domain-knowledge-*.md         ← L3 manual（test-rules + code-standards）
     │   └── evaluator/.kiro/steering/
-    │       ├── 00-index.md  02-file-map.md   ← L1 always
-    │       ├── 01-comm-system.md             ← L2 always
-    │       ├── details/ {workflow, role-detail, output-format}.md
-    │       └── shared/ {error-handling, context-management, avoid-shell}.md
+    │       ├── role.md  navigation.md        ← L1 always
+    │       ├── tools.md  project-file-paths.md  ← L2 always
+    │       ├── deterministic-first.md        ← L2 always（確定性原則）
+    │       ├── anti-amnesia.md               ← L1 always（防失憶）
+    │       ├── project-protocols-*.md        ← L3 manual
+    │       └── domain-knowledge-*.md         ← L3 manual（evaluation-criteria）
     │
     └── ProjectRecord/                        ← 所有 Project 記錄 + 產出
         ├── active-project.md                 ← 當前 active project（切換用）
@@ -148,6 +202,8 @@ ProjectAgentExample/                          ← Root（頂層 workspace）
         │   ├── conversation-log-entry-template.md
         │   ├── search-index-entry-template.md
         │   ├── verdict-template.md
+        │   ├── progress-marker-template.md   ← Anti-Amnesia Progress Marker 格式
+        │   ├── session-log-entry-template.md ← Session Log 統一格式模板
         │   ├── examples/                     ← 完整範例（manual 載入）
         │   └── specs/                        ← requirements/design/tasks template
         │
@@ -324,6 +380,8 @@ ProjectRecord/{project-name}/
 | **5. comm-system 瘦身** | 完整目錄圖 + Message 格式搬 L3 | Main comm-system 200→108 |
 | **+ 導航地圖** | 每個 Agent 加 `02-file-map.md`（always） | 工具權限 + 文件清單 + 點搵 Project |
 | **+ avoid-shell 共用** | 搬入各 Agent shared/，L1 留精簡提醒 | always-on 27→4 行 |
+| **+ Deterministic-First** | 確定性任務必須寫 JS 腳本，唔用 LLM 推理 | 所有 Agent 加入原則 + 模板 |
+| **+ Anti-Amnesia** | 防 compaction 失憶，每步讀/寫 progress marker | 5 行覆蓋式，~20 tokens/step |
 
 ### 設計原則總結
 - **漸進式披露**：L1/L2 always 精簡，L3 按需 `fs_read` → 慳 token

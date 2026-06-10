@@ -27,6 +27,8 @@ description: Generator 配置文件路徑索引（L2 - 永遠載入）
 | role-constraints.md | `Agents/generator/.kiro/steering/role-constraints.md` |
 | domain-knowledge-test-rules.md | `Agents/generator/.kiro/steering/domain-knowledge-test-rules.md` |
 | domain-knowledge-code-standards.md | `Agents/generator/.kiro/steering/domain-knowledge-code-standards.md` |
+| deterministic-first.md | `Agents/generator/.kiro/steering/deterministic-first.md` |
+| anti-amnesia.md | `Agents/generator/.kiro/steering/anti-amnesia.md` |
 
 ## Hooks
 （空 — Generator 冇自己嘅 hooks）

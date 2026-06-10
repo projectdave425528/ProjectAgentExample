@@ -1,12 +1,12 @@
 {
-  "name": "Auto Log Session",
-  "version": "2.0.0",
-  "description": "每次完成後自動記錄 session log 到 active-project 嘅 UserConfig/sessions/ + 問 commit",
+  "name": "Auto Log Session (Main Agent)",
+  "version": "13.0.0",
+  "description": "每次 Agent 完成後，自動記錄對話到 session 文件。v13: 統一格式（參考 session-log-entry-template）",
   "when": {
     "type": "agentStop"
   },
   "then": {
     "type": "askAgent",
-    "prompt": "記錄 Session Log：1. 讀取 ./ProjectRecord/active-project.md 確認當前 Project。2. 記錄到 ./ProjectRecord/{active-project}/UserConfig/sessions/YYYY-MM-DD-session-HHMM.md。格式：時間 + 用戶輸入 + 回覆摘要 + 操作。記錄完問：commit / branch / no？防循環：如果用戶輸入係 commit/branch/no/go/understood → 靜默結束。"
+    "prompt": "自動記錄 Session Log（全部自動執行，唔需要問用戶任何確認）：\n\n1. 直接執行 `Get-Date -Format 'yyyy-MM-dd HH:mm:ss'` 取得本地時間\n2. 讀取 `./ProjectRecord/active-project.md` 取得 `current` 值\n3. 寫去 `./ProjectRecord/{current}/UserConfig/sessions/`\n4. 文件名：`YYYY-MM-DD-session-HHMM.md`（HHMM = session 第一條訊息時間）\n5. 同名文件存在 → 追加\n6. 記錄格式（參考 `./ProjectRecord/templates/session-log-entry-template.md`）：\n\n## [YYYY-MM-DD HH:MM:SS] 對話記錄\n\n### 用戶輸入\n[完整內容，唔包括 HOOK_INSTRUCTION]\n\n### 決策過程（思考鏈）\n1. {理解}\n2. {方案}\n3. {問題}\n4. {決策}\n\n### Kiro 回覆摘要\n[2-5 句總結]\n\n### 工具調用 + 操作\n| # | 操作 | 目標 | 結果 |\n|---|------|------|------|\n\n### 文件變動\n| 類型 | 路徑 | 備註 |\n|------|------|------|\n\n---\n\n關鍵規則：\n- 全部自動執行，唔問用戶\n- 記錄完靜默結束\n- 唔記錄 HOOK_INSTRUCTION 內容\n- 用戶輸入空 → 靜默結束\n- 回覆摘要 2-5 句，唔完整抄錄\n- 工具+操作合併一個 table\n- 文件變動有先寫，冇就省略"
   }
 }
