@@ -17,3 +17,4 @@ description: Evaluator Project 路徑查表（L2 - 永遠載入）
 - **Verdict** → `./ProjectRecord/{active-project}/outbox/evaluator/assignment-{id}-reply-verdict.md`
 - **FAIL 時** → 重命名 `output/assignment-{id}/` 為 `output/assignment-{id}-FAILED/`
 - **Checkpoint** → `./ProjectRecord/{active-project}/checkpoints/evaluator/`
+- **Decision Log** → `./ProjectRecord/{active-project}/decision-logs/evaluator/`

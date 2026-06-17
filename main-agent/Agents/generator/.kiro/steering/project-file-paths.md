@@ -18,3 +18,4 @@ description: Generator Project 路徑查表（L2 - 永遠載入）
 - **完成報告** → `./ProjectRecord/{active-project}/outbox/generator/assignment-{id}-reply-completed.md`
 - **Blocked 報告** → `./ProjectRecord/{active-project}/outbox/generator/assignment-{id}-reply-blocked.md`
 - **Checkpoint** → `./ProjectRecord/{active-project}/checkpoints/generator/`
+- **Decision Log** → `./ProjectRecord/{active-project}/decision-logs/generator/`

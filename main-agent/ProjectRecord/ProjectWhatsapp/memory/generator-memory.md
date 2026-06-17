@@ -8,6 +8,13 @@
 | 3 | 2026-05-30 | Task 10: CLI 入口 + 主流程串接 | completed (20 tests pass, 260 total) | Click CLI 用 lazy import 處理 optional dependencies（OcrAnalyzer）；CliRunner 測試唔需要真實文件系統；builtins.__import__ patch 可以模擬 ImportError；中間結果保存用 records_to_json() 直接寫入 |
 | 4 | 2026-05-31 | Task 11: 端到端整合測試 | completed (6 tests pass, 266 total) | Excel summary row 用 "總計" 唔係 "合計"；attachment message 同 amount message 係分開嘅（matcher 配對 attachment msg）；金額格式化為 "X.00" 字串；empty records 仍產出 header + summary row |
 
+## 重要教訓（永久）
+1. **Test import 路徑必須同 source 一致** — 寫 test 前確認 import path + function signature
+2. **Lazy import 會令 module-level mock patch 失效** — 需要 patch 原始 module 或 builtins.__import__
+3. **Integration test 會暴露單元測試搵唔到嘅問題** — 各 Task 獨立 pass 唔代表合併後 pass
+4. **Floating point 加法要 round** — confidence 計算用 `round(score, 2)`
+5. **中文 regex 唔穩定** — 中文數字/金額用 dict lookup 比 regex 更可靠
+
 ## 項目知識
 - 技術棧：Python 3.14、Pydantic 2.13.4、pytest 9.0.3、openpyxl 3.1.5、Click
 - TransactionRecord 用 `transaction_date` 而非 `date`（避免 Pydantic type annotation 衝突）

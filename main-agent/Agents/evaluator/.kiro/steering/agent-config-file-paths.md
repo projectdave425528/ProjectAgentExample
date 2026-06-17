@@ -25,6 +25,7 @@ description: Evaluator 配置文件路徑索引（L2 - 永遠載入）
 | project-protocols-shell-policy.md | `Agents/evaluator/.kiro/steering/project-protocols-shell-policy.md` |
 | role-execution.md | `Agents/evaluator/.kiro/steering/role-execution.md` |
 | role-constraints.md | `Agents/evaluator/.kiro/steering/role-constraints.md` |
+| project-protocols-decision-log.md | `Agents/evaluator/.kiro/steering/project-protocols-decision-log.md` |
 | domain-knowledge-evaluation-criteria.md | `Agents/evaluator/.kiro/steering/domain-knowledge-evaluation-criteria.md` |
 | deterministic-first.md | `Agents/evaluator/.kiro/steering/deterministic-first.md` |
 | anti-amnesia.md | `Agents/evaluator/.kiro/steering/anti-amnesia.md` |

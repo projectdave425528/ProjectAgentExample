@@ -25,6 +25,7 @@ description: Planner 配置文件路徑索引（L2 - 永遠載入）
 | project-protocols-shell-policy.md | `Agents/planner/.kiro/steering/project-protocols-shell-policy.md` |
 | role-execution.md | `Agents/planner/.kiro/steering/role-execution.md` |
 | role-constraints.md | `Agents/planner/.kiro/steering/role-constraints.md` |
+| project-protocols-decision-log.md | `Agents/planner/.kiro/steering/project-protocols-decision-log.md` |
 | domain-knowledge-tech-stack.md | `Agents/planner/.kiro/steering/domain-knowledge-tech-stack.md` |
 | deterministic-first.md | `Agents/planner/.kiro/steering/deterministic-first.md` |
 | anti-amnesia.md | `Agents/planner/.kiro/steering/anti-amnesia.md` |

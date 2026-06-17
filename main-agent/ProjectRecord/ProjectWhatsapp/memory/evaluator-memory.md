@@ -7,6 +7,13 @@
 | 2 | 2026-05-31 | Task 11: 端到端整合測試（6 E2E tests） | PASS (88) | Happy Path 重複 pipeline 執行；column index magic number；整體覆蓋度優秀 |
 | 3 | 2026-05-31 | Task 12: 文檔 + README（內容審查） | PASS (92) | 全部 section 齊全；FAQ 6 個；Tesseract 安裝指南完整；建議加 macOS/Linux 提示 |
 
+## 重要教訓（永久）
+1. **Integration gap 係盲點** — 各 Task 獨立評估 PASS 但合併後暴露問題（系統訊息格式、floating point、empty sender）
+2. **FAIL → 修改 → 重評流程有效** — 具體修改建議（含代碼範例）對 Generator 最有幫助
+3. **bare `list` type hint 係 recurring issue** — Generator 應統一用 generic type（`list[T]`）
+4. **Lazy import 會令 module-level mock 失效** — test 必須 patch 原始 module
+5. **文檔評估要點** — README 必須有：簡介、功能、安裝、快速開始、項目結構；usage.md 必須有：CLI 參數表、配置、FAQ ≥5
+
 ## 項目標準
 - Python 3.9+、Pydantic v2、pytest
 - Config 優先順序：env vars > yaml > defaults

@@ -1,0 +1,18 @@
+{
+  "enabled": true,
+  "name": "Auto Check README",
+  "description": "當 .kiro/ 下嘅 steering、hooks、settings 或 templates 有修改時，自動讀取 README.md 並評估需要更新嘅內容，提出具體建議。",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "**/.kiro/steering/*.md",
+      "**/.kiro/hooks/*.hook",
+      "**/templates/*.md"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "剛才有 config/steering/hook/template 文件被修改。請執行以下步驟：\n1. 讀取 README.md\n2. 對照剛才修改嘅文件內容\n3. 評估 README 嘅邊啲 section 需要同步更新（例如：§3 目錄結構、§4 文件表、§5.4 Hooks 列表、§6.1 Project 結構）\n4. 如果有差距，列出具體需要改嘅位置同建議內容\n5. 如果冇差距，靜默結束"
+  }
+}

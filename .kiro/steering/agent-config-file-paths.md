@@ -27,6 +27,7 @@ description: Root Agent 配置文件路徑索引（L2 - 永遠載入）
 | Remind Update Config (Deleted) | `.kiro/hooks/remind-update-config-deleted.kiro.hook` | fileDeleted (.kiro/) |
 | Sync Config from GitHub | `.kiro/hooks/sync-config-from-github.kiro.hook` | userTriggered |
 | Watch Agent Replies | `.kiro/hooks/watch-agent-replies.kiro.hook` | fileCreated (outbox/) |
+| Auto Check README | `.kiro/hooks/auto-check-readme.kiro.hook` | fileEdited (steering/hooks/templates) |
 
 ## Settings
 | 文件 | 路徑 |

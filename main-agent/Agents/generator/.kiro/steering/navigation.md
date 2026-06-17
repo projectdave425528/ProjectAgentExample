@@ -13,6 +13,7 @@ description: Generator 文件清單 + 幾時讀（L1 - 永遠載入）
 | `project-file-paths.md` | L2 | always | Project 路徑查表（自動載入） |
 | `project-protocols-comm.md` | L2 | always | 通訊協議（自動載入） |
 | `project-protocols-checkpoint.md` | L3 | manual | 建立/恢復 Checkpoint 時 |
+| `project-protocols-decision-log.md` | L3 | manual | 每個 Step 完成後寫 Decision Log 時 |
 | `project-protocols-memory.md` | L3 | manual | 寫 outbox reply 時 |
 | `project-protocols-record-write.md` | L3 | manual | 寫入 ProjectRecord 遇到問題時 |
 | `project-protocols-format.md` | L3 | manual | 寫 outbox reply 前 |

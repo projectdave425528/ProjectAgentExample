@@ -28,7 +28,12 @@
 | UI-03 | 策略管理介面：新增/編輯/啟停策略 | P0 |
 | UI-04 | Backtest 結果可視化（equity curve、drawdown、trade list） | P0 |
 | UI-05 | 即時市場數據顯示（K 線圖 + indicators） | P1 |
-| UI-06 | 告警/通知系統（Telegram / Email / Webhook） | P1 |
+| UI-06 | 告警/通知系統（Email 為主要通知渠道） | P0 |
+| UI-07 | Responsive Web App — 同一套 UI 自適應 Desktop（Windows）同 Mobile（iOS）屏幕 | P0 |
+| UI-08 | PWA 支持 — 用戶可將 Web App 加到 iOS 主畫面，獲得接近 Native App 嘅體驗 | P0 |
+| UI-09 | iOS 同 Windows 功能完全一致，手機版唔做功能閹割 | P0 |
+| UI-10 | 離線緩存 — 部分功能可離線使用（例如：已完成嘅 Backtest 結果、歷史交易記錄） | P1 |
+| UI-11 | 數據同步延遲容許 5-10 秒（唔需要毫秒級即時同步） | P0 |
 
 ### 2.2 策略系統
 
@@ -67,7 +72,7 @@
 | LT-03 | 訂單管理（市價/限價/止損單） | P0 |
 | LT-04 | Paper Trading 模式（模擬交易，唔落真錢） | P0 |
 | LT-05 | 支持多個帳戶同時運行 | P1 |
-| LT-06 | 風險管理系統（獨立模組）— 包含：每日最大虧損限額、每策略最大持倉量、整體帳戶風險敞口上限、Drawdown 熔斷機制（達到 X% drawdown 自動暫停所有交易）、風險事件 log | P0 |
+| LT-06 | 風險管理系統（獨立模組）— 包含：每日最大虧損限額、每策略最大持倉量、整體帳戶風險敞口上限、Drawdown 熔斷機制（用戶可自定義熔斷百分比，預設 15%，達到後自動暫停所有交易）、風險事件 log | P0 |
 | LT-07 | 平倉系統 — 支持多種平倉策略：移動止損（trailing stop）、時間止損（持倉超過 N 天自動平）、條件止損（indicator 觸發平倉）、一鍵全平（緊急情況）、部分平倉（減倉） | P0 |
 | LT-08 | 多單 Position Group 管理 — 策略產生嘅多張單歸入同一 group，group level 嘅風控（整體 stop loss、整體 take profit）、group 整體 PnL 追蹤 | P0 |
 
@@ -80,6 +85,8 @@
 | DA-03 | 支持多個 Data Provider（歷史數據 + 即時數據） | P0 |
 | DA-04 | 數據緩存 + 本地存儲（減少 API call） | P1 |
 | DA-05 | 標準化 Data Schema（OHLCV + metadata） | P0 |
+| DA-06 | 多市場支持 — 美股、港股、Crypto、Forex、期貨，每個市場一個 Adapter | P0 |
+| DA-07 | 市場交易時段管理 — 唔同市場有唔同交易時間（美股 9:30-16:00 ET、港股 9:30-16:00 HKT、Crypto 24/7） | P0 |
 
 ### 2.6 架構要求
 
@@ -91,6 +98,65 @@
 | AR-04 | 事件驅動架構（Event-Driven） | P0 |
 | AR-05 | 狀態持久化（系統重啟後可恢復） | P1 |
 | AR-06 | 日誌 + 審計追蹤（所有交易決策可追溯） | P0 |
+
+### 2.7 跨平台需求
+
+| ID | 需求 | 優先級 |
+|----|------|--------|
+| CP-01 | 系統以 Responsive Web App 形式運行，支持 iOS（Safari）同 Windows（Chrome/Edge） | P0 |
+| CP-02 | PWA 配置 — Service Worker + Web App Manifest，支持「加到主畫面」 | P0 |
+| CP-03 | 離線緩存策略 — 已完成嘅 Backtest 結果、歷史交易記錄可離線瀏覽 | P1 |
+| CP-04 | 數據同步 — Server → Client 延遲容許 5-10 秒，用 WebSocket 或 SSE 推送更新 | P0 |
+| CP-05 | Email 通知 — 交易信號、風控告警、訂單成交等關鍵事件透過 Email 通知用戶 | P0 |
+| CP-06 | 唔需要開發 Native App（iOS/Android），唔需要上 App Store | P0 |
+| CP-07 | Mobile-first responsive design — 確保觸控操作友好、圖表可縮放 | P0 |
+
+**技術方向：**
+```
+Frontend: React / Next.js + Tailwind CSS（Responsive）
+PWA: Service Worker + Cache API（離線緩存）
+通知: Email（SMTP / SendGrid / AWS SES）
+同步: WebSocket（持倉/PnL 即時推送）+ REST API（歷史數據）
+```
+
+---
+
+### 2.8 用戶系統（User Management）
+
+| ID | 需求 | 優先級 |
+|----|------|--------|
+| UM-01 | 用戶註冊 / 登入 — Email + 密碼認證 | P0 |
+| UM-02 | 密碼安全 — bcrypt hash、密碼重設功能、登入失敗鎖定 | P0 |
+| UM-03 | Session 管理 — JWT Token、自動過期、可強制登出 | P0 |
+| UM-04 | 角色權限系統（RBAC）— Admin 可管理所有用戶及系統設定；User 只管自己嘅帳戶 | P0 |
+| UM-05 | 用戶級設定持久化 — 所有設定跟住用戶走，登入後自動載入 | P0 |
+| UM-06 | 策略模板共享 — 用戶可以將自己嘅策略發佈為模板，其他用戶可以複製使用 | P1 |
+| UM-07 | 數據隔離 — 市場數據全體共享；交易記錄、策略配置、Broker 連接、帳戶資料嚴格按用戶隔離 | P0 |
+| UM-08 | 多用戶並行 — 系統架構支持多個用戶同時在線操作，互不干擾 | P0 |
+
+**用戶設定範圍：**
+
+| 設定類別 | 內容 | 儲存方式 |
+|---------|------|---------|
+| 策略配置 | 使用邊個策略、參數設定、啟停狀態 | 用戶 DB record |
+| 風控設定 | risk per trade、max drawdown、熔斷百分比 | 用戶 DB record |
+| Broker 連接 | API key（加密）、帳戶 ID、連接狀態 | 加密儲存 |
+| 通知偏好 | Email 地址、通知類型、頻率 | 用戶 DB record |
+| UI 偏好 | Dashboard layout、語言、主題色 | 用戶 DB record |
+| 部署模式 | 本地 / 雲端 / 混合 | 用戶 DB record |
+
+**權限矩陣：**
+
+| 功能 | Admin | User |
+|------|:-----:|:----:|
+| 管理自己嘅策略/交易 | ✅ | ✅ |
+| 管理自己嘅 Broker 連接 | ✅ | ✅ |
+| 修改自己嘅風控/通知設定 | ✅ | ✅ |
+| 查看其他用戶嘅交易 | ✅ | ❌ |
+| 管理用戶帳號（新增/停用） | ✅ | ❌ |
+| 系統全局設定（市場數據源等） | ✅ | ❌ |
+| 發佈策略模板 | ✅ | ✅ |
+| 使用共享策略模板 | ✅ | ✅ |
 
 ---
 
@@ -330,7 +396,7 @@ Internal Format ←→ Broker Adapter ←→ Broker-specific API Format
 
 | 組件 | 候選 | 備註 |
 |------|------|------|
-| Frontend | React / Next.js | Dashboard + 策略配置 |
+| Frontend | React / Next.js + Tailwind CSS | Responsive Web App + PWA |
 | Backend API | Node.js / Python FastAPI | API Gateway |
 | Strategy Engine | Python | 數學計算 + indicator library |
 | Message Bus | Redis Streams / RabbitMQ | 解耦通訊 |
@@ -338,6 +404,9 @@ Internal Format ←→ Broker Adapter ←→ Broker-specific API Format
 | Vector Store | Qdrant / Milvus / FAISS | 向量策略用 |
 | Backtest Workers | Celery (Python) / Bull (Node) | 分散式 job queue |
 | Deployment | Docker + Kubernetes | 水平擴展 |
+| Email 通知 | SendGrid / AWS SES / SMTP | 交易信號 + 風控告警 |
+| 即時同步 | WebSocket (Socket.io) | 持倉/PnL 推送（延遲 < 10s） |
+| 離線緩存 | Service Worker + Cache API | Backtest 結果 + 歷史記錄 |
 
 ---
 
@@ -382,9 +451,10 @@ RoR = ((1 - W + W×R) / R) ^ (A / B)
 - `B` = 連續虧損可承受次數
 
 **控制變數：**
-- 降低每次 risk per trade（建議 1-2%）
+- 降低每次 risk per trade（預設 1%，UI 可調）
 - 提高 Edge（勝率 × 盈虧比）
 - 資金越大，RoR 越低
+- Max Drawdown 熔斷線：15%（達到即暫停所有交易）
 
 ### 10.2 策略最大回撤（Max Drawdown）
 
@@ -442,10 +512,13 @@ S1 = 2 × PP - High; S2 = PP - (High - Low)
 
 | ID | 需求 | 優先級 |
 |----|------|--------|
-| CMP-01 | 系統必須支援 Local 電腦同 Cloud 兩種計算模式 | P0 |
+| CMP-01 | 系統必須支援 Local 電腦同 Cloud 兩種計算模式，用戶可喺 UI 自行選擇 | P0 |
 | CMP-02 | 向量數據（Vector Data）嘅計算同儲存需兼容兩種環境 | P0 |
-| CMP-03 | 可根據資源需求動態切換計算模式 | P1 |
+| CMP-03 | 用戶可根據需求隨時切換 Local ↔ Cloud（唔需要重啟系統或改 code） | P0 |
 | CMP-04 | Local ↔ Cloud 數據同步機制 | P0 |
+| CMP-05 | GPU/CPU 自動偵測 — 系統啟動時自動偵測有冇 GPU，有就用 GPU 加速，冇就用 CPU，唔需要改 code 或手動配置 | P0 |
+| CMP-06 | 部署模式可選 — 用戶可以選擇：(A) 純本地運行、(B) 純雲端運行、(C) 混合模式（本地做即時交易 + 雲端做回測/訓練） | P0 |
+| CMP-07 | 同一套 code 喺本地同雲端都可以跑，唔需要維護兩套版本 | P0 |
 
 ### 11.2 Local 計算模式
 - **適用場景**：低延遲策略、隱私敏感數據、離線回測
@@ -455,7 +528,7 @@ S1 = 2 × PP - High; S2 = PP - (High - Low)
   - 支持/阻力線即時計算
   - Risk of Ruin 即時驗證
 - **儲存**：本地 vector database（ChromaDB / LanceDB / FAISS）
-- **硬件建議**：GPU 加速向量計算（CUDA / Metal）
+- **硬件適配**：自動偵測 GPU（CUDA / Metal），冇 GPU 時 fallback 到 CPU，零配置切換
 
 ### 11.3 Cloud 計算模式
 - **適用場景**：大規模回測、模型訓練、歷史數據分析
@@ -715,6 +788,28 @@ module/
 - ❌ 超過 500 行的文件
 - ❌ Magic number（用常數代替）
 - ❌ 註釋解釋「做咩」，只註釋「點解」
+- ❌ Hard-code `'cuda'` 或 `'cpu'` — 必須用自動偵測變數
+
+### 15.6 GPU/CPU 自動偵測規範
+
+所有涉及 AI / 向量計算嘅 code 必須遵守：
+
+```python
+# 標準寫法（全局定義一次）
+import torch
+DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+# 使用時：
+model.to(DEVICE)
+tensor = data.to(DEVICE)
+```
+
+規則：
+- ✅ 用 `DEVICE` 常數，啟動時自動偵測
+- ✅ 同一套 code 喺 CPU/GPU 機器都跑到
+- ✅ FAISS 用 `index_cpu_to_gpu()` 做 optional GPU 加速
+- ❌ 唔好 hard-code device string
+- ❌ 唔好假設一定有 GPU
 
 ---
 
@@ -867,15 +962,24 @@ Phase 4：優化 + UI（全部 Agent）
 
 ---
 
-## 19. 開放問題（待決定）
+## 19. 已確認決策
 
-1. 目標市場？（美股 / 港股 / 加密貨幣 / 外匯？）
-2. 用邊個 Broker 做第一個 Adapter？
-3. 前端技術偏好？（React / Vue / Svelte？）
-4. 部署環境？（自己 server / cloud？）
-5. 團隊規模？（影響技術複雜度取捨）
-6. Budget 限制？（影響 infrastructure 選擇）
-7. AI 模型訓練用邊個 Cloud Provider？
-8. Local 機器 GPU 規格？（影響 inference 能力）
-9. 交易頻率？（高頻 / 日內 / 波段 / 長線）
-10. 風控要求？（保守 / 中等 / 激進）
+| # | 問題 | 決定 | 備註 |
+|---|------|------|------|
+| 1 | 目標市場 | 全部（美股、港股、Crypto、Forex、期貨） | 系統需支持多市場 Adapter |
+| 2 | 第一個 Broker | 未決定 | 開發時先用 Paper Trading Simulator |
+| 3 | 前端技術 | React / Next.js + Tailwind CSS | Responsive Web App + PWA |
+| 4 | 部署環境 | 先本地開發，之後搬上 Cloud | 需支持 Local ↔ Cloud 切換 |
+| 5 | 團隊規模 | 目前 1 人，未來可能擴展 | 架構預留多用戶支持 |
+| 6 | Budget | 初始資金 < $10,000 | 優先免費/低成本工具 |
+| 7 | AI 訓練 Cloud | 未決定 | 目前冇 GPU，先用 CPU |
+| 8 | Local GPU | 暫時冇 | 向量計算先用 CPU，將來可加 GPU |
+| 9 | 交易頻率 | 混合（唔同策略唔同頻率） | 需支持秒級到月級 |
+| 10 | 風控 | 自定義：預設 1%/trade，Max Drawdown 15% 暫停 | UI 可調參數 |
+
+### 仍然開放嘅問題
+
+1. 第一個 Broker Adapter 用邊個？（等揀定市場優先級後再決定）
+2. 歷史數據來源？（免費 vs 付費，待評估）
+3. Cloud Provider？（AWS / GCP / Azure，待評估成本）
+4. GPU 添購計劃？（視乎向量策略表現再決定）

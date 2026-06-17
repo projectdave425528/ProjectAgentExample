@@ -12,11 +12,16 @@ description: Planner 任務執行流程（L3 - 手動載入）
 2. 讀 `./ProjectRecord/{active-project}/inbox/planner/assignment-{id}.md` → 取得需求
 3. 建立 Checkpoint（見 `project-protocols-checkpoint.md`）
 4. 讀 `../../.kiro/skills/clean-code/SKILL.md` → Clean Code 設計原則（重點：SRP、可測試性、抽象層級）
+   → 完成後：寫 Decision Log（見 `project-protocols-decision-log.md`）
 5. 讀 `../../.kiro/skills/design-patterns/SKILL.md`（Part A）→ 方案設計嘅 Pattern 選擇
+   → 完成後：寫 Decision Log
 6. 分析需求 → 設計方案（遵守可測試性設計規則）
-6. 每完成一個主要步驟 → 更新 Checkpoint 執行記錄
-7. 按 `./ProjectRecord/templates/assignment-reply-template.md` 格式寫 outbox reply
-8. 更新 Checkpoint → completed，重命名文件
+   → 完成後：寫 Decision Log（記錄點解揀呢個設計方案，考慮過咩替代方案）
+7. 每完成一個主要步驟 → 更新 Checkpoint 執行記錄 + 寫 Decision Log（零例外）
+8. 按 `./ProjectRecord/templates/assignment-reply-template.md` 格式寫 outbox reply
+9. 更新 Checkpoint → completed，重命名文件
+
+> 🔒 **Decision Log 規則**：每個 Step 完成後必須寫一份 Decision Log，見 `project-protocols-decision-log.md`。唔寫 = Step 未完成。
 
 ## 可測試性設計規則（必須遵守）
 

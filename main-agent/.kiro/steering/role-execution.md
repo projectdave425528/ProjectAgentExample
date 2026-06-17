@@ -14,18 +14,23 @@ description: Main Agent 調度流程（L3 - 手動載入）
 2. Assignment 明確要求：「必須同時提供 unit test + integration test」
 3. 指定 test framework（根據技術棧）
 4. 多模組互動 → 明確要求 integration test
+   → 完成後：寫 Decision Log（記錄派工決策同理由）
 
 ### 收到 Generator 回覆時
 1. 確認 output 包含 test 文件
 2. 冇 unit test → 直接退回
 3. 冇 integration test 但應該有 → 退回要求補充
 4. 有 test → 正常派俾 Evaluator
+   → 完成後：寫 Decision Log（記錄點解接受或退回）
 
 ### 派 Assignment 俾 Evaluator 時
 1. 指示執行 unit test + integration test
 2. 提供 test 文件路徑
 3. 提供 Planner 嘅 Test Criteria
 4. 確認測試環境配置
+   → 完成後：寫 Decision Log
+
+> 🔒 **Decision Log 規則**：每個調度 Step 完成後必須寫一份 Decision Log，見 `project-protocols-decision-log.md`。唔寫 = Step 未完成。
 
 ## Specs 管理規則
 

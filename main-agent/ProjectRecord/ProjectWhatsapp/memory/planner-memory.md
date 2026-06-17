@@ -5,6 +5,9 @@
 |---|------|---------|------|--------|
 | 1 | 2026-05-28 | 重寫全部 Specs（requirements/design/tasks） | completed | 每個 Task 必須有 Test Criteria（H+E+Edge）；template 格式要嚴格遵守；Input/Output 定義要明確 |
 
+## 重要教訓（永久）
+（空 — 下次任務後由 Agent 自行填入）
+
 ## 項目知識
 - 技術棧：Python 3.9+、Pydantic v2、Click、openpyxl、pytesseract、OpenAI Vision API
 - 架構：Pipeline（TextParser → ImageAnalyzer → RecordBuilder → ExcelExporter）

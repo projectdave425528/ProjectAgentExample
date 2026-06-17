@@ -26,6 +26,7 @@ description: Main Agent 配置文件路徑索引（L2 - 永遠載入）
 | project-protocols-shell-policy.md | `main-agent/.kiro/steering/project-protocols-shell-policy.md` |
 | role-execution.md | `main-agent/.kiro/steering/role-execution.md` |
 | role-constraints.md | `main-agent/.kiro/steering/role-constraints.md` |
+| project-protocols-decision-log.md | `main-agent/.kiro/steering/project-protocols-decision-log.md` |
 
 ## Hooks
 | Hook | 路徑 | 觸發條件 |

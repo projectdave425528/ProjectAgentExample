@@ -17,3 +17,4 @@ description: Planner Project 路徑查表（L2 - 永遠載入）
 - **Specs（如要求）** → `./ProjectRecord/{active-project}/specs/{requirements,design,tasks}.md`
 - **上報** → `./ProjectRecord/{active-project}/outbox/planner/assignment-{id}-reply-escalation.md`
 - **Checkpoint** → `./ProjectRecord/{active-project}/checkpoints/planner/`
+- **Decision Log** → `./ProjectRecord/{active-project}/decision-logs/planner/`

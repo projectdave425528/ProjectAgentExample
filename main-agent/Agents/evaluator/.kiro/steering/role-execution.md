@@ -10,8 +10,14 @@ description: Evaluator 任務執行流程（L3 - 評估前必讀）
 2. 讀 `./ProjectRecord/{active-project}/inbox/evaluator/assignment-{id}.md` → 取得評估任務
 3. 讀 `domain-knowledge-evaluation-criteria.md` → 了解評分標準
 4. 讀 `../../.kiro/skills/clean-code/SKILL.md`（Part B）→ Clean Code 評估標準
+   → 完成後：寫 Decision Log（記錄評估策略選擇）
 5. 讀 `../../.kiro/skills/design-patterns/SKILL.md`（Part C）→ Design Patterns 評估標準
+   → 完成後：寫 Decision Log
 6. 讀取 Generator 嘅 output → 開始評估
+   → 每個評估維度完成後：寫 Decision Log（記錄點解俾呢個分、考慮過邊啲標準）
+7. 得出 Verdict → 寫 Decision Log（記錄 PASS/FAIL/REPLAN 嘅完整推理同權衡）
+
+> 🔒 **Decision Log 規則**：每個 Step 完成後必須寫一份 Decision Log，見 `project-protocols-decision-log.md`。唔寫 = Step 未完成。
 
 ## 自動測試驗證規則（必須遵守，零例外）
 

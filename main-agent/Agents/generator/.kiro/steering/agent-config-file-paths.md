@@ -25,6 +25,7 @@ description: Generator 配置文件路徑索引（L2 - 永遠載入）
 | project-protocols-shell-policy.md | `Agents/generator/.kiro/steering/project-protocols-shell-policy.md` |
 | role-execution.md | `Agents/generator/.kiro/steering/role-execution.md` |
 | role-constraints.md | `Agents/generator/.kiro/steering/role-constraints.md` |
+| project-protocols-decision-log.md | `Agents/generator/.kiro/steering/project-protocols-decision-log.md` |
 | domain-knowledge-test-rules.md | `Agents/generator/.kiro/steering/domain-knowledge-test-rules.md` |
 | domain-knowledge-code-standards.md | `Agents/generator/.kiro/steering/domain-knowledge-code-standards.md` |
 | deterministic-first.md | `Agents/generator/.kiro/steering/deterministic-first.md` |

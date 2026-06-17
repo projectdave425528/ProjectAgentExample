@@ -19,6 +19,7 @@ description: Main Agent Project 路徑查表 + 完整目錄結構圖（L2 - 永�
 - **對話記錄** → `./ProjectRecord/{active-project}/conversation-log.md`（append）
 - **搜尋索引** → `./ProjectRecord/{active-project}/SearchIndex.md`（每次寫入後 append）
 - **我嘅 Checkpoint** → `./ProjectRecord/{active-project}/checkpoints/main-agent/`
+- **我嘅 Decision Log** → `./ProjectRecord/{active-project}/decision-logs/main-agent/`
 - **交付成品** → `./ProjectRecord/{active-project}/output/`
 
 ## 完整目錄結構
@@ -32,6 +33,7 @@ description: Main Agent Project 路徑查表 + 完整目錄結構圖（L2 - 永�
     ├── SearchIndex.md
     ├── conversation-log.md
     ├── checkpoints/ (main-agent / planner / generator / evaluator)
+    ├── decision-logs/ (main-agent / planner / generator / evaluator)
     ├── control/
     ├── output/
     ├── inbox/ (planner / generator / evaluator / main-agent)
